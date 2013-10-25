@@ -24,7 +24,7 @@ loading pickled environment... not yet created
 loading intersphinx inventory from http://statsmodels.sourceforge.net/devel/objects.inv...
 loading intersphinx inventory from http://docs.python.org/objects.inv...
 building [html]: targets for 28 source files that are out of date
-updating environment: 392 added, 0 changed, 0 removed
+updating environment: 393 added, 0 changed, 0 removed
 reading sources... [  0%] 10min
 ,762:1/usr/lib/pymodules/python2.7/matplotlib/font_manager.py:1218: UserWarning: findfont: Font family ['monospace'] not found. Falling back to Bitstream Vera Sans
   (prop.get_family(), self.defaultFamily[fontext]))
@@ -37,14 +37,14 @@ ImportError                               Traceback (most recent call last)
 <ipython-input-131-6d3ea2c5c98f> in <module>()
 ----> 1 pd.read_excel('foo.xlsx', 'sheet1', index_col=None, na_values=['NA'])
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/excel.pyc in read_excel(path_or_buf, sheetname, kind, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/excel.pyc in read_excel(path_or_buf, sheetname, kind, **kwds)
      51         DataFrame from the passed in Excel file
      52     """
 ---> 53     return ExcelFile(path_or_buf, kind=kind).parse(sheetname=sheetname,
      54                                                    kind=kind, **kwds)
      55 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/excel.pyc in __init__(self, path_or_buf, kind, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/excel.pyc in __init__(self, path_or_buf, kind, **kwds)
      73         if ver < (0, 9):
      74             raise ImportError("pandas requires xlrd >= 0.9.0 for excel "
 ---> 75                               "support, current version " + xlrd.__VERSION__)
@@ -58,7 +58,7 @@ reading sources... [  1%] comparison_with_r
 reading sources... [  1%] computation
 reading sources... [  1%] cookbook
 reading sources... [  1%] dsintro
-,368:1/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/core/frame.py:3019: FutureWarning: TimeSeries broadcasting along DataFrame index by default is deprecated. Please use DataFrame.<op> to explicitly broadcast arithmetic operations along the index
+,368:1/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/core/frame.py:2958: FutureWarning: TimeSeries broadcasting along DataFrame index by default is deprecated. Please use DataFrame.<op> to explicitly broadcast arithmetic operations along the index
   FutureWarning)
 ,10001:0reading sources... [  2%] enhancingperf
 reading sources... [  2%] faq
@@ -73,12 +73,12 @@ AttributeError                            Traceback (most recent call last)
 <ipython-input-18-c16b12c482e8> in <module>()
 ----> 1 data = ts.time_series(np.random.randn(50), start_date='Jan-2000', freq='M')
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/core/generic.pyc in __getattr__(self, name)
-   1176             return self[name]
-   1177         raise AttributeError("'%s' object has no attribute '%s'" %
--> 1178                              (type(self).__name__, name))
-   1179 
-   1180     def __setattr__(self, name, value):
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/core/generic.pyc in __getattr__(self, name)
+   1250             return self[name]
+   1251         raise AttributeError("'%s' object has no attribute '%s'" %
+-> 1252                              (type(self).__name__, name))
+   1253 
+   1254     def __setattr__(self, name, value):
 
 AttributeError: 'Series' object has no attribute 'time_series'
 ---------------------------------------------------------------------------
@@ -128,11 +128,11 @@ reading sources... [ 11%] generated/pandas.DataFrame.div
 reading sources... [ 12%] generated/pandas.DataFrame.drop
 reading sources... [ 12%] generated/pandas.DataFrame.drop_duplicates
 reading sources... [ 12%] generated/pandas.DataFrame.dropna
-reading sources... [ 13%] generated/pandas.DataFrame.dtypes
+reading sources... [ 12%] generated/pandas.DataFrame.dtypes
 reading sources... [ 13%] generated/pandas.DataFrame.duplicated
 reading sources... [ 13%] generated/pandas.DataFrame.fillna
 reading sources... [ 13%] generated/pandas.DataFrame.filter
-reading sources... [ 14%] generated/pandas.DataFrame.first
+reading sources... [ 13%] generated/pandas.DataFrame.first
 reading sources... [ 14%] generated/pandas.DataFrame.first_valid_index
 reading sources... [ 14%] generated/pandas.DataFrame.from_csv
 reading sources... [ 14%] generated/pandas.DataFrame.from_dict
@@ -175,19 +175,19 @@ reading sources... [ 23%] generated/pandas.DataFrame.rdiv
 reading sources... [ 24%] generated/pandas.DataFrame.reindex
 reading sources... [ 24%] generated/pandas.DataFrame.reindex_axis
 reading sources... [ 24%] generated/pandas.DataFrame.reindex_like
-reading sources... [ 25%] generated/pandas.DataFrame.rename
+reading sources... [ 24%] generated/pandas.DataFrame.rename
 reading sources... [ 25%] generated/pandas.DataFrame.reorder_levels
 reading sources... [ 25%] generated/pandas.DataFrame.replace
 reading sources... [ 25%] generated/pandas.DataFrame.resample
-reading sources... [ 26%] generated/pandas.DataFrame.reset_index
+reading sources... [ 25%] generated/pandas.DataFrame.reset_index
 reading sources... [ 26%] generated/pandas.DataFrame.rmul
 reading sources... [ 26%] generated/pandas.DataFrame.rsub
 reading sources... [ 26%] generated/pandas.DataFrame.select
-reading sources... [ 27%] generated/pandas.DataFrame.set_index
+reading sources... [ 26%] generated/pandas.DataFrame.set_index
 reading sources... [ 27%] generated/pandas.DataFrame.shape
 reading sources... [ 27%] generated/pandas.DataFrame.shift
 reading sources... [ 27%] generated/pandas.DataFrame.skew
-reading sources... [ 28%] generated/pandas.DataFrame.sort
+reading sources... [ 27%] generated/pandas.DataFrame.sort
 reading sources... [ 28%] generated/pandas.DataFrame.sort_index
 reading sources... [ 28%] generated/pandas.DataFrame.sortlevel
 reading sources... [ 28%] generated/pandas.DataFrame.stack
@@ -226,23 +226,23 @@ reading sources... [ 36%] generated/pandas.Panel.__iter__
 reading sources... [ 37%] generated/pandas.Panel.abs
 reading sources... [ 37%] generated/pandas.Panel.add
 reading sources... [ 37%] generated/pandas.Panel.add_prefix
-reading sources... [ 38%] generated/pandas.Panel.add_suffix
+reading sources... [ 37%] generated/pandas.Panel.add_suffix
 reading sources... [ 38%] generated/pandas.Panel.apply
 reading sources,932:0... [ 38%] generated/pandas.Panel.asfreq
 reading sources... [ 38%] generated/pandas.Panel.astype
-reading sources... [ 39%] generated/pandas.Panel.axes
+reading sources... [ 38%] generated/pandas.Panel.axes
 reading sources... [ 39%] generated/pandas.Panel.conform
 reading sources... [ 39%] generated/pandas.Panel.copy
 reading sources... [ 39%] generated/pandas.Panel.count
-reading sources... [ 40%] generated/pandas.Panel.cummax
+reading sources... [ 39%] generated/pandas.Panel.cummax
 reading sources... [ 40%] generated/pandas.Panel.cummin
 reading sources... [ 40%] generated/pandas.Panel.cumprod
 reading sources... [ 40%] generated/pandas.Panel.cumsum
-reading sources... [ 41%] generated/pandas.Panel.div
+reading sources... [ 40%] generated/pandas.Panel.div
 reading sources... [ 41%] generated/pandas.Panel.drop
 reading sources... [ 41%] generated/pandas.Panel.dropna
 reading sources... [ 41%] generated/pandas.Panel.fillna
-reading sources... [ 42%] generated/pandas.Panel.filter
+reading sources... [ 41%] generated/pandas.Panel.filter
 reading sources... [ 42%] generated/pandas.Panel.first
 reading sources... [ 42%] generated/pandas.Panel.from_dict
 ,10001:0reading sources... [ 42%] generated/pandas.Panel.get_value
@@ -265,11 +265,12 @@ reading sources... [ 46%] generated/pandas.Panel.prod
 reading sources... [ 47%] generated/pandas.Panel.reindex
 reading sources... [ 47%] generated/pandas.Panel.reindex_axis
 reading sources... [ 47%] generated/pandas.Panel.reindex_like
-reading sources... [ 47%] generated/pandas.Panel.resample
+reading sources... [ 47%] generated/pandas.Panel.rename
+reading sources... [ 48%] generated/pandas.Panel.resample
 reading sources... [ 48%] generated/pandas.Panel.select
 reading sources... [ 48%] generated/pandas.Panel.set_value
 reading sources... [ 48%] generated/pandas.Panel.shape
-reading sources... [ 48%] generated/pandas.Panel.shift
+reading sources... [ 49%] generated/pandas.Panel.shift
 reading sources... [ 49%] generated/pandas.Panel.skew
 reading sources... [ 49%] generated/pandas.Panel.sort_index
 reading sources... [ 49%] generated/pandas.Panel.std
@@ -304,23 +305,23 @@ reading sources... [ 56%] generated/pandas.Series.asfreq
 reading sources... [ 57%] generated/pandas.Series.asof
 reading sources... [ 57%] generated/pandas.Series.astype
 reading sources... [ 57%] generated/pandas.Series.autocorr
-reading sources... [ 57%] generated/pandas.Series.between
+reading sources... [ 58%] generated/pandas.Series.between
 reading sources... [ 58%] generated/pandas.Series.clip
 reading sources... [ 58%] generated/pandas.Series.clip_lower
 reading sources... [ 58%] generated/pandas.Series.clip_upper
-reading sources... [ 58%] generated/pandas.Series.combine
+reading sources... [ 59%] generated/pandas.Series.combine
 reading sources... [ 59%] generated/pandas.Series.combine_first
 reading sources... [ 59%] generated/pandas.Series.copy
 reading sources... [ 59%] generated/pandas.Series.corr
-reading sources... [ 59%] generated/pandas.Series.count
+reading sources... [ 60%] generated/pandas.Series.count
 reading sources... [ 60%] generated/pandas.Series.cov
 reading sources... [ 60%] generated/pandas.Series.cummax
 reading sources... [ 60%] generated/pandas.Series.cummin
-reading sources... [ 60%] generated/pandas.Series.cumprod
+reading sources... [ 61%] generated/pandas.Series.cumprod
 reading sources... [ 61%] generated/pandas.Series.cumsum
 reading sources... [ 61%] generated/pandas.Series.describe
 reading sources... [ 61%] generated/pandas.Series.diff
-reading sources... [ 61%] generated/pandas.Series.div
+reading sources... [ 62%] generated/pandas.Series.div
 reading sources... [ 62%] generated/pandas.Series.drop
 reading sources... [ 62%] generated/pandas.Series.dropna
 reading sources... [ 62%] generated/pandas.Series.dtype
@@ -359,15 +360,15 @@ reading sources... [ 70%] generated/pandas.Series.quantile
 reading sources... [ 71%] generated/pandas.Series.rank
 reading sources... [ 71%] generated/pandas.Series.reindex
 reading sources... [ 71%] generated/pandas.Series.reindex_like
-reading sources... [ 71%] generated/pandas.Series.rename
+reading sources... [ 72%] generated/pandas.Series.rename
 reading sources... [ 72%] generated/pandas.Series.reorder_levels
 reading sources... [ 72%] generated/pandas.Series.replace
 reading sources... [ 72%] generated/pandas.Series.resample
-reading sources... [ 72%] generated/pandas.Series.reset_index
+reading sources... [ 73%] generated/pandas.Series.reset_index
 reading sources... [ 73%] generated/pandas.Series.round
 reading sources... [ 73%] generated/pandas.Series.select
 reading sources... [ 73%] generated/pandas.Series.shift
-reading sources... [ 73%] generated/pandas.Series.skew
+reading sources... [ 74%] generated/pandas.Series.skew
 reading sources... [ 74%] generated/pandas.Series.sort
 reading sources... [ 74%] generated/pandas.Series.sort_index
 reading sources... [ 74%] generated/pandas.Series.sortlevel
@@ -414,11 +415,11 @@ reading sources... [ 84%] generated/pandas.io.sql.read_sql
 reading sources... [ 85%] generated/pandas.io.sql.write_frame
 reading sources... [ 85%] generated/pandas.io.stata.StataReader.data
 reading sources... [ 85%] generated/pandas.io.stata.StataReader.data_label
-reading sources... [ 85%] generated/pandas.io.stata.StataReader.value_labels
-reading sources... [ 86%] generated/pandas.io.stata.StataReader.variable_labels
-reading sources...,312:0 [ 86%] generated/pandas.io.stata.StataWriter.write_file
+reading sources... [ 86%] generated/pandas.io.stata.StataReader.value_labels
+reading sources... [ 86%] generated/pandas,368:0.io.stata.StataReader.variable_labels
+reading sources... [ 86%] generated/pandas.io.stata.StataWriter.write_file
 reading sources... [ 86%] generated/pandas.io.stata.read_stata
-reading sources... [ 86%] generated/pandas.stats.moments.ewma
+reading sources... [ 87%] generated/pandas.stats.moments.ewma
 reading sources... [ 87%] generated/pandas.stats.moments.ewmcorr
 reading sources... [ 87%] generated/pandas.stats.moments.ewmcov
 ,2313:0reading sources... [ 87%] generated/pandas.stats.moments.ewmstd
@@ -465,19 +466,19 @@ AssertionError                            Traceback (most recent call last)
 <ipython-input-160-15368cbb4893> in <module>()
 ----> 1 dfs = read_html(url)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in read_html(io, match, flavor, header, index_col, skiprows, infer_types, attrs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in read_html(io, match, flavor, header, index_col, skiprows, infer_types, attrs)
     901                              'data (you passed a negative value)')
     902     return _parse(flavor, io, match, header, index_col, skiprows, infer_types,
 --> 903                   attrs)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parse(flavor, io, match, header, index_col, skiprows, infer_types, attrs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parse(flavor, io, match, header, index_col, skiprows, infer_types, attrs)
     760     retained = None
     761     for flav in flavor:
 --> 762         parser = _parser_dispatch(flav)
     763         p = parser(io, compiled_match, attrs)
     764 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parser_dispatch(flavor)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parser_dispatch(flavor)
     718             raise ImportError("bs4 not found please install it")
     719         if bs4.__version__ == LooseVersion('4.2.0'):
 --> 720             raise AssertionError("You're using a version"
@@ -497,19 +498,19 @@ AssertionError                            Traceback (most recent call last)
       1 with open(file_path, 'r') as f:
 ----> 2     dfs = read_html(f.read())
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in read_html(io, match, flavor, header, index_col, skiprows, infer_types, attrs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in read_html(io, match, flavor, header, index_col, skiprows, infer_types, attrs)
     901                              'data (you passed a negative value)')
     902     return _parse(flavor, io, match, header, index_col, skiprows, infer_types,
 --> 903                   attrs)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parse(flavor, io, match, header, index_col, skiprows, infer_types, attrs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parse(flavor, io, match, header, index_col, skiprows, infer_types, attrs)
     760     retained = None
     761     for flav in flavor:
 --> 762         parser = _parser_dispatch(flav)
     763         p = parser(io, compiled_match, attrs)
     764 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parser_dispatch(flavor)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parser_dispatch(flavor)
     718             raise ImportError("bs4 not found please install it")
     719         if bs4.__version__ == LooseVersion('4.2.0'):
 --> 720             raise AssertionError("You're using a version"
@@ -528,19 +529,19 @@ AssertionError                            Traceback (most recent call last)
 <ipython-input-166-00d9a52e4007> in <module>()
 ----> 1 dfs = read_html(sio)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in read_html(io, match, flavor, header, index_col, skiprows, infer_types, attrs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in read_html(io, match, flavor, header, index_col, skiprows, infer_types, attrs)
     901                              'data (you passed a negative value)')
     902     return _parse(flavor, io, match, header, index_col, skiprows, infer_types,
 --> 903                   attrs)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parse(flavor, io, match, header, index_col, skiprows, infer_types, attrs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parse(flavor, io, match, header, index_col, skiprows, infer_types, attrs)
     760     retained = None
     761     for flav in flavor:
 --> 762         parser = _parser_dispatch(flav)
     763         p = parser(io, compiled_match, attrs)
     764 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parser_dispatch(flavor)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/html.pyc in _parser_dispatch(flavor)
     718             raise ImportError("bs4 not found please install it")
     719         if bs4.__version__ == LooseVersion('4.2.0'):
 --> 720             raise AssertionError("You're using a version"
@@ -559,63 +560,63 @@ StopIteration                             Traceback (most recent call last)
 <ipython-input-182-475cedd2a1b1> in <module>()
 ----> 1 pd.read_clipboard()
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/clipboard.pyc in read_clipboard(**kwargs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/clipboard.pyc in read_clipboard(**kwargs)
      24         except:
      25             pass
 ---> 26     return read_table(StringIO(text), **kwargs)
      27 
      28 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in parser_f(filepath_or_buffer, sep, dialect, compression, doublequote, escapechar, quotechar, quoting, skipinitialspace, lineterminator, header, index_col, names, prefix, skiprows, skipfooter, skip_footer, na_values, na_fvalues, true_values, false_values, delimiter, converters, dtype, usecols, engine, delim_whitespace, as_recarray, na_filter, compact_ints, use_unsigned, low_memory, buffer_lines, warn_bad_lines, error_bad_lines, keep_default_na, thousands, comment, decimal, parse_dates, keep_date_col, dayfirst, date_parser, memory_map, nrows, iterator, chunksize, verbose, encoding, squeeze, mangle_dupe_cols, tupleize_cols)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in parser_f(filepath_or_buffer, sep, dialect, compression, doublequote, escapechar, quotechar, quoting, skipinitialspace, lineterminator, header, index_col, names, prefix, skiprows, skipfooter, skip_footer, na_values, na_fvalues, true_values, false_values, delimiter, converters, dtype, usecols, engine, delim_whitespace, as_recarray, na_filter, compact_ints, use_unsigned, low_memory, buffer_lines, warn_bad_lines, error_bad_lines, keep_default_na, thousands, comment, decimal, parse_dates, keep_date_col, dayfirst, date_parser, memory_map, nrows, iterator, chunksize, verbose, encoding, squeeze, mangle_dupe_cols, tupleize_cols)
     399             )
     400 
 --> 401         return _read(filepath_or_buffer, kwds)
     402 
     403     parser_f.__name__ = name
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _read(filepath_or_buffer, kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _read(filepath_or_buffer, kwds)
     197 
     198     # Create the parser.
 --> 199     parser = TextFileReader(filepath_or_buffer, **kwds)
     200 
     201     if nrows is not None:
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in __init__(self, f, engine, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in __init__(self, f, engine, **kwds)
     478             self.options['has_index_names'] = kwds['has_index_names']
     479 
 --> 480         self._make_engine(self.engine)
     481 
     482     def _get_options_with_defaults(self, engine):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _make_engine(self, engine)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _make_engine(self, engine)
     591             elif engine == 'python-fwf':
     592                 klass = FixedWidthFieldParser
 --> 593             self._engine = klass(self.f, **self.options)
     594 
     595     def _failover_to_python(self):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in __init__(self, f, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in __init__(self, f, **kwds)
    1239         else:
    1240             self.data = f
 -> 1241         self.columns = self._infer_columns()
    1242 
    1243         # we are processing a multi index column
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _infer_columns(self)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _infer_columns(self)
    1405                     line = self.buf[0]
    1406                 else:
 -> 1407                     line = self._next_line()
    1408 
    1409                 while self.pos <= hr:
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pa,2333:0ndas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _next_line(self)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pa,2333:0ndas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _next_line(self)
    1472                 self.pos += 1
    1473 
 -> 1474             line = next(self.data)
    1475 
    1476         line = self._check_comments([line])[0]
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _read()
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _read()
    1317         else:
    1318             def _read():
 -> 1319                 line = next(f)
@@ -628,21 +629,21 @@ TypeError                                 Traceback (most recent call last)
 <ipython-input-313-9110e3df5f3f> in <module>()
 ----> 1 pd.read_stata('stata.dta')
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in read_stata(filepath_or_buffer, convert_dates, convert_categoricals, encoding, index)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in read_stata(filepath_or_buffer, convert_dates, convert_categoricals, encoding, index)
      37 @Appender(_read_stata_doc)
      38 def read_stata(filepath_or_buffer, convert_dates=True, convert_categoricals=True, encoding=None, index=None):
 ---> 39     reader = StataReader(filepath_or_buffer, encoding)
      40 
      41     return reader.data(convert_dates, convert_categoricals, index)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in __init__(self, path_or_buf, encoding)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in __init__(self, path_or_buf, encoding)
     304             self.path_or_buf = path_or_buf
     305 
 --> 306         self._read_header()
     307 
     308     def _read_header(self):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in _read_header(self)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in _read_header(self)
     337             self.dtyplist = [self.DTYPE_MAP[typ] for typ in typlist]
     338         except:
 --> 339             raise ValueError("cannot convert stata dtypes [{0}]".format(','.join(typlist)))
@@ -652,19 +653,19 @@ TypeError                                 Traceback (most recent call last)
 TypeError: sequence item 0: expected string, int found
 reading sources... [ 96%] merging
 ,40:0reading sources... [ 97%] missing_data
-,352:1/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/core/generic.py:1586: UserWarning: the "method" argument is deprecated and will be removed inv0.13; this argument has no effect
+,352:1/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/core/generic.py:1668: UserWarning: the "method" argument is deprecated and will be removed inv0.13; this argument has no effect
   warn('the "method" argument is deprecated and will be removed in'
 ,1241:0---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 <ipython-input-51-bb70c342590c> in <module>()
 ----> 1 ser.replace([1, 2, 3], method='pad')
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/core/generic.pyc in replace(self, to_replace, value, inplace, limit, regex, method, axis)
-   1600             if not is_dictlike(to_replace):
-   1601                 if not is_dictlike(regex):
--> 1602                     raise TypeError('If "to_replace" and "value" are both None'
-   1603                                     ' then regex must be a mapping')
-   1604                 to_replace = regex
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/core/generic.pyc in replace(self, to_replace, value, inplace, limit, regex, method, axis)
+   1682             if not is_dictlike(to_replace):
+   1683                 if not is_dictlike(regex):
+-> 1684                     raise TypeError('If "to_replace" and "value" are both None'
+   1685                                     ' then regex must be a mapping')
+   1686                 to_replace = regex
 
 TypeError: If "to_replace" and "value" are both None then regex must be a mapping
 reading sources... [ 97%] overview
@@ -689,7 +690,7 @@ ImportError                               Traceback (most recent call last)
 <ipython-input-18-6f71a005fdc1> in <module>()
 ----> 1 xl = ExcelFile('data/test.xls')
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/excel.pyc in __init__(self, path_or_buf, kind, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/excel.pyc in __init__(self, path_or_buf, kind, **kwds)
      73         if ver < (0, 9):
      74             raise ImportError("pandas requires xlrd >= 0.9.0 for excel "
 ---> 75                               "support, current version " + xlrd.__VERSION__)
@@ -709,82 +710,82 @@ ValueError                                Traceback (most recent call last)
 <ipython-input-2-3bfc79e08766> in <module>()
 ----> 1 fx['FR'].plot(style='g')
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in plot_series(series, label, kind, use_index, rot, xticks, yticks, xlim, ylim, ax, style, grid, legend, logx, logy, secondary_y, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in plot_series(series, label, kind, use_index, rot, xticks, yticks, xlim, ylim, ax, style, grid, legend, logx, logy, secondary_y, **kwds)
    1738                      secondary_y=secondary_y, **kwds)
    1739 
 -> 1740     plot_obj.generate()
    1741     plot_obj.draw()
    1742 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in generate(self)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in generate(self)
     864         self._compute_plot_data()
     865         self._setup_subplots()
 --> 866         self._make_plot()
     867         self._post_plot_logic()
     868         self._adorn_subplots()
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _make_plot(self)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _make_plot(self)
    1248         if not self.x_compat and self.use_index and self._use_dynamic_x():
    1249             data = self._maybe_convert_index(self.data)
 -> 1250             self._make_ts_plot(data, **self.kwds)
    1251         else:
    1252             lines = []
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _make_ts_plot(self, data, **kwargs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _make_ts_plot(self, data, **kwargs)
    1319             self._maybe_add_color(colors, kwds, style, 0)
    1320 
 -> 1321             _plot(data, 0, ax, label, self.style, **kwds)
    1322         else:
    1323             for i, col in enumerate(data.columns):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _plot(data, col_num, ax, label, style, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _plot(data, col_num, ax, label, style, **kwds)
    1303         def _plot(data, col_num, ax, label, style, **kwds):
    1304             newlines = tsplot(data, plotf, ax=ax, label=label,
 -> 1305                                 style=style, **kwds)
    1306             ax.grid(self.grid)
    1307             lines.append(newlines[0])
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/plotting.pyc in tsplot(series, plotf, **kwargs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/plotting.pyc in tsplot(series, plotf, **kwargs)
      55         # Convert DatetimeIndex to PeriodIndex
      56         if isinstance(series.index, DatetimeIndex):
 ---> 57             series = series.to_period(freq=freq)
      58         freq, ax_freq, series = _maybe_resample(series, ax, freq, plotf,
      59                                                 kwargs)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/core/series.pyc in to_period(self, freq, copy)
-   3300         if freq is None:
-   3301             freq = self.index.freqstr or self.index.inferred_freq
--> 3302         new_index = self.index.to_period(freq=freq)
-   3303         return self._constructor(new_values, index=new_index, name=self.name)
-   3304 
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/core/series.pyc in to_period(self, freq, copy)
+   3173         if freq is None:
+   3174             freq = self.index.freqstr or self.index.inferred_freq
+-> 3175         new_index = self.index.to_period(freq=freq)
+   3176         return self._constructor(new_values, index=new_index, name=self.name)
+   3177 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/index.pyc in to_period(self, freq)
-    718             freq = get_period_alias(self.freqstr)
-    719 
---> 720         return PeriodIndex(self.values, freq=freq, tz=self.tz)
-    721 
-    722     def order(self, return_indexer=False, ascending=True):
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/index.pyc in to_period(self, freq)
+    721             freq = get_period_alias(self.freqstr)
+    722 
+--> 723         return PeriodIndex(self.values, freq=freq, tz=self.tz)
+    724 
+    725     def order(self, return_indexer=False, ascending=True):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in __new__(cls, data, ordinal, freq, start, end, periods, copy, name, year, month, quarter, day, hour, minute, second, tz)
-    576                                                  freq, fields)
-    577         else:
---> 578             ordinal, freq = cls._from_arraylike(data, freq, tz)
-    579             data = np.array(ordinal, dtype=np.int64, copy=False)
-    580 
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in __new__(cls, data, ordinal, freq, start, end, periods, copy, name, year, month, quarter, day, hour, minute, second, tz)
+    577                                                  freq, fields)
+    578         else:
+--> 579             ordinal, freq = cls._from_arraylike(data, freq, tz)
+    580             data = np.array(ordinal, dtype=np.int64, copy=False)
+    581 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in _from_arraylike(cls, data, freq, tz)
-    653                 if data.dtype != np.int64:
-    654                     if np.issubdtype(data.dtype, np.datetime64):
---> 655                         data = dt64arr_to_periodarr(data, freq, tz)
-    656                     else:
-    657                         try:
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in _from_arraylike(cls, data, freq, tz)
+    654                 if data.dtype != np.int64:
+    655                     if np.issubdtype(data.dtype, np.datetime64):
+--> 656                         data = dt64arr_to_periodarr(data, freq, tz)
+    657                     else:
+    658                         try:
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in dt64arr_to_periodarr(data, freq, tz)
-    464 def dt64arr_to_periodarr(data, freq, tz):
-    465     if data.dtype != np.dtype('M8[ns]'):
---> 466         raise ValueError('Wrong dtype: %s' % data.dtype)
-    467 
-    468     base, mult = _gfc(freq)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in dt64arr_to_periodarr(data, freq, tz)
+    465 def dt64arr_to_periodarr(data, freq, tz):
+    466     if data.dtype != np.dtype('M8[ns]'):
+--> 467         raise ValueError('Wrong dtype: %s' % data.dtype)
+    468 
+    469     base, mult = _gfc(freq)
 
 ValueError: Wrong dtype: datetime64
 ---------------------------------------------------------------------------
@@ -792,86 +793,86 @@ ValueError                                Traceback (most recent call last)
 <ipython-input-3-d77d6aa06988> in <module>()
 ----> 1 fx['IT'].plot(style='k--', secondary_y=True)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in plot_series(series, label, kind, use_index, rot, xticks, yticks, xlim, ylim, ax, style, grid, legend, logx, logy, secondary_y, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in plot_series(series, label, kind, use_index, rot, xticks, yticks, xlim, ylim, ax, style, grid, legend, logx, logy, secondary_y, **kwds)
    1738                      secondary_y=secondary_y, **kwds)
    1739 
 -> 1740     plot_obj.generate()
    1741     plot_obj.draw()
    1742 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in generate(self)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in generate(self)
     864         self._compute_plot_data()
     865         self._setup_subplots()
 --> 866         self._make_plot()
     867         self._post_plot_logic()
     868         self._adorn_subplots()
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _make_plot(self)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _make_plot(self)
    1248         if not self.x_compat and self.use_index and self._use_dynamic_x():
    1249             data = self._maybe_convert_index(self.data)
 -> 1250             self._make_ts_plot(data, **self.kwds)
    1251         else:
    1252             lines = []
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _make_ts_plot(self, data, **kwargs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _make_ts_plot(self, data, **kwargs)
    1319             self._maybe_add_color(colors, kwds, style, 0)
    1320 
 -> 1321             _plot(data, 0, ax, label, self.style, **kwds)
    1322         else:
    1323             for i, col in enumerate(data.columns):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _plot(data, col_num, ax, label, style, **kwds)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tools/plotting.pyc in _plot(data, col_num, ax, label, style, **kwds)
    1303         def _plot(data, col_num, ax, label, style, **kwds):
    1304             newlines = tsplot(data, plotf, ax=ax, label=label,
 -> 1305                                 style=style, **kwds)
    1306             ax.grid(self.grid)
    1307             lines.append(newlines[0])
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/plotting.pyc in tsplot(series, plotf, **kwargs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/plotting.pyc in tsplot(series, plotf, **kwargs)
      55         # Convert DatetimeIndex to PeriodIndex
      56         if isinstance(series.index, DatetimeIndex):
 ---> 57             series = series.to_period(freq=freq)
      58         freq, ax_freq, series = _maybe_resample(series, ax, freq, plotf,
      59                                                 kwargs)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/core/series.pyc in to_period(self, freq, copy)
-   3300         if freq is None:
-   3301             freq = self.index.freqstr or self.index.inferred_freq
--> 3302         new_index = self.index.to_period(freq=freq)
-   3303         return self._constructor(new_values, index=new_index, name=self.name)
-  ,1914:0 3304 
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/core/series.pyc in to_period(self, freq, copy)
+   3173         if freq is None:
+   3174             freq = self.index.freqstr or self.index.inferred_freq
+-> 3175         new_index = self.index.to_period(freq=freq)
+   3176         return self._constructor(new_values, index=new_index, name=self.name)
+  ,1914:0 3177 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/index.pyc in to_period(self, freq)
-    718             freq = get_period_alias(self.freqstr)
-    719 
---> 720         return PeriodIndex(self.values, freq=freq, tz=self.tz)
-    721 
-    722     def order(self, return_indexer=False, ascending=True):
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/index.pyc in to_period(self, freq)
+    721             freq = get_period_alias(self.freqstr)
+    722 
+--> 723         return PeriodIndex(self.values, freq=freq, tz=self.tz)
+    724 
+    725     def order(self, return_indexer=False, ascending=True):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in __new__(cls, data, ordinal, freq, start, end, periods, copy, name, year, month, quarter, day, hour, minute, second, tz)
-    576                                                  freq, fields)
-    577         else:
---> 578             ordinal, freq = cls._from_arraylike(data, freq, tz)
-    579             data = np.array(ordinal, dtype=np.int64, copy=False)
-    580 
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in __new__(cls, data, ordinal, freq, start, end, periods, copy, name, year, month, quarter, day, hour, minute, second, tz)
+    577                                                  freq, fields)
+    578         else:
+--> 579             ordinal, freq = cls._from_arraylike(data, freq, tz)
+    580             data = np.array(ordinal, dtype=np.int64, copy=False)
+    581 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in _from_arraylike(cls, data, freq, tz)
-    653                 if data.dtype != np.int64:
-    654                     if np.issubdtype(data.dtype, np.datetime64):
---> 655                         data = dt64arr_to_periodarr(data, freq, tz)
-    656                     else:
-    657                         try:
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in _from_arraylike(cls, data, freq, tz)
+    654                 if data.dtype != np.int64:
+    655                     if np.issubdtype(data.dtype, np.datetime64):
+--> 656                         data = dt64arr_to_periodarr(data, freq, tz)
+    657                     else:
+    658                         try:
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in dt64arr_to_periodarr(data, freq, tz)
-    464 def dt64arr_to_periodarr(data, freq, tz):
-    465     if data.dtype != np.dtype('M8[ns]'):
---> 466         raise ValueError('Wrong dtype: %s' % data.dtype)
-    467 
-    468     base, mult = _gfc(freq)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/tseries/period.pyc in dt64arr_to_periodarr(data, freq, tz)
+    465 def dt64arr_to_periodarr(data, freq, tz):
+    466     if data.dtype != np.dtype('M8[ns]'):
+--> 467         raise ValueError('Wrong dtype: %s' % data.dtype)
+    468 
+    469     base, mult = _gfc(freq)
 
 ValueError: Wrong dtype: datetime64
 
-,1137:1/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_201_g3644370-py2.7-linux-sparc64.egg/pandas/io/json.py:docstring of pandas.io.json.read_json:32: WARNING: Definition list ends without a blank line; unexpected unindent.
+,1137:1/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_213_gdc3ead3-py2.7-linux-sparc64.egg/pandas/io/json.py:docstring of pandas.io.json.read_json:32: WARNING: Definition list ends without a blank line; unexpected unindent.
 /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/doc/source/timeseries.rst:651: ERROR: Error with CSV data in "csv-table" directive:
 ',' expected after '"'
 
@@ -961,11 +962,11 @@ writing output... [ 11%] generated/pandas.DataFrame.div
 writing output... [ 12%] generated/pandas.DataFrame.drop
 writing output... [ 12%] generated/pandas.DataFrame.drop_duplicates
 writing output... [ 12%] generated/pandas.DataFrame.dropna
-writing output... [ 13%] generated/pandas.DataFrame.dtypes
+writing output... [ 12%] generated/pandas.DataFrame.dtypes
 writing output... [ 13%] generated/pandas.DataFrame.duplicated
 writing output... [ 13%] generated/pandas.DataFrame.fillna
 writing output... [ 13%] generated/pandas.DataFrame.filter
-writing output... [ 14%] generated/pandas.DataFrame.first
+writing output... [ 13%] generated/pandas.DataFrame.first
 writing output... [ 14%] generated/pandas.DataFrame.first_valid_index
 writing output... [ 14%] generated/pandas.DataFrame.from_csv
 writing output... [ 14%] generated/pandas.DataFrame.from_dict
@@ -1008,19 +1009,19 @@ writing output... [ 23%] generated/pandas.DataFrame.rdiv
 writing output... [ 24%] generated/pandas.DataFrame.reindex
 writing output... [ 24%] generated/pandas.DataFrame.reindex_axis
 writing output... [ 24%] generated/pandas.DataFrame.reindex_like
-writing output... [ 25%] generated/pandas.DataFrame.rename
+writing output... [ 24%] generated/pandas.DataFrame.rename
 writing output... [ 25%] generated/pandas.DataFrame.reorder_levels
 writing output... [ 25%] generated/pandas.DataFrame.replace
 writing output... [ 25%] generated/pandas.DataFrame.resample
-writing output... [ 26%] generated/pandas.DataFrame.reset_index
+writing output... [ 25%] generated/pandas.DataFrame.reset_index
 writing output... [ 26%] generated/pandas.DataFrame.rmul
 writing output... [ 26%] generated/pandas.DataFrame.rsub
 writing output... [ 26%] generated/pandas.DataFrame.select
-writing output... [ 27%] generated/pandas.DataFrame.set_index
+writing output... [ 26%] generated/pandas.DataFrame.set_index
 writing output... [ 27%] generated/pandas.DataFrame.shape
 writing output... [ 27%] generated/pandas.DataFrame.shift
 writing output... [ 27%] generated/pandas.DataFrame.skew
-writing output... [ 28%] generated/pandas.DataFrame.sort
+writing output... [ 27%] generated/pandas.DataFrame.sort
 writing output... [ 28%] generated/pandas.DataFrame.sort_index
 writing output... [ 28%] generated/pandas.DataFrame.sortlevel
 writing output... [ 28%] generated/pandas.DataFrame.stack
@@ -1059,23 +1060,23 @@ writing output... [ 36%] generated/pandas.Panel.__iter__
 writing output... [ 37%] generated/pandas.Panel.abs
 writing output... [ 37%] generated/pandas.Panel.add
 writing output... [ 37%] generated/pandas.Panel.add_prefix
-writing output... [ 38%] generated/pandas.Panel.add_suffix
+writing output... [ 37%] generated/pandas.Panel.add_suffix
 writing output... [ 38%] generated/pandas.Panel.apply
 writing output... [ 38%] generated/pandas.Panel.asfreq
 writing output... [ 38%] generated/pandas.Panel.astype
-writing output... [ 39%] generated/pandas.Panel.axes
+writing output... [ 38%] generated/pandas.Panel.axes
 writing output... [ 39%] generated/pandas.Panel.conform
 writing output... [ 39%] generated/pandas.Panel.copy
 writing output... [ 39%] generated/pandas.Panel.count
-writing output... [ 40%] generated/pandas.Panel.cummax
+writing output... [ 39%] generated/pandas.Panel.cummax
 writing output... [ 40%] generated/pandas.Panel.cummin
 writing output... [ 40%] generated/pandas.Panel.cumprod
 writing output... [ 40%] generated/pandas.Panel.cumsum
-writing output... [ 41%] generated/pandas.Panel.div
+writing output... [ 40%] generated/pandas.Panel.div
 writing output... [ 41%] generated/pandas.Panel.drop
 writing output... [ 41%] generated/pandas.Panel.dropna
 writing output... [ 41%] generated/pandas.Panel.fillna
-writing output... [ 42%] generated/pandas.Panel.filter
+writing output... [ 41%] generated/pandas.Panel.filter
 writing output... [ 42%] generated/pandas.Panel.first
 writing output... [ 42%] generated/pandas.Panel.from_dict
 writing output... [ 42%] generated/pandas.Panel.get_value
@@ -1087,10 +1088,10 @@ writing output... [ 44%] generated/pandas.Panel.last
 writing output... [ 44%] generated/pandas.Panel.major_xs
 writing output... [ 44%] generated/pandas.Panel.max
 writing output... [ 44%] generated/pandas.Panel.mean
-writing output... [ 45%] generated/p,129:0andas.Panel.median
-writing output... [ 45%] generated/pandas.Panel.min
+writing output... [ 45%] generated/p,20:0andas.Panel.median
+,10001:0writing output... [ 45%] generated/pandas.Panel.min
 writing output... [ 45%] generated/pandas.Panel.minor_xs
-,10001:0writing output... [ 45%] generated/pandas.Panel.mul
+writing output... [ 45%] generated/pandas.Panel.mul
 writing output... [ 46%] generated/pandas.Panel.ndim
 writing output... [ 46%] generated/pandas.Panel.pct_change
 writing output... [ 46%] generated/pandas.Panel.pop
@@ -1098,11 +1099,12 @@ writing output... [ 46%] generated/pandas.Panel.prod
 writing output... [ 47%] generated/pandas.Panel.reindex
 writing output... [ 47%] generated/pandas.Panel.reindex_axis
 writing output... [ 47%] generated/pandas.Panel.reindex_like
-writing output... [ 47%] generated/pandas.Panel.resample
+writing output... [ 47%] generated/pandas.Panel.rename
+writing output... [ 48%] generated/pandas.Panel.resample
 writing output... [ 48%] generated/pandas.Panel.select
 writing output... [ 48%] generated/pandas.Panel.set_value
 writing output... [ 48%] generated/pandas.Panel.shape
-writing output... [ 48%] generated/pandas.Panel.shift
+writing output... [ 49%] generated/pandas.Panel.shift
 writing output... [ 49%] generated/pandas.Panel.skew
 writing output... [ 49%] generated/pandas.Panel.sort_index
 writing output... [ 49%] generated/pandas.Panel.std
@@ -1137,23 +1139,23 @@ writing output... [ 56%] generated/pandas.Series.asfreq
 writing output... [ 57%] generated/pandas.Series.asof
 writing output... [ 57%] generated/pandas.Series.astype
 writing output... [ 57%] generated/pandas.Series.autocorr
-writing output... [ 57%] generated/pandas.Series.between
+writing output... [ 58%] generated/pandas.Series.between
 writing output... [ 58%] generated/pandas.Series.clip
 writing output... [ 58%] generated/pandas.Series.clip_lower
 writing output... [ 58%] generated/pandas.Series.clip_upper
-writing output... [ 58%] generated/pandas.Series.combine
+writing output... [ 59%] generated/pandas.Series.combine
 writing output... [ 59%] generated/pandas.Series.combine_first
 writing output... [ 59%] generated/pandas.Series.copy
 writing output... [ 59%] generated/pandas.Series.corr
-writing output... [ 59%] generated/pandas.Series.count
+writing output... [ 60%] generated/pandas.Series.count
 writing output... [ 60%] generated/pandas.Series.cov
 writing output... [ 60%] generated/pandas.Series.cummax
 writing output... [ 60%] generated/pandas.Series.cummin
-writing output... [ 60%] generated/pandas.Series.cumprod
+writing output... [ 61%] generated/pandas.Series.cumprod
 writing output... [ 61%] generated/pandas.Series.cumsum
 writing output... [ 61%] generated/pandas.Series.describe
 writing output... [ 61%] generated/pandas.Series.diff
-writing output... [ 61%] generated/pandas.Series.div
+writing output... [ 62%] generated/pandas.Series.div
 writing output... [ 62%] generated/pandas.Series.drop
 writing output... [ 62%] generated/pandas.Series.dropna
 writing output... [ 62%] generated/pandas.Series.dtype
@@ -1192,15 +1194,15 @@ writing output... [ 70%] generated/pandas.Series.quantile
 writing output... [ 71%] generated/pandas.Series.rank
 writing output... [ 71%] generated/pandas.Series.reindex
 writing output... [ 71%] generated/pandas.Series.reindex_like
-writing output... [ 71%] generated/pandas.Series.rename
+writing output... [ 72%] generated/pandas.Series.rename
 writing output... [ 72%] generated/pandas.Series.reorder_levels
 writing output... [ 72%] generated/pandas.Series.replace
 writing output... [ 72%] generated/pandas.Series.resample
-writing output... [ 72%] generated/pandas.Series.reset_index
+writing output... [ 73%] generated/pandas.Series.reset_index
 writing output... [ 73%] generated/pandas.Series.round
 writing output... [ 73%] generated/pandas.Series.select
 writing output... [ 73%] generated/pandas.Series.shift
-writing output... [ 73%] generated/pandas.Series.skew
+writing output... [ 74%] generated/pandas.Series.skew
 writing output... [ 74%] generated/pandas.Series.sort
 writing output... [ 74%] generated/pandas.Series.sort_index
 writing output... [ 74%] generated/pandas.Series.sortlevel
@@ -1247,11 +1249,11 @@ writing output... [ 84%] generated/pandas.io.sql.read_sql
 writing output... [ 85%] generated/pandas.io.sql.write_frame
 writing output... [ 85%] generated/pandas.io.stata.StataReader.data
 writing output... [ 85%] generated/pandas.io.stata.StataReader.data_label
-writing output... [ 85%] generated/pandas.io.stata.StataReader.value_labels
+writing output... [ 86%] generated/pandas.io.stata.StataReader.value_labels
 writing output... [ 86%] generated/pandas.io.stata.StataReader.variable_labels
 writing output... [ 86%] generated/pandas.io.stata.StataWriter.write_file
 writing output... [ 86%] generated/pandas.io.stata.read_stata
-writing output... [ 86%] generated/pandas.stats.moments.ewma
+writing output... [ 87%] generated/pandas.stats.moments.ewma
 writing output... [ 87%] generated/pandas.stats.moments.ewmcorr
 writing output... [ 87%] generated/pandas.stats.moments.ewmcov
 writing output... [ 87%] generated/pandas.stats.moments.ewmstd
@@ -1259,10 +1261,10 @@ writing output... [ 88%] generated/pandas.stats.moments.ewmvar
 writing output... [ 88%] generated/pandas.stats.moments.expanding_apply
 writing output... [ 88%] generated/pandas.stats.moments.expanding_corr
 writing output... [ 88%] generated/pandas.stats.moments.expanding_count
-writing output... [ 89%] generated/pandas.stats.moments.expanding_cov
+writing output.,127:0.. [ 89%] generated/pandas.stats.moments.expanding_cov
 writing output... [ 89%] generated/pandas.stats.moments.expanding_kurt
-writing output... [ 89%] generated/pan,34:0das.stats.moments.expanding_mean
-,5280:0writing output... [ 89%] generated/pandas.stats.moments.expanding_median
+,5351:0writing output... [ 89%] generated/pandas.stats.moments.expanding_mean
+writing output... [ 89%] generated/pandas.stats.moments.expanding_median
 writing output... [ 90%] generated/pandas.stats.moments.expanding_quantile
 writing output... [ 90%] generated/pandas.stats.moments.expanding_skew
 writing output... [ 90%] generated/pandas.stats.moments.expanding_std
@@ -1366,5 +1368,5 @@ dumping search index... done
 dumping object inventory... done
 build succeeded, 3 warnings.
 ,59:2program finished with exit code 0
-elapsedTime=2668.882182
+elapsedTime=2643.551435
 ,
