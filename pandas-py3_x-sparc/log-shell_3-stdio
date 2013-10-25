@@ -1,45 +1,36 @@
-539:2python setup.py install
- in dir /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sparc/build (timeout 1200 secs)
+611:2nosetests --verbosity=3 --exe --with-doctest pandas
+ in dir /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sparc/build/venv (timeout 1200 secs)
  watching logfiles {}
- argv: ['python', 'setup.py', 'install']
+ argv: ['nosetests', '--verbosity=3', '--exe', '--with-doctest', 'pandas']
  environment:
   HOME=/home/buildslave
   LOGNAME=buildslave
   MAIL=/var/mail/buildslave
   PATH=/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sparc/build/venv/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-  PWD=/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sparc/build
+  PWD=/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sparc/build/venv
   SHELL=/bin/sh
   TERM=xterm
   USER=buildslave
  using PTY: False
-,87:0running install
-Checking .pth file support in /usr/local/lib/python2.7/dist-packages/
-,1005:1error: can't create or remove files in install directory
+,886:1nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+Failure: ImportError (No module named pandas) ... ERROR
 
-The following error occurred while trying to add or remove files in the
-installation directory:
+======================================================================
+ERROR: Failure: ImportError (No module named pandas)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/nose/failure.py", line 38, in runTest
+    raise self.exc_val.with_traceback(self.tb)
+  File "/usr/lib/python3/dist-packages/nose/loader.py", line 402, in loadTestsFromName
+    module = resolve_name(addr.module)
+  File "/usr/lib/python3/dist-packages/nose/util.py", line 311, in resolve_name
+    module = __import__('.'.join(parts_copy))
+ImportError: No module named pandas
 
-    [Errno 13] Permission denied: '/usr/local/lib/python2.7/dist-packages/test-easy-install-11382.pth'
+----------------------------------------------------------------------
+Ran 1 test in 0.009s
 
-The installation directory you specified (via --install-dir, --prefix, or
-the distutils default setting) was:
-
-    /usr/local/lib/python2.7/dist-packages/
-
-Perhaps your account does not have write access to this directory?  If the
-installation directory is a system-owned directory, you may need to sign in
-as the administrator or "root" account.  If you do not have administrative
-access to this machine, you may wish to choose a different installation
-directory, preferably one that is listed in your PYTHONPATH environment
-variable.
-
-For information on other options, you may wish to consult the
-documentation at:
-
-  http://packages.python.org/distribute/easy_install.html
-
-Please make the appropriate changes for your system and try again.
-
+FAILED (errors=1)
 ,56:2program finished with exit code 1
-elapsedTime=1.363356
+elapsedTime=1.981217
 ,
