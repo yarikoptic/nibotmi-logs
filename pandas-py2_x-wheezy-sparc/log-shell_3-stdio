@@ -169,7 +169,7 @@ copying pandas/tests/test_algos.py -> build/lib.linux-sparc64-2.7/pandas/tests
 copying pandas/tests/test_tests.py -> build/lib.linux-sparc64-2.7/pandas/tests
 copying pandas/tests/test_stats.py -> build/lib.linux-sparc64-2.7/pandas/tests
 copying pandas/tests/test_base.py -> build/lib.linux-sparc64-2.7/pandas/tests
-copying pandas/tests/test_groupb,6036:0y.py -> build/lib.linux-sparc64-2.7/pandas/tests
+copying pandas/tests/test_groupb,8808:0y.py -> build/lib.linux-sparc64-2.7/pandas/tests
 copying pandas/tests/test_compat.py -> build/lib.linux-sparc64-2.7/pandas/tests
 copying pandas/tests/test_generic.py -> build/lib.linux-sparc64-2.7/pandas/tests
 copying pandas/tests/test_series.py -> build/lib.linux-sparc64-2.7/pandas/tests
@@ -239,7 +239,7 @@ copying pandas/tseries/tests/test_timezones.py -> build/lib.linux-sparc64-2.7/pa
 copying pandas/tseries/tests/__init__.py -> build/lib.linux-sparc64-2.7/pandas/tseries/tests
 copying pandas/tseries/tests/test_plotting.py -> build/lib.linux-sparc64-2.7/pandas/tseries/tests
 copying pandas/tseries/tests/test_timeseries_legacy.py -> build/lib.linux-sparc64-2.7/pandas/tseries/tests
-,9482:0copying pandas/tseries/tests/test_util.py -> build/lib.linux-sparc64-2.7/pandas/tseries/tests
+copying pandas/tseries/tests/test_util.py -> build/lib.linux-sparc64-2.7/pandas/tseries/tests
 creating build/lib.linux-sparc64-2.7/pandas/io/tests
 copying pandas/io/tests/test_packers.py -> build/lib.linux-sparc64-2.7/pandas/io/tests
 copying pandas/io/tests/test_excel.py -> build/lib.linux-sparc64-2.7/pandas/io/tests
@@ -271,7 +271,7 @@ copying pandas/stats/tests/test_fama_macbeth.py -> build/lib.linux-sparc64-2.7/p
 copying pandas/stats/tests/test_var.py -> build/lib.linux-sparc64-2.7/pandas/stats/tests
 copying pandas/stats/tests/__init__.py -> build/lib.linux-sparc64-2.7/pandas/stats/tests
 copying pandas/stats/tests/test_ols.py -> build/lib.linux-sparc64-2.7/pandas/stats/tests
-creating build/lib.linux-sparc64-2.7/pandas/io/tests/data
+,6710:0creating build/lib.linux-sparc64-2.7/pandas/io/tests/data
 creating build/lib.linux-sparc64-2.7/pandas/io/tests/data/legacy_hdf
 copying pandas/io/tests/data/legacy_hdf/pytables_native2.h5 -> build/lib.linux-sparc64-2.7/pandas/io/tests/data/legacy_hdf
 copying pandas/io/tests/data/legacy_hdf/legacy.h5 -> build/lib.linux-sparc64-2.7/pandas/io/tests/data/legacy_hdf
@@ -415,7 +415,7 @@ pandas/src/parse_helper.h:13:29: warning: 'p_end' may be used uninitialized in t
 cythoning pandas/tslib.pyx to pandas/tslib.c
 building 'pandas.tslib' extension
 gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/tslib.c -o build/temp.linux-sparc64-2.7/pandas/tslib.o
-,1851:1In file included from pandas/src/klib/khash_python.h:3:0,
+,2027:1In file included from pandas/src/klib/khash_python.h:3:0,
                  from pandas/tslib.c:325:
 pandas/src/klib/khash.h: In function 'kh_del_str':
 pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
@@ -432,6 +432,9 @@ pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
 pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/tslib.c:326:0:
+pandas/src/period.h: At top level:
+pandas/src/period.h:165:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 pandas/tslib.c: In function '__pyx_f_6pandas_5tslib__check_dts_bounds':
 pandas/tslib.c:14106:5: warning: implicit declaration of function 'cmp_pandas_datetimestruct' [-Wimplicit-function-declaration]
 pandas/tslib.c: At top level:
@@ -444,10 +447,12 @@ pandas/tslib.c:26297:18: warning: '__pyx_pybuffernd_dst_hours.diminfo[0].strides
 ,316:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime_strings.o
 ,113:1pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
 ,272:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/period.c -o build/temp.linux-sparc64-2.7/pandas/src/period.o
-,387:1pandas/src/period.c:304:12: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-pandas/src/period.c:353:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-pandas/src/period.c:377:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-pandas/src/period.c:34:20: warning: 'NULL_AF_INFO' defined but not used [-Wunused-variable]
+,530:1In file included from pandas/src/period.c:1:0:
+pandas/src/period.h:165:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/period.c:303:12: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/period.c:352:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/period.c:376:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/period.c:33:20: warning: 'NULL_AF_INFO' defined but not used [-Wunused-variable]
 ,743:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-2.7/pandas/tslib.o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime_strings.o build/temp.linux-sparc64-2.7/pandas/src/period.o -o build/lib.linux-sparc64-2.7/pandas/tslib.so
 cythoning pandas/parser.pyx to pandas/parser.c
 building 'pandas.parser' extension
@@ -1067,7 +1072,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/period.py to period.
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/interval.py to interval.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/api.py to api.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tools.py to tools.pyc
-byte-compiling build/bdist.linux-sparc64/egg/panda,2069:0s/tseries/util.py to util.pyc
+byte-compiling build/bdist.linux-sparc64/egg/panda,2543:0s/tseries/util.py to util.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/resample.py to resample.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/timedeltas.py to timedeltas.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/frequencies.py to frequencies.pyc
@@ -1092,12 +1097,12 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/moments.py to moments.
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/misc.py to misc.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_math.py to test_math.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_moments.py to test_moments.pyc
-,4412:0byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/common.py to common.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/common.py to common.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_fama_macbeth.py to test_fama_macbeth.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_var.py to test_var.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_ols.py to test_ols.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/fama_macbeth.py to fama_macbeth.pyc
+,3938:0byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/fama_macbeth.py to fama_macbeth.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/common.py to common.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/plm.py to plm.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/api.py to api.pyc
@@ -1135,15 +1140,15 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+creating 'dist/pandas-0.12.0_840_g9ec30ad-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
 removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg
-Extracting pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages
-Adding pandas 0.12.0-834-g04dbd55 to easy-install.pth file
+Processing pandas-0.12.0_840_g9ec30ad-py2.7-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_840_g9ec30ad-py2.7-linux-sparc64.egg
+Extracting pandas-0.12.0_840_g9ec30ad-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages
+Adding pandas 0.12.0-840-g9ec30ad to easy-install.pth file
 
-Installed /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-834-g04dbd55
+Installed /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_840_g9ec30ad-py2.7-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-840-g9ec30ad
 Searching for numpy==1.6.2
 Best match: numpy 1.6.2
 Adding numpy 1.6.2 to easy-install.pth file
@@ -1159,7 +1164,7 @@ Best match: python-dateutil 1.5
 python-dateutil 1.5 is already the active version in easy-install.pth
 
 Using /usr/lib/python2.7/dist-packages
-Finished processing dependencies for pandas==0.12.0-834-g04dbd55
+Finished processing dependencies for pandas==0.12.0-840-g9ec30ad
 ,59:2program finished with exit code 0
-elapsedTime=3421.547435
+elapsedTime=3378.775958
 ,
