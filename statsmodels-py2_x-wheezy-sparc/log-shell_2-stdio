@@ -9,7 +9,7 @@
   PATH=/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
   PWD=/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build
   SHELL=/bin/sh
-  TERM=xterm
+  TERM=linux
   USER=buildslave
  using PTY: False
 ,10001:0Downloading/unpacking patsy>=0.1.0
@@ -29,11 +29,11 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     
     atlas_blas_threads_info:
     Setting PTATLAS=ATLAS
-      libraries ptf77blas,ptcblas,atlas not found in ['/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib', '/usr/local/lib', '/usr/lib', '/usr/lib/sparc-linux-gnu']
+      libraries ptf77blas,ptcblas,atlas not found in ['/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib', '/usr/local/lib', '/usr/lib/atlas-base', '/usr/lib', '/usr/lib/sparc-linux-gnu']
       NOT AVAILABLE
     
     atlas_blas_info:
-      libraries f77blas,cblas,atlas not found in ['/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib', '/usr/local/lib', '/usr/lib', '/usr/lib/sparc-linux-gnu']
+      libraries f77blas,cblas,atlas not found in ['/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib', '/usr/local/lib', '/usr/lib/atlas-base', '/usr/lib', '/usr/lib/sparc-linux-gnu']
       NOT AVAILABLE
     
     /home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/build/numpy/numpy/distutils/system_info.py:1494: UserWarning:
@@ -69,6 +69,8 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
       libraries lapack_atlas not found in /home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib
       libraries ptf77blas,ptcblas,atlas not found in /usr/local/lib
       libraries lapack_atlas not found in /usr/local/lib
+      libraries ptf77blas,ptcblas,atlas not found in /usr/lib/atlas-base
+      libraries lapack_atlas not found in /usr/lib/atlas-base
       libraries ptf77blas,ptcblas,atlas not found in /usr/lib
       libraries lapack_atlas not found in /usr/lib
       libraries ptf77blas,ptcblas,atlas not found in /usr/lib/sparc-linux-gnu
@@ -81,6 +83,8 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
       libraries lapack_atlas not found in /home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib
       libraries f77blas,cblas,atlas not found in /usr/local/lib
       libraries lapack_atlas not found in /usr/local/lib
+      libraries f77blas,cblas,atlas not found in /usr/lib/atlas-base
+      libraries lapack_atlas not found in /usr/lib/atlas-base
       libraries f77blas,cblas,atlas not found in /usr/lib
       libraries lapack_atlas not found in /usr/lib
       libraries f77blas,cblas,atlas not found in /usr/lib/sparc-linux-gnu
@@ -181,23 +185,15 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     
     compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
-    _configtest.c:4:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-    success!
-    removing: _configtest.c _configtest.o
-    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
-    
-    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -I,6385:0numpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
-    gcc: _configtest.c
-    _configtest.c:4:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    _configtest.c:4:5: war,6385:0ning: function declaration isn't a prototype [-Wstrict-prototypes]
     success!
     removing: _configtest.c _configtest.o
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
     compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
-    _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-    _configtest.c: In function 'main':
-    _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
+    _configtest.c:4:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    success!
     removing: _configtest.c _configtest.o
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
@@ -221,12 +217,8 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     gcc: _configtest.c
     _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
     _configtest.c: In function 'main':
-    _configtest.c:5:16: error: size of array 'test_array' is negative
     _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
-    _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-    _configtest.c: In function 'main':
-    _configtest.c:5:16: error: size of array 'test_array' is negative
-    _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
+    removing: _configtest.c _configtest.o
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
     compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
@@ -265,7 +257,19 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
-    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -In,10001:0umpy/core/include -I/usr/include/python2.7 -c'
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
+    gcc: _configtest.c
+    _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    _configtest.c: In function 'main':
+    _configtest.c:5:16: error: size of array 'test_array' is negative
+    _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
+    _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    _configtest.c: In function 'main':
+    _configtest.c:5:16: error: size of array 'test_array' is negative
+    _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunuse,10001:0d-but-set-variable]
+    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
+    
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
     _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
     _configtest.c: In function 'main':
@@ -386,9 +390,9 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     _configtest.c: In function 'main':
     _configtest.c:5:16: error: size of array 'test_array' is negative
     _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
-    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
+    C compiler: gcc ,10001:0-pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
-    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2,10001:0.7 -c'
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
     _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
     _configtest.c: In function 'main':
@@ -508,11 +512,11 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     _configtest.c: In function 'main':
     _configtest.c:5:16: error: size of array 'test_array' is negative
     _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
-    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
+    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prot,10001:0otypes -fPIC
     
     compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
-    _configtest.c:3:5: warning: function de,10001:0claration isn't a prototype [-Wstrict-prototypes]
+    _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
     _configtest.c: In function 'main':
     _configtest.c:5:16: error: size of array 'test_array' is negative
     _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
@@ -632,19 +636,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     _configtest.c: In function 'main':
     _configtest.c:5:16: error: size of array 'test_array' is negative
     _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
-    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
-    
-    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
-    gcc: _configtest.c
-    _configtest.c:3:5,2769:0: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-    _configtest.c: In function 'main':
-    _configtest.c:5:16: error: size of array 'test_array' is negative
-    _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
-    _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-    _configtest.c: In function 'main':
-    _configtest.c:5:16: error: size of array 'test_array' is negative
-    _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
-    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
+    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -,2769:0O2 -Wall -Wstrict-prototypes -fPIC
     
     compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
@@ -670,7 +662,19 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
-    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core,10001:0/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
+    gcc: _configtest.c
+    _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    _configtest.c: In function 'main':
+    _configtest.c:5:16: error: size of array 'test_array' is negative
+    _configtest.c:5:16: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
+    _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+    _configtest.c: In function 'main':
+    _configtest.c:5:16: error: size of array 'test_array' is negative
+    _configtest.c:5:16: warning: variable,10001:0 'test_array' set but not used [-Wunused-but-set-variable]
+    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
+    
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
     _configtest.c:3:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
     _configtest.c: In function 'main':
@@ -789,10 +793,10 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     gcc: _configtest.c
     _configtest.c:4:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
     success!
-    removing: _configtest.c _configtest.o
+    removing: _configtest.c _,6385:0configtest.o
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
-    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/co,10001:0re/include -I/usr/include/python2.7 -c'
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
     _configtest.c:1:5: warning: conflicting types for built-in function 'exp' [enabled by default]
     gcc -pthread _configtest.o -o _configtest
@@ -869,7 +873,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     removing: _configtest.c _configtest.o
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
-    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/cor,10001:0e/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
     _configtest.c:5:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
     success!
@@ -916,7 +920,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     _configtest.c:8:5: warning: conflicting types for built-in function 'log10f' [enabled by default]
     _configtest.c:9:5: warning: conflicting types for built-in function 'logf' [enabled by default]
     _configtest.c:10:5: warning: conflicting types for built-in function 'sinhf' [enabled by default]
-    _configtest.c:11:5: warning: conflicting types for built-in function 'acosf' [enabl,4577:0ed by default]
+    _configtest.c:11:5: warning: conflicting types for built-in function 'acosf' [enabled by default]
     _configtest.c:12:5: warning: conflicting types for built-in function 'sqrtf' [enabled by default]
     _configtest.c:13:5: warning: conflicting types for built-in function 'ldexpf' [enabled by default]
     _configtest.c:14:5: warning: conflicting types for built-in function 'hypotf' [enabled by default]
@@ -963,7 +967,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     _configtest.c:14:5: warning: conflicting types for built-in function 'hypotl' [enabled by default]
     _configtest.c:15:5: warning: conflicting types for built-in function 'log2l' [enabled by default]
     _configtest.c:16:5: warning: conflicting types for built-in function 'copysignl' [enabled by default]
-    _configtest.c:17:5: warning: conflicting types for built-in function 'exp2l' [enabled b,10001:0y default]
+    _configtest.c:17:5: warning: conflicting types for built-in function 'exp2l' [enabled by default]
     _configtest.c:18:5: warning: conflicting types for built-in function 'atanl' [enabled by default]
     _configtest.c:19:5: warning: conflicting types for built-in function 'frexpl' [enabled by default]
     _configtest.c:20:5: warning: conflicting types for built-in function 'atan2l' [enabled by default]
@@ -978,7 +982,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     _configtest.c:29:5: warning: conflicting types for built-in function 'tanl' [enabled by default]
     _configtest.c:30:5: warning: conflicting types for built-in function 'truncl' [enabled by default]
     _configtest.c:31:5: warning: conflicting types for built-in function 'powl' [enabled by default]
-    _configtest.c:32:5: warning: conflicting types for built-in function 'expl' [enabled by default]
+    _configtest.c:32:5: warning: conflicting types for,10001:0 built-in function 'expl' [enabled by default]
     _configtest.c:33:5: warning: conflicting types for built-in function 'modfl' [enabled by default]
     _configtest.c:34:5: warning: conflicting types for built-in function 'asinhl' [enabled by default]
     gcc -pthread _configtest.o -lm -o _configtest
@@ -1088,7 +1092,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     gcc -pthread _configtest.o -lm -o _configtest
     success!
     removing: _configtest.c _configtest.o _configtest
-    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-,6385:0prototypes -fPIC
+    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
     compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
@@ -1105,7 +1109,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     gcc -pthread _configtest.o -lm -o _configtest
     success!
     removing: _configtest.c _configtest.o _configtest
-    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
+    C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-pro,4577:0totypes -fPIC
     
     compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
@@ -1211,7 +1215,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     #define HAVE_TANL 1
     #define HAVE_SINHL 1
     #define HAVE_COSHL 1
-    #define HAVE_TANHL 1
+    #def,10001:0ine HAVE_TANHL 1
     #define HAVE_FABSL 1
     #define HAVE_FLOORL 1
     #define HAVE_CEILL 1
@@ -1223,7 +1227,7 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     #define HAVE_LOG1PL 1
     #define HAVE_EXPL 1
     #define HAVE_EXPM1L 1
-    #define HAVE_,10001:0ASINL 1
+    #define HAVE_ASINL 1
     #define HAVE_ACOSL 1
     #define HAVE_ATANL 1
     #define HAVE_ASINHL 1
@@ -1395,13 +1399,13 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     building extension "numpy.core.umath_tests" sources
     conv_template:> build/src.linux-sparc64-2.7/numpy/core/src/umath/umath_tests.c
     building extension "numpy.core.multiarray_tests" sources
-    conv_template:> build/src.linux-sparc64-2.7/numpy/core/src/multiarray/multiarray_tests.c
+    conv_template:> build/src.linux-sparc64-2.7/numpy/core/src/multiarray/multiarray_test,6385:0s.c
     building extension "numpy.lib._compiled_base" sources
     building extension "numpy.numarray._capi" sources
     building extension "numpy.fft.fftpack_lite" sources
     building extension "numpy.linalg.lapack_lite" sources
       adding 'numpy/linalg/lapack_litemodule.c' to sources.
-      adding 'numpy/li,6385:0nalg/python_xerbla.c' to sources.
+      adding 'numpy/linalg/python_xerbla.c' to sources.
     building extension "numpy.random.mtrand" sources
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
@@ -1415,6 +1419,8 @@ Downloading/unpacking numpy (from patsy>=0.1.0)
     build_src: building npy-pkg config files
     
 Installing collected packages: patsy, numpy
+  Found existing installation: patsy 0.2.1
+    Not uninstalling patsy at /usr/lib/python2.7/dist-packages, outside environment /home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv
   Running setup.py install for patsy
     
     no previously-included directories found matching 'doc/_build'
@@ -1432,11 +1438,11 @@ Installing collected packages: patsy, numpy
     
     atlas_blas_threads_info:
     Setting PTATLAS=ATLAS
-      libraries ptf77blas,ptcblas,atlas not found in ['/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib', '/usr/local/lib', '/usr/lib', '/usr/lib/sparc-linux-gnu']
+      libraries ptf77blas,ptcblas,atlas not found in ['/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib', '/usr/local/lib', '/usr/lib/atlas-base', '/usr/lib', '/usr/lib/sparc-linux-gnu']
       NOT AVAILABLE
     
     atlas_blas_info:
-      libraries f77blas,cblas,atlas not found in ['/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib', '/usr/local/lib', '/usr/lib', '/usr/lib/sparc-linux-gnu']
+      libraries f77blas,cblas,atlas not found in ['/home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib', '/usr/local/lib', '/usr/lib/atlas-base', '/usr/lib', '/usr/lib/sparc-linux-gnu']
       NOT AVAILABLE
     
     /home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/build/numpy/numpy/distutils/system_info.py:1494: UserWarning:
@@ -1472,6 +1478,8 @@ Installing collected packages: patsy, numpy
       libraries lapack_atlas not found in /home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib
       libraries ptf77blas,ptcblas,atlas not found in /usr/local/lib
       libraries lapack_atlas not found in /usr/local/lib
+      libraries ptf77blas,ptcblas,atlas not found in /usr/lib/atlas-base
+      libraries lapack_atlas not found in /usr/lib/atlas-base
       libraries ptf77blas,ptcblas,atlas not found in /usr/lib
       libraries lapack_atlas not found in /usr/lib
       libraries ptf77blas,ptcblas,atlas not found in /usr/lib/sparc-linux-gnu
@@ -1484,6 +1492,8 @@ Installing collected packages: patsy, numpy
       libraries lapack_atlas not found in /home/buildslave/nd-bb-slave-sparc-wheezy/statsmodels-py2_x-wheezy-sparc/build/venv/lib
       libraries f77blas,cblas,atlas not found in /usr/local/lib
       libraries lapack_atlas not found in /usr/local/lib
+      libraries f77blas,cblas,atlas not found in /usr/lib/atlas-base
+      libraries lapack_atlas not found in /usr/lib/atlas-base
       libraries f77blas,cblas,atlas not found in /usr/lib
       libraries lapack_atlas not found in /usr/lib
       libraries f77blas,cblas,atlas not found in /usr/lib/sparc-linux-gnu
@@ -1513,7 +1523,7 @@ Installing collected packages: patsy, numpy
     unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
     build_src
     building py_modules sources
-    building library "npymath" sources
+    building library "npyma,10001:0th" sources
     customize Gnu95FCompiler
     Found executable /usr/bin/gfortran
     customize Gnu95FCompiler
@@ -1527,7 +1537,7 @@ Installing collected packages: patsy, numpy
     removing: _configtest.c _configtest.o _configtest
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
-    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npym,10001:0ath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
+    compile options: '-Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -c'
     gcc: _configtest.c
     _configtest.c:1:5: warning: conflicting types for built-in function 'exp' [enabled by default]
     gcc -pthread _configtest.o -o _configtest
@@ -1640,7 +1650,7 @@ Installing collected packages: patsy, numpy
     compiling C sources
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
-    compile options: '-Inumpy/core/include -Ibuild/src.linux-sparc64-2.7/numpy/core/include/numpy -Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -Ibuild/src.linux-sparc64-2.7/numpy/core/src/multiarray -Ibuild/src.linux-sparc64-2.7/numpy/core/src/umath -c'
+    compile options: '-Inumpy/core/include -Ibuild/src.linux-sparc64-2.7/numpy/core/include/numpy -Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -In,6385:0umpy/core/include -I/usr/include/python2.7 -Ibuild/src.linux-sparc64-2.7/numpy/core/src/multiarray -Ibuild/src.linux-sparc64-2.7/numpy/core/src/umath -c'
     gcc: numpy/core/src/dummymodule.c
     build/src.linux-sparc64-2.7/numpy/core/include/numpy/__multiarray_api.h:1594:1: warning: '_import_array' defined but not used [-Wunused-function]
     gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-2.7/numpy/core/src/dummymodule.o -Lbuild/temp.linux-sparc64-2.7 -lm -o build/lib.linux-sparc64-2.7/numpy/core/_dummy.so
@@ -1648,7 +1658,7 @@ Installing collected packages: patsy, numpy
     compiling C sources
     C compiler: gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC
     
-    compile options: '-Inumpy/core/include -Ibuild/src.linux-sparc64-2.7/numpy/core/include/num,6385:0py -Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -Ibuild/src.linux-sparc64-2.7/numpy/core/src/multiarray -Ibuild/src.linux-sparc64-2.7/numpy/core/src/umath -c'
+    compile options: '-Inumpy/core/include -Ibuild/src.linux-sparc64-2.7/numpy/core/include/numpy -Inumpy/core/src/private -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/include -I/usr/include/python2.7 -Ibuild/src.linux-sparc64-2.7/numpy/core/src/multiarray -Ibuild/src.linux-sparc64-2.7/numpy/core/src/umath -c'
     gcc: numpy/core/src/multiarray/multiarraymodule_onefile.c
     In file included from numpy/core/src/multiarray/scalartypes.c.src:25:0,
                      from numpy/core/src/multiarray/multiarraymodule_onefile.c:10:
@@ -1697,12 +1707,12 @@ Installing collected packages: patsy, numpy
     numpy/core/src/private/lowlevel_strided_loops.h:112:1: warning: 'PyArray_GetStridedCopySwapPairFn' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:127:1: warning: 'PyArray_GetStridedZeroPadCopyFn' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:140:1: warning: 'PyArray_GetStridedNumericCastFn' declared 'static' but never defined [-Wunused-function]
-    numpy/core/src/private/lowlevel_strided_loops.h:151:1: warning: 'PyArray_GetDTypeCopySwapFn' declared 'static' but never defined [-Wunused-function]
+  ,10001:0  numpy/core/src/private/lowlevel_strided_loops.h:151:1: warning: 'PyArray_GetDTypeCopySwapFn' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:203:1: warning: 'PyArray_GetDTypeTransferFunction' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:227:1: warning: 'PyArray_GetMaskedDTypeTransferFunction' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:247:1: warning: 'PyArray_CastRawArrays' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:296:1: warning: 'PyArray_TransferNDimToStrided' declared 'static' but never defined [-Wunused-function]
-    numpy/core/src/private/lowlevel_strided_loops.h:306:,9538:01: warning: 'PyArray_TransferStridedToNDim' declared 'static' but never defined [-Wunused-function]
+    numpy/core/src/private/lowlevel_strided_loops.h:306:1: warning: 'PyArray_TransferStridedToNDim' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:316:1: warning: 'PyArray_TransferMaskedStridedToNDim' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:343:1: warning: 'PyArray_PrepareOneRawArrayIter' declared 'static' but never defined [-Wunused-function]
     numpy/core/src/private/lowlevel_strided_loops.h:365:1: warning: 'PyArray_PrepareTwoRawArrayIter' declared 'static' but never defined [-Wunused-function]
@@ -1773,7 +1783,7 @@ Installing collected packages: patsy, numpy
     gcc: numpy/random/mtrand/distributions.c
     gcc: numpy/random/mtrand/initarray.c
     build/src.linux-sparc64-2.7/numpy/core/include/numpy/__multiarray_api.h:1594:1: warning: '_import_array' defined but not used [-Wunused-function]
-    gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-2.7/numpy/random/mtrand/mtrand.o build/temp.linux-sparc64-2.7/numpy/random/mtrand/randomkit.o build/temp.linux-sparc64-2.7/numpy/random/mtrand/initarray.o build/temp.linux-sparc64-2.7/numpy/random/mtrand/distributions.o -Lbuild/temp.linux-sparc64-2.7 -o build/lib.linux-sparc64-2.7/numpy/random/mtrand.so
+    gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-2.7/numpy/random/mtrand/mtrand.o build/temp.linux-sparc64-2.7/numpy/random/mtrand/randomkit.o build/temp.linux-sparc64-2.7/numpy/random/mtrand/initarray.o build/temp.linux-sparc64-2.7/numpy/random/mtrand/distributions.o -Lbuild/temp.linux-sparc64-2.7 -o build/lib.linux-sparc64-2.7/numpy/random/m,373:0trand.so
     Creating build/scripts.linux-sparc64-2.7/f2py
       adding 'build/scripts.linux-sparc64-2.7/f2py' to scripts
     changing mode of build/scripts.linux-sparc64-2.7/f2py from 600 to 755
@@ -1782,5 +1792,5 @@ Installing collected packages: patsy, numpy
 Successfully installed patsy numpy
 Cleaning up...
 ,59:2program finished with exit code 0
-elapsedTime=1164.510253
+elapsedTime=1069.234013
 ,
