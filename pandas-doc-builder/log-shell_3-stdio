@@ -444,7 +444,7 @@ pandas/src/parse_helper.h:13:29: warning: 'p_end' may be used uninitialized in t
 cythoning pandas/tslib.pyx to pandas/tslib.c
 building 'pandas.tslib' extension
 sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/tslib.c -o build/temp.linux-sparc64-2.7/pandas/tslib.o
-,2385:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+,2561:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarrayobject.h:17,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/arrayobject.h:15,
                  from pandas/tslib.c:314:
@@ -466,6 +466,9 @@ pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
 pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/tslib.c:326:0:
+pandas/src/period.h: At top level:
+pandas/src/period.h:165:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 pandas/tslib.c: In function '__pyx_f_6pandas_5tslib__check_dts_bounds':
 pandas/tslib.c:14081:5: warning: implicit declaration of function 'cmp_pandas_datetimestruct' [-Wimplicit-function-declaration]
 pandas/tslib.c: At top level:
@@ -488,14 +491,16 @@ pandas/tslib.c:26228:18: warning: '__pyx_pybuffernd_dst_hours.diminfo[0].strides
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
 pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
 ,288:0sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/period.c -o build/temp.linux-sparc64-2.7/pandas/src/period.o
-,780:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
-                 from pandas/src/period.h:11,
+,923:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from pandas/src/period.h:12,
                  from pandas/src/period.c:1:
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
-pandas/src/period.c:304:12: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-pandas/src/period.c:353:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-pandas/src/period.c:377:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-pandas/src/period.c:34:20: warning: 'NULL_AF_INFO' defined but not used [-Wunused-variable]
+In file included from pandas/src/period.c:1:0:
+pandas/src/period.h:165:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/period.c:303:12: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/period.c:352:13: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/period.c:376:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/period.c:33:20: warning: 'NULL_AF_INFO' defined but not used [-Wunused-variable]
 ,946:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-sparc64-2.7/pandas/tslib.o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime_strings.o build/temp.linux-sparc64-2.7/pandas/src/period.o -o build/lib.linux-sparc64-2.7/pandas/tslib.so
 cythoning pandas/parser.pyx to pandas/parser.c
 building 'pandas.parser' extension
@@ -1156,13 +1161,13 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/interval.py to inter
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/api.py to api.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tools.py to tools.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/util.py to util.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/tse,478:0ries/resample.py to resample.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tse,1270:0ries/resample.py to resample.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/timedeltas.py to timedeltas.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/frequencies.py to frequencies.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/converter.py to converter.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/common.py to common.pyc
-,5888:0byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/vars.py to vars.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/vars.py to vars.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/base.py to base.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/mass.py to mass.pyc
@@ -1172,7 +1177,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/util/counter.py to counter.p
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/misc.py to misc.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/terminal.py to terminal.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/testing.py to testing.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/util/clipboard.py to clipboard.pyc
+,5096:0byte-compiling build/bdist.linux-sparc64/egg/pandas/util/clipboard.py to clipboard.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/decorators.py to decorators.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/print_versions.py to print_versions.pyc
@@ -1223,15 +1228,15 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+creating 'dist/pandas-0.12.0_850_g6060e5a-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
 removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg
-Extracting pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages
-Adding pandas 0.12.0-834-g04dbd55 to easy-install.pth file
+Processing pandas-0.12.0_850_g6060e5a-py2.7-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_850_g6060e5a-py2.7-linux-sparc64.egg
+Extracting pandas-0.12.0_850_g6060e5a-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages
+Adding pandas 0.12.0-850-g6060e5a to easy-install.pth file
 
-Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_834_g04dbd55-py2.7-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-834-g04dbd55
+Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_850_g6060e5a-py2.7-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-850-g6060e5a
 Searching for numpy==1.7.1
 Best match: numpy 1.7.1
 Adding numpy 1.7.1 to easy-install.pth file
@@ -1247,7 +1252,7 @@ Best match: python-dateutil 1.5
 python-dateutil 1.5 is already the active version in easy-install.pth
 
 Using /usr/lib/python2.7/dist-packages
-Finished processing dependencies for pandas==0.12.0-834-g04dbd55
+Finished processing dependencies for pandas==0.12.0-850-g6060e5a
 ,59:2program finished with exit code 0
-elapsedTime=3249.137602
+elapsedTime=3326.505519
 ,
