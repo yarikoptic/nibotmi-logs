@@ -12,7 +12,7 @@
   TERM=linux
   USER=buildslave
  using PTY: False
-,7409:0Downloading/unpacking sphinx
+,7035:0Downloading/unpacking sphinx
   Running setup.py egg_info for package sphinx
     
     no previously-included directories found matching 'doc/_build'
@@ -102,21 +102,9 @@ Installing collected packages: sphinx, Pygments, Jinja2, docutils, markupsafe
     
     building 'markupsafe._speedups' extension
     sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c markupsafe/_speedups.c -o build/temp.linux-sparc64-2.7/markupsafe/_speedups.o
-    markupsafe/_speedups.c: In function '__sparc_get_pc_thunk.l7':
-    markupsafe/_speedups.c:214:1: fatal error: error writing to /tmp/ccB8bGgZ.s: No space left on device
-    compilation terminated.
-    ==========================================================================
-    WARNING: The C extension could not be compiled, speedups are not enabled.
-    Failure information, if any, is above.
-    Retrying the build without the C extension now.
-    
-    
-    ==========================================================================
-    WARNING: The C extension could not be compiled, speedups are not enabled.
-    Plain-Python installation succeeded.
-    ==========================================================================
+    sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-sparc64-2.7/markupsafe/_speedups.o -o build/lib.linux-sparc64-2.7/markupsafe/_speedups.so
 Successfully installed sphinx Pygments Jinja2 docutils markupsafe
 Cleaning up...
 ,57:2program finished with exit code 0
-elapsedTime=57.088425
+elapsedTime=57.042119
 ,
