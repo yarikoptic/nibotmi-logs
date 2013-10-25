@@ -12,9 +12,25 @@
   TERM=linux
   USER=buildslave
  using PTY: False
-,293:0New python executable in venv/bin/python
-Installing distribute.............................................................................................................................................................................................done.
-Installing pip...............done.
-,57:2program finished with exit code 0
-elapsedTime=15.070599
+,66:0New python executable in venv/bin/python
+Installing distribute...,1083:1Traceback (most recent call last):
+  File "/usr/bin/virtualenv", line 3, in <module>
+    virtualenv.main()
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 938, in main
+    never_download=options.never_download)
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 1052, in create_environment
+    search_dirs=search_dirs, never_download=never_download)
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 601, in install_distribute
+    search_dirs=search_dirs, never_download=never_download)
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 556, in _install_req
+    cwd = tempfile.mkdtemp()
+  File "/usr/lib/python2.7/tempfile.py", line 317, in mkdtemp
+    dir = gettempdir()
+  File "/usr/lib/python2.7/tempfile.py", line 261, in gettempdir
+    tempdir = _get_default_tempdir()
+  File "/usr/lib/python2.7/tempfile.py", line 208, in _get_default_tempdir
+    ("No usable temporary directory found in %s" % dirlist))
+IOError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/usr/share/python-virtualenv']
+,56:2program finished with exit code 1
+elapsedTime=1.105451
 ,
