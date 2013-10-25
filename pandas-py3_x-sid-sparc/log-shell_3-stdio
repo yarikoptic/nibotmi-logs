@@ -331,7 +331,7 @@ pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined b
 cythoning pandas/algos.pyx to pandas/algos.c
 building 'pandas.algos' extension
 gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/algos.c -o build/temp.linux-sparc64-3.2/pandas/algos.o
-,3113:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+,3277:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
                  from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
                  from pandas/algos.c:314:
@@ -366,6 +366,709 @@ pandas/algos.c:117797:213: warning: '__pyx_v_vclose' may be used uninitialized i
 pandas/algos.c:117907:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
 pandas/algos.c:117929:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
 pandas/algos.c:117764:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
-,183:2
-remoteFailed: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion.
-],
+pandas/algos.c: In function 'PyInit_algos':
+pandas/algos.c:149849:16: note: variable tracking size limit exceeded with -fvar-tracking-assignments, retrying without
+,585:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-3.2/pandas/algos.o -o build/lib.linux-sparc64-3.2/pandas/algos.cpython-32mu.so
+cythoning pandas/lib.pyx to pandas/lib.c
+building 'pandas.lib' extension
+gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/lib.c -o build/temp.linux-sparc64-3.2/pandas/lib.o
+,956:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/lib.c:314:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+pandas/lib.c: In function '__pyx_pw_6pandas_3lib_53maybe_booleans_to_slice':
+pandas/lib.c:10029:15: warning: '__pyx_v_end' may be used uninitialized in this function [-Wuninitialized]
+pandas/lib.c:9742:14: note: '__pyx_v_end' was declared here
+pandas/lib.c:10027:15: warning: '__pyx_v_start' may be used uninitialized in this function [-Wuninitialized]
+pandas/lib.c:9741:14: note: '__pyx_v_start' was declared here
+,591:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-3.2/pandas/lib.o -o build/lib.linux-sparc64-3.2/pandas/lib.cpython-32mu.so
+cythoning pandas/tslib.pyx to pandas/tslib.c
+building 'pandas.tslib' extension
+gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/tslib.c -o build/temp.linux-sparc64-3.2/pandas/tslib.o
+,1968:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/tslib.c:314:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+In file included from pandas/src/klib/khash_python.h:3:0,
+                 from pandas/tslib.c:325:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/tslib.c:325:0:
+pandas/src/klib/khash_python.h: In function 'kh_del_float64':
+pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
+pandas/src/klib/khash_python.h:38:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
+pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
+pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
+pandas/tslib.c: At top level:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/__ufunc_api.h:236:1: warning: '_import_umath' defined but not used [-Wunused-function]
+pandas/tslib.c:7901:18: warning: '__pyx_f_6pandas_5tslib__tz_format' defined but not used [-Wunused-function]
+,383:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime.o
+,671:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/datetime/np_datetime.c:18:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+/usr/include/python3.2mu/datetime.h:185:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
+,399:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime_strings.o
+,1139:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/datetime/np_datetime_strings.c:17:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+pandas/src/datetime/np_datetime_strings.c: In function 'make_iso_8601_datetime':
+pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
+pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
+pandas/src/datetime/np_datetime_strings.c: At top level:
+pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
+,355:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/period.c -o build/temp.linux-sparc64-3.2/pandas/src/period.o
+,398:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from pandas/src/period.h:11,
+                 from pandas/src/period.c:1:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+,839:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-3.2/pandas/tslib.o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime_strings.o build/temp.linux-sparc64-3.2/pandas/src/period.o -o build/lib.linux-sparc64-3.2/pandas/tslib.cpython-32mu.so
+cythoning pandas/parser.pyx to pandas/parser.c
+building 'pandas.parser' extension
+creating build/temp.linux-sparc64-3.2/pandas/src/parser
+gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/parser.c -o build/temp.linux-sparc64-3.2/pandas/parser.o
+,2339:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/parser.c:316:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+In file included from pandas/src/klib/khash_python.h:3:0,
+                 from pandas/parser.c:319:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/parser.c:319:0:
+pandas/src/klib/khash_python.h: In function 'kh_del_float64':
+pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
+pandas/src/klib/khash_python.h:38:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
+pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
+pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/parser.c:322:0:
+pandas/src/parser/tokenizer.h: At top level:
+pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/__ufunc_api.h:236:1: warning: '_import_umath' defined but not used [-Wunused-function]
+pandas/parser.c:18251:18: warning: '__pyx_f_6pandas_6parser__get_na_mask' defined but not used [-Wunused-function]
+pandas/parser.c: In function '__pyx_f_6pandas_6parser_10TextReader__get_header':
+pandas/parser.c:6400:61: warning: '__pyx_v_data_line' may be used uninitialized in this function [-Wuninitialized]
+,375:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/parser/tokenizer.c -o build/temp.linux-sparc64-3.2/pandas/src/parser/tokenizer.o
+,1151:1In file included from pandas/src/parser/tokenizer.h:35:0,
+                 from pandas/src/parser/tokenizer.c:20:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/src/parser/tokenizer.c:20:0:
+pandas/src/parser/tokenizer.h: At top level:
+pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/parser/tokenizer.c:166:11: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/parser/tokenizer.c: In function 'parser_buffer_bytes':
+pandas/src/parser/tokenizer.c:562:11: warning: unused variable 'src' [-Wunused-variable]
+pandas/src/parser/tokenizer.c: In function 'to_longlong_thousands':
+pandas/src/parser/tokenizer.c:1725:11: warning: unused variable 'p_end' [-Wunused-variable]
+,361:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/parser/io.c -o build/temp.linux-sparc64-3.2/pandas/src/parser/io.o
+,808:1In file included from pandas/src/parser/tokenizer.h:35:0,
+                 from pandas/src/parser/io.h:2,
+                 from pandas/src/parser/io.c:1:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/src/parser/io.h:2:0,
+                 from pandas/src/parser/io.c:1:
+pandas/src/parser/tokenizer.h: At top level:
+pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+,728:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-3.2/pandas/parser.o build/temp.linux-sparc64-3.2/pandas/src/parser/tokenizer.o build/temp.linux-sparc64-3.2/pandas/src/parser/io.o -o build/lib.linux-sparc64-3.2/pandas/parser.cpython-32mu.so
+cythoning pandas/hashtable.pyx to pandas/hashtable.c
+building 'pandas.hashtable' extension
+gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/hashtable.c -o build/temp.linux-sparc64-3.2/pandas/hashtable.o
+,1697:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/hashtable.c:316:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+In file included from pandas/src/klib/khash_python.h:3:0,
+                 from pandas/hashtable.c:318:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/hashtable.c:318:0:
+pandas/src/klib/khash_python.h: In function 'kh_del_float64':
+pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
+pandas/src/klib/khash_python.h:38:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
+pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
+pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
+,594:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-3.2/pandas/hashtable.o -o build/lib.linux-sparc64-3.2/pandas/hashtable.cpython-32mu.so
+cythoning pandas/src/sparse.pyx to pandas/src/sparse.c
+building 'pandas._sparse' extension
+gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/sparse.c -o build/temp.linux-sparc64-3.2/pandas/src/sparse.o
+,548:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/sparse.c:314:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+,1326:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-3.2/pandas/src/sparse.o -lm -o build/lib.linux-sparc64-3.2/pandas/_sparse.cpython-32mu.so
+building 'pandas.json' extension
+creating build/temp.linux-sparc64-3.2/pandas/src/ujson
+creating build/temp.linux-sparc64-3.2/pandas/src/ujson/python
+creating build/temp.linux-sparc64-3.2/pandas/src/ujson/lib
+gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/ujson/python/ujson.c -o build/temp.linux-sparc64-3.2/pandas/src/ujson/python/ujson.o -D_GNU_SOURCE
+gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/ujson/python/objToJSON.c -o build/temp.linux-sparc64-3.2/pandas/src/ujson/python/objToJSON.o -D_GNU_SOURCE
+,1086:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/ujson/python/objToJSON.c:40:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+pandas/src/ujson/python/objToJSON.c: In function 'initObjToJSON':
+pandas/src/ujson/python/objToJSON.c:165:3: warning: return makes integer from pointer without a cast [enabled by default]
+pandas/src/ujson/python/objToJSON.c: At top level:
+pandas/src/ujson/python/objToJSON.c:175:14: warning: 'PyIntToINT64' defined but not used [-Wunused-function]
+pandas/src/ujson/python/objToJSON.c: In function 'initObjToJSON':
+pandas/src/ujson/python/objToJSON.c:166:1: warning: control reaches end of non-void function [-Wreturn-type]
+,472:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/ujson/python/JSONtoObj.c -o build/temp.linux-sparc64-3.2/pandas/src/ujson/python/JSONtoObj.o -D_GNU_SOURCE
+,563:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/ujson/python/JSONtoObj.c:41:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+,472:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/ujson/lib/ultrajsonenc.c -o build/temp.linux-sparc64-3.2/pandas/src/ujson/lib/ultrajsonenc.o -D_GNU_SOURCE
+,213:1pandas/src/ujson/lib/ultrajsonenc.c:147:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsonenc.c:470:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+,472:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/ujson/lib/ultrajsondec.c -o build/temp.linux-sparc64-3.2/pandas/src/ujson/lib/ultrajsondec.o -D_GNU_SOURCE
+,1272:1pandas/src/ujson/lib/ultrajsondec.c:68:40: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:91:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:108:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:309:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:329:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:351:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:371:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:426:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:676:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:744:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:833:1: warning: 'fastcall' attribute directive ignored [-Wattributes]
+pandas/src/ujson/lib/ultrajsondec.c:78:13: warning: 'ClearError' defined but not used [-Wunused-function]
+,468:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime.o -D_GNU_SOURCE
+,671:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/datetime/np_datetime.c:18:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+/usr/include/python3.2mu/datetime.h:185:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
+,484:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime_strings.o -D_GNU_SOURCE
+,1139:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/datetime/np_datetime_strings.c:17:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+pandas/src/datetime/np_datetime_strings.c: In function 'make_iso_8601_datetime':
+pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
+pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
+pandas/src/datetime/np_datetime_strings.c: At top level:
+pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
+,10001:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-3.2/pandas/src/ujson/python/ujson.o build/temp.linux-sparc64-3.2/pandas/src/ujson/python/objToJSON.o build/temp.linux-sparc64-3.2/pandas/src/ujson/python/JSONtoObj.o build/temp.linux-sparc64-3.2/pandas/src/ujson/lib/ultrajsonenc.o build/temp.linux-sparc64-3.2/pandas/src/ujson/lib/ultrajsondec.o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime_strings.o -o build/lib.linux-sparc64-3.2/pandas/json.cpython-32mu.so
+creating build/bdist.linux-sparc64
+creating build/bdist.linux-sparc64/egg
+creating build/bdist.linux-sparc64/egg/pandas
+creating build/bdist.linux-sparc64/egg/pandas/sparse
+copying build/lib.linux-sparc64-3.2/pandas/sparse/series.py -> build/bdist.linux-sparc64/egg/pandas/sparse
+copying build/lib.linux-sparc64-3.2/pandas/sparse/list.py -> build/bdist.linux-sparc64/egg/pandas/sparse
+creating build/bdist.linux-sparc64/egg/pandas/sparse/tests
+copying build/lib.linux-sparc64-3.2/pandas/sparse/tests/test_sparse.py -> build/bdist.linux-sparc64/egg/pandas/sparse/tests
+copying build/lib.linux-sparc64-3.2/pandas/sparse/tests/test_array.py -> build/bdist.linux-sparc64/egg/pandas/sparse/tests
+copying build/lib.linux-sparc64-3.2/pandas/sparse/tests/test_libsparse.py -> build/bdist.linux-sparc64/egg/pandas/sparse/tests
+copying build/lib.linux-sparc64-3.2/pandas/sparse/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/sparse/tests
+copying build/lib.linux-sparc64-3.2/pandas/sparse/tests/test_list.py -> build/bdist.linux-sparc64/egg/pandas/sparse/tests
+copying build/lib.linux-sparc64-3.2/pandas/sparse/panel.py -> build/bdist.linux-sparc64/egg/pandas/sparse
+copying build/lib.linux-sparc64-3.2/pandas/sparse/api.py -> build/bdist.linux-sparc64/egg/pandas/sparse
+copying build/lib.linux-sparc64-3.2/pandas/sparse/__init__.py -> build/bdist.linux-sparc64/egg/pandas/sparse
+copying build/lib.linux-sparc64-3.2/pandas/sparse/frame.py -> build/bdist.linux-sparc64/egg/pandas/sparse
+copying build/lib.linux-sparc64-3.2/pandas/sparse/array.py -> build/bdist.linux-sparc64/egg/pandas/sparse
+copying build/lib.linux-sparc64-3.2/pandas/_sparse.cpython-32mu.so -> build/bdist.linux-sparc64/egg/pandas
+creating build/bdist.linux-sparc64/egg/pandas/tools
+copying build/lib.linux-sparc64-3.2/pandas/tools/pivot.py -> build/bdist.linux-sparc64/egg/pandas/tools
+creating build/bdist.linux-sparc64/egg/pandas/tools/tests
+copying build/lib.linux-sparc64-3.2/pandas/tools/tests/test_merge.py -> build/bdist.linux-sparc64/egg/pandas/tools/tests
+copying build/lib.linux-sparc64-3.2/pandas/tools/tests/test_tools.py -> build/bdist.linux-sparc64/egg/pandas/tools/tests
+copying build/lib.linux-sparc64-3.2/pandas/tools/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tools/tests
+copying build/lib.linux-sparc64-3.2/pandas/tools/tests/cut_data.csv -> build/bdist.linux-sparc64/egg/pandas/tools/tests
+copying build/lib.linux-sparc64-3.2/pandas/tools/tests/test_tile.py -> build/bdist.linux-sparc64/egg/pandas/tools/tests
+copying build/lib.linux-sparc64-3.2/pandas/tools/tests/test_util.py -> build/bdist.linux-sparc64/egg/pandas/tools/tests
+copying build/lib.linux-sparc64-3.2/pandas/tools/tests/test_pivot.py -> build/bdist.linux-sparc64/egg/pandas/tools/tests
+copying build/lib.linux-sparc64-3.2/pandas/tools/plotting.py -> build/bdist.linux-sparc64/egg/pandas/tools
+copying build/lib.linux-sparc64-3.2/pandas/tools/tile.py -> build/bdist.linux-sparc64/egg/pandas/tools
+copying build/lib.linux-sparc64-3.2/pandas/tools/util.py -> build/bdist.linux-sparc64/egg/pandas/tools
+copying build/lib.linux-sparc64-3.2/pandas/tools/merge.py -> build/bdist.linux-sparc64/egg/pandas/tools
+copying build/lib.linux-sparc64-3.2/pandas/tools/rplot.py -> build/bdist.linux-sparc64/egg/pandas/tools
+copying build/lib.linux-sparc64-3.2/pandas/tools/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tools
+copying build/lib.linux-sparc64-3.2/pandas/tools/describe.py -> build/bdist.linux-sparc64/egg/pandas/tools
+creating build/bdist.linux-sparc64/egg/pandas/compat
+copying build/lib.linux-sparc64-3.2/pandas/compat/__init__.py -> build/bdist.linux-sparc64/egg/pandas/compat
+copying build/lib.linux-sparc64-3.2/pandas/compat/scipy.py -> build/bdist.linux-sparc64/egg/pandas/compat
+creating build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/datetools.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/expressions.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/series.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/index.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/sparse.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/categorical.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/config_init.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/nanops.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/format.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/strings.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/internals.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/panel.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/common.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/daterange.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/api.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/config.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/panel4d.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/generic.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/__init__.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/panelnd.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/matrix.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/frame.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/base.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/groupby.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/indexing.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/array.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/reshape.py -> build/bdist.linux-sparc64/egg/pandas/core
+copying build/lib.linux-sparc64-3.2/pandas/core/algorithms.py -> build/bdist.linux-sparc64/egg/pandas/core
+creating build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/json.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/excel.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/pickle.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/parsers.py -> build/bdist.linux-sparc64/egg/pandas/io
+creating build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_excel.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+creating build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_json/test_ujson.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_json/test_pandas.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_json/__init__.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_wb.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_parsers.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+creating build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/test2.xlsx -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/test2.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/test.xlsx -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/banklist.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/stata4.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/spam.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/banklist.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/unicode_series.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/test1.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/valid_markup.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/stata2.dta -> build/bdist.linux-s,10001:0parc64/egg/pandas/io/tests/data
+creating build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle
+creating build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle/0.11.0
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_pickle/0.11.0/x86_64_linux_2.7.3.pickle -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle/0.11.0
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_pickle/0.11.0/x86_64_linux_3.3.0.pickle -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle/0.11.0
+creating build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle/0.10.1
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_pickle/0.10.1/AMD64_windows_2.7.3.pickle -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle/0.10.1
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_pickle/0.10.1/x86_64_linux_2.7.3.pickle -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle/0.10.1
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/test.xls -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/stata1.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/test2.xls -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/test3.xls -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/stata3.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/stata3.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/salary.table -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/utf16_ex.txt -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+creating build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_hdf/pytables_native2.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_hdf/legacy.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_hdf/legacy_table_0.11.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_hdf/pytables_native.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_hdf/legacy_table.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/data/legacy_hdf/legacy_0.10.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_data.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_clipboard.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_pickle.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_pytables.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_html.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/generate_legacy_pickles.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_cparser.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_ga.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_sql.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_date_converters.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/tests/test_stata.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-3.2/pandas/io/common.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/api.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/clipboard.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/date_converters.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/html.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/auth.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/wb.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/sql.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/stata.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/__init__.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/ga.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/data.py -> build/bdist.linux-sparc64/egg/pandas/io
+copying build/lib.linux-sparc64-3.2/pandas/io/pytables.py -> build/bdist.linux-sparc64/egg/pandas/io
+creating build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_common.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_graphics.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_expressions.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_rplot.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_internals.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_categorical.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_indexing.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_panel4d.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_ndframe.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_strings.py -> build/bdist.linux-sparc64/egg/pandas/tests
+creating build/bdist.linux-sparc64/egg/pandas/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tests/data/tips.csv -> build/bdist.linux-sparc64/egg/pandas/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tests/data/unicode_series.csv -> build/bdist.linux-sparc64/egg/pandas/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tests/data/iris.csv -> build/bdist.linux-sparc64/egg/pandas/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tests/data/multiindex_v1.pickle -> build/bdist.linux-sparc64/egg/pandas/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tests/data/mindex_073.pickle -> build/bdist.linux-sparc64/egg/pandas/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_reshape.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_multilevel.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_algos.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_tests.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_stats.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_groupby.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_compat.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_series.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_tseries.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_panel.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_config.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_format.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_frame.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_index.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_panelnd.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/version.py -> build/bdist.linux-sparc64/egg/pandas
+copying build/lib.linux-sparc64-3.2/pandas/parser.cpython-32mu.so -> build/bdist.linux-sparc64/egg/pandas
+creating build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/index.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+creating build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_timeseries.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_converter.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_cursor.py -> build/bdist.linux-sparc64/egg/pandas/ts,10001:0eries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_frequencies.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+creating build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/data/daterange_073.pickle -> build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/data/series.pickle -> build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/data/frame.pickle -> build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/data/series_daterange0.pickle -> build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_period.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_daterange.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_offsets.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_resample.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_timezones.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_plotting.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_util.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/plotting.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/offsets.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/period.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/interval.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/api.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tools.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/util.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/resample.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/frequencies.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-3.2/pandas/tseries/converter.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+creating build/bdist.linux-sparc64/egg/pandas/rpy
+copying build/lib.linux-sparc64-3.2/pandas/rpy/common.py -> build/bdist.linux-sparc64/egg/pandas/rpy
+copying build/lib.linux-sparc64-3.2/pandas/rpy/vars.py -> build/bdist.linux-sparc64/egg/pandas/rpy
+copying build/lib.linux-sparc64-3.2/pandas/rpy/__init__.py -> build/bdist.linux-sparc64/egg/pandas/rpy
+copying build/lib.linux-sparc64-3.2/pandas/rpy/base.py -> build/bdist.linux-sparc64/egg/pandas/rpy
+copying build/lib.linux-sparc64-3.2/pandas/rpy/mass.py -> build/bdist.linux-sparc64/egg/pandas/rpy
+copying build/lib.linux-sparc64-3.2/pandas/info.py -> build/bdist.linux-sparc64/egg/pandas
+copying build/lib.linux-sparc64-3.2/pandas/tslib.cpython-32mu.so -> build/bdist.linux-sparc64/egg/pandas
+copying build/lib.linux-sparc64-3.2/pandas/algos.cpython-32mu.so -> build/bdist.linux-sparc64/egg/pandas
+copying build/lib.linux-sparc64-3.2/pandas/json.cpython-32mu.so -> build/bdist.linux-sparc64/egg/pandas
+copying build/lib.linux-sparc64-3.2/pandas/index.cpython-32mu.so -> build/bdist.linux-sparc64/egg/pandas
+copying build/lib.linux-sparc64-3.2/pandas/__init__.py -> build/bdist.linux-sparc64/egg/pandas
+copying build/lib.linux-sparc64-3.2/pandas/lib.cpython-32mu.so -> build/bdist.linux-sparc64/egg/pandas
+creating build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-3.2/pandas/util/counter.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-3.2/pandas/util/misc.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-3.2/pandas/util/terminal.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-3.2/pandas/util/testing.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-3.2/pandas/util/clipboard.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-3.2/pandas/util/decorators.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-3.2/pandas/util/__init__.py -> build/bdist.linux-sparc64/egg/pandas/util
+creating build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/moments.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/misc.py -> build/bdist.linux-sparc64/egg/pandas/stats
+creating build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.2/pandas/stats/tests/test_math.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.2/pandas/stats/tests/test_moments.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.2/pandas/stats/tests/common.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.2/pandas/stats/tests/test_fama_macbeth.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.2/pandas/stats/tests/test_var.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.2/pandas/stats/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.2/pandas/stats/tests/test_ols.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.2/pandas/stats/fama_macbeth.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/common.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/plm.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/api.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/interface.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/math.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/ols.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/__init__.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/stats/var.py -> build/bdist.linux-sparc64/egg/pandas/stats
+copying build/lib.linux-sparc64-3.2/pandas/hashtable.cpython-32mu.so -> build/bdist.linux-sparc64/egg/pandas
+creating build/bdist.linux-sparc64/egg/pandas/sandbox
+copying build/lib.linux-sparc64-3.2/pandas/sandbox/qtpandas.py -> build/bdist.linux-sparc64/egg/pandas/sandbox
+copying build/lib.linux-sparc64-3.2/pandas/sandbox/__init__.py -> build/bdist.linux-sparc64/egg/pandas/sandbox
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/series.py to series.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/list.py to list.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/tests/test_sparse.py to test_sparse.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/tests/test_array.py to test_array.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/tests/test_libsparse.py to test_libsparse.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/tests/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/tests/test_list.py to test_list.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/panel.py to panel.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/api.py to api.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/frame.py to frame.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/array.py to array.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/pivot.py to pivot.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_merge.py to test_merge.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_tools.py to test_tools.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_tile.py to test_tile.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_util.py to test_util.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_pivot.py to test_pivot.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/plotting.py to plotting.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tile.py to tile.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/util.py to util.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/merge.py to merge.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/rplot.py to rplot.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/__init__.py to __init__.cpython-32.pyc
+byte-comp,2629:0iling build/bdist.linux-sparc64/egg/pandas/tools/describe.py to describe.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/scipy.py to scipy.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/datetools.py to datetools.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/expressions.py to expressions.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/series.py to series.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/index.py to index.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/sparse.py to sparse.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/categorical.py to categorical.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/config_init.py to config_init.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/nanops.py to nanops.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/format.py to format.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/strings.py to strings.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/internals.py to internals.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/panel.py to panel.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/common.py to common.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/daterange.py to daterange.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/api.py to api.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/config.py to config.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/panel4d.py to panel4d.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/generic.py to generic.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/panelnd.py to panelnd.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/matrix.py to matrix.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/frame.py to frame.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/base.py to base.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/groupby.py to groupby.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/indexing.py to indexing.cpython-32.pyc
+,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/core/array.py to array.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/reshape.py to reshape.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/algorithms.py to algorithms.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/json.py to json.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/excel.py to excel.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/pickle.py to pickle.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/parsers.py to parsers.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_excel.py to test_excel.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_ujson.py to test_ujson.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_pandas.py to test_pandas.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_wb.py to test_wb.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_parsers.py to test_parsers.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_data.py to test_data.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_clipboard.py to test_clipboard.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_pickle.py to test_pickle.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_pytables.py to test_pytables.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_html.py to test_html.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/generate_legacy_pickles.py to generate_legacy_pickles.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_cparser.py to test_cparser.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_ga.py to test_ga.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_sql.py to test_sql.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_date_converters.py to test_date_converters.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_stata.py to test_stata.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/common.py to common.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/api.py to api.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/clipboard.py to clipboard.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/date_converters.py to date_converters.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/html.py to html.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/auth.py to auth.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/wb.py to wb.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/sql.py to sql.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/stata.py to stata.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/ga.py to ga.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/data.py to data.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/pytables.py to pytables.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_common.py to test_common.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_graphics.py to test_graphics.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_expressions.py to test_expressions.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_rplot.py to test_rplot.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_internals.py to test_internals.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_categorical.py to test_categorical.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_indexing.py to test_indexing.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_panel4d.py to test_panel4d.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_ndframe.py to test_ndframe.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_strings.py to test_strings.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_reshape.py to test_reshape.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_multilevel.py to test_multilevel.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_algos.py to test_algos.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_tests.py to test_tests.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_stats.py to test_stats.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_groupby.py to test_groupby.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_compat.py to test_compat.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_series.py to test_series.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_tseries.py to test_tseries.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_panel.py to test_panel.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_config.py to test_config.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_format.py to test_format.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_frame.py to test_frame.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_index.py to test_index.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_panelnd.py to test_panelnd.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/version.py to version.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/index.py to index.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_timeseries.py to test_timeseries.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_converter.py to test_converter.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_cursor.py to test_cursor.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_frequencies.py to test_frequencies.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_period.py to test_period.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_daterange.py to test_daterange.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_offsets.py to test_offsets.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_resample.py to test_resample.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_timezones.py to test_timezones.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_plotting.py to test_plotting.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tests/test_util.py to test_util.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/plotting.py to plotting.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/offsets.py to offsets.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/period.py to period.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/interval.py to interval.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/api.py to api.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tools.py to tools.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/util.py to util.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/resample.py to resample.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/frequencies.py to frequencies.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/converter.py to converter.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/common.py to common.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/vars.py to vars.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/base.py to base.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/mass.py to mass.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/info.py to info.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/util/counter.py to counter.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/util/misc.py to misc.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/util/terminal.py to terminal.cpython-32.pyc
+byte-compiling build/bdi,4166:0st.linux-sparc64/egg/pandas/util/testing.py to testing.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/util/clipboard.py to clipboard.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/util/decorators.py to decorators.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/util/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/moments.py to moments.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/misc.py to misc.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_math.py to test_math.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_moments.py to test_moments.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/common.py to common.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_fama_macbeth.py to test_fama_macbeth.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_var.py to test_var.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_ols.py to test_ols.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/fama_macbeth.py to fama_macbeth.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/common.py to common.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/plm.py to plm.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/api.py to api.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/interface.py to interface.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/math.py to math.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/ols.py to ols.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/__init__.py to __init__.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/var.py to var.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sandbox/qtpandas.py to qtpandas.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/sandbox/__init__.py to __init__.cpython-32.pyc
+creating stub loader for pandas/index.cpython-32mu.so
+creating stub loader for pandas/algos.cpython-32mu.so
+creating stub loader for pandas/lib.cpython-32mu.so
+creating stub loader for pandas/tslib.cpython-32mu.so
+creating stub loader for pandas/parser.cpython-32mu.so
+creating stub loader for pandas/hashtable.cpython-32mu.so
+creating stub loader for pandas/_sparse.cpython-32mu.so
+creating stub loader for pandas/json.cpython-32mu.so
+byte-compiling build/bdist.linux-sparc64/egg/pandas/index.py to index.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/algos.py to algos.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/lib.py to lib.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tslib.py to tslib.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/parser.py to parser.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/hashtable.py to hashtable.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/_sparse.py to _sparse.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/json.py to json.cpython-32.pyc
+creating build/bdist.linux-sparc64/egg/EGG-INFO
+copying pandas.egg-info/PKG-INFO -> build/bdist.linux-sparc64/egg/EGG-INFO
+copying pandas.egg-info/SOURCES.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
+copying pandas.egg-info/dependency_links.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
+copying pandas.egg-info/not-zip-safe -> build/bdist.linux-sparc64/egg/EGG-INFO
+copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
+copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
+writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
+creating dist
+creating 'dist/pandas-0.12.0_146_g9cba0de-py3.2-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+,1256:0removing 'build/bdist.linux-sparc64/egg' (and everything under it)
+Processing pandas-0.12.0_146_g9cba0de-py3.2-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_146_g9cba0de-py3.2-linux-sparc64.egg
+Extracting pandas-0.12.0_146_g9cba0de-py3.2-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages
+Adding pandas 0.12.0-146-g9cba0de to easy-install.pth file
+
+Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_146_g9cba0de-py3.2-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-146-g9cba0de
+Searching for numpy==1.7.1
+Best match: numpy 1.7.1
+Adding numpy 1.7.1 to easy-install.pth file
+
+Using /usr/lib/python3/dist-packages
+Searching for pytz==2012c
+Best match: pytz 2012c
+pytz 2012c is already the active version in easy-install.pth
+
+Using /usr/lib/python3/dist-packages
+Searching for python-dateutil==2.0
+Best match: python-dateutil 2.0
+python-dateutil 2.0 is already the active version in easy-install.pth
+
+Using /usr/lib/python3/dist-packages
+Finished processing dependencies for pandas==0.12.0-146-g9cba0de
+,59:2program finished with exit code 0
+elapsedTime=3013.623204
+,
