@@ -16,14 +16,14 @@
 running bdist_egg
 running egg_info
 creating pandas.egg-info
-writing dependency_links to pandas.egg-info/dependency_links.txt
+writing pandas.egg-info/PKG-INFO
 writing requirements to pandas.egg-info/requires.txt
+writing dependency_links to pandas.egg-info/dependency_links.txt
+writing top-level names to pandas.egg-info/top_level.txt
 writing pandas.egg-info/PKG-INFO
 writing top-level names to pandas.egg-info/top_level.txt
-writing dependency_links to pandas.egg-info/dependency_links.txt
 writing requirements to pandas.egg-info/requires.txt
-writing pandas.egg-info/PKG-INFO
-writing top-level names to pandas.egg-info/top_level.txt
+writing dependency_links to pandas.egg-info/dependency_links.txt
 writing manifest file 'pandas.egg-info/SOURCES.txt'
 reading manifest file 'pandas.egg-info/SOURCES.txt'
 reading manifest template 'MANIFEST.in'
@@ -283,7 +283,7 @@ copying pandas/io/tests/data/stata3.csv -> build/lib.linux-sparc64-3.3/pandas/io
 copying pandas/io/tests/data/stata4_v13.dta -> build/lib.linux-sparc64-3.3/pandas/io/tests/data
 copying pandas/io/tests/data/stata4.dta -> build/lib.linux-sparc64-3.3/pandas/io/tests/data
 copying pandas/io/tests/data/stata1_v13.dta -> build/lib.linux-sparc64-3.3/pandas/io/tests/data
-copying pandas/io/,2904:0tests/data/stata1_encoding.dta -> build/lib.linux-sparc64-3.3/pandas/io/tests/data
+copying pandas/io/,2949:0tests/data/stata1_encoding.dta -> build/lib.linux-sparc64-3.3/pandas/io/tests/data
 copying pandas/io/tests/data/stata2_v13.dta -> build/lib.linux-sparc64-3.3/pandas/io/tests/data
 copying pandas/io/tests/data/stata2.dta -> build/lib.linux-sparc64-3.3/pandas/io/tests/data
 copying pandas/io/tests/data/stata1.dta -> build/lib.linux-sparc64-3.3/pandas/io/tests/data
@@ -315,127 +315,10 @@ copying pandas/tseries/tests/data/series.pickle -> build/lib.linux-sparc64-3.3/p
 copying pandas/tseries/tests/data/frame.pickle -> build/lib.linux-sparc64-3.3/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/series_daterange0.pickle -> build/lib.linux-sparc64-3.3/pandas/tseries/tests/data
 running build_ext
-,726:0cythoning pandas/parser.pyx to pandas/parser.c
-building 'pandas.parser' extension
+cythoning pandas/algos.pyx to pandas/algos.c
+,571:0building 'pandas.algos' extension
 creating build/temp.linux-sparc64-3.3
 creating build/temp.linux-sparc64-3.3/pandas
-creating build/temp.linux-sparc64-3.3/pandas/src
-creating build/temp.linux-sparc64-3.3/pandas/src/parser
-sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/parser.c -o build/temp.linux-sparc64-3.3/pandas/parser.o
-,2577:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
-                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
-                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
-                 from pandas/parser.c:315:
-/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
-In file included from pandas/src/klib/khash_python.h:3:0,
-                 from pandas/parser.c:318:
-pandas/src/klib/khash.h: In function 'kh_del_str':
-pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash.h: In function 'kh_del_int32':
-pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash.h: In function 'kh_del_int64':
-pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/parser.c:318:0:
-pandas/src/klib/khash_python.h: In function 'kh_del_float64':
-pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
-pandas/src/klib/khash_python.h:38:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
-pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
-pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/parser.c:321:0:
-pandas/src/parser/tokenizer.h: At top level:
-pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-In file included from pandas/parser.c:322:0:
-pandas/src/parser/io.h:33:0: warning: "HAVE_MMAP" redefined [enabled by default]
-/usr/include/sparc-linux-gnu/python3.3m/pyconfig.h:575:0: note: this is the location of the previous definition
-/usr/lib/python3/dist-packages/numpy/core/include/numpy/__ufunc_api.h:236:1: warning: '_import_umath' defined but not used [-Wunused-function]
-pandas/parser.c:18183:18: warning: '__pyx_f_6pandas_6parser__get_na_mask' defined but not used [-Wunused-function]
-pandas/parser.c: In function '__pyx_f_6pandas_6parser_10TextReader__get_header':
-pandas/parser.c:6372:61: warning: '__pyx_v_data_line' may be used uninitialized in this function [-Wuninitialized]
-,484:0sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/parser/tokenizer.c -o build/temp.linux-sparc64-3.3/pandas/src/parser/tokenizer.o
-,1324:1In file included from pandas/src/parser/tokenizer.h:35:0,
-                 from pandas/src/parser/tokenizer.c:20:
-pandas/src/klib/khash.h: In function 'kh_del_str':
-pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash.h: In function 'kh_del_int32':
-pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash.h: In function 'kh_del_int64':
-pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/src/parser/tokenizer.c:20:0:
-pandas/src/parser/tokenizer.h: At top level:
-pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-pandas/src/parser/tokenizer.c:166:11: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-pandas/src/parser/tokenizer.c: In function 'parser_buffer_bytes':
-pandas/src/parser/tokenizer.c:562:11: warning: unused variable 'src' [-Wunused-variable]
-pandas/src/parser/tokenizer.c: In function 'to_longlong_thousands':
-pandas/src/parser/tokenizer.c:1725:11: warning: unused variable 'p_end' [-Wunused-variable]
-pandas/src/parser/tokenizer.c: In function 'xstrtod':
-pandas/src/parser/tokenizer.c:1900:5: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
-,470:0sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/parser/io.c -o build/temp.linux-sparc64-3.3/pandas/src/parser/io.o
-,1051:1In file included from pandas/src/parser/tokenizer.h:35:0,
-                 from pandas/src/parser/io.h:2,
-                 from pandas/src/parser/io.c:1:
-pandas/src/klib/khash.h: In function 'kh_del_str':
-pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash.h: In function 'kh_del_int32':
-pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash.h: In function 'kh_del_int64':
-pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/src/parser/io.h:2:0,
-                 from pandas/src/parser/io.c:1:
-pandas/src/parser/tokenizer.h: At top level:
-pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-In file included from pandas/src/parser/io.c:1:0:
-pandas/src/parser/io.h:33:0: warning: "HAVE_MMAP" redefined [enabled by default]
-/usr/include/sparc-linux-gnu/python3.3m/pyconfig.h:575:0: note: this is the location of the previous definition
-,1152:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wno-unused-result -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 build/temp.linux-sparc64-3.3/pandas/parser.o build/temp.linux-sparc64-3.3/pandas/src/parser/tokenizer.o build/temp.linux-sparc64-3.3/pandas/src/parser/io.o -o build/lib.linux-sparc64-3.3/pandas/parser.cpython-33m.so
-cythoning pandas/index.pyx to pandas/index.c
-building 'pandas.index' extension
-creating build/temp.linux-sparc64-3.3/pandas/src/datetime
-sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/index.c -o build/temp.linux-sparc64-3.3/pandas/index.o
-,1859:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
-                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
-                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
-                 from pandas/index.c:314:
-/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
-In file included from pandas/src/klib/khash_python.h:3:0,
-                 from pandas/index.c:318:
-pandas/src/klib/khash.h: In function 'kh_del_str':
-pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash.h: In function 'kh_del_int32':
-pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash.h: In function 'kh_del_int64':
-pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/index.c:318:0:
-pandas/src/klib/khash_python.h: In function 'kh_del_float64':
-pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
-pandas/src/klib/khash_python.h:38:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
-pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
-pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
-pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
-pandas/index.c: In function '__pyx_f_6pandas_5index__bin_search':
-pandas/index.c:7594:13: warning: '__pyx_v_mid' may be used uninitialized in this function [-Wuninitialized]
-,492:0sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-3.3/pandas/src/datetime/np_datetime.o
-,670:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
-                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
-                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
-                 from pandas/src/datetime/np_datetime.c:18:
-/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
-/usr/include/python3.3m/datetime.h:191:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
-,508:0sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-3.3/pandas/src/datetime/np_datetime_strings.o
-,681:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
-                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
-                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
-                 from pandas/src/datetime/np_datetime_strings.c:17:
-/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
-pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
-,1115:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wno-unused-result -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 build/temp.linux-sparc64-3.3/pandas/index.o build/temp.linux-sparc64-3.3/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-3.3/pandas/src/datetime/np_datetime_strings.o -o build/lib.linux-sparc64-3.3/pandas/index.cpython-33m.so
-cythoning pandas/algos.pyx to pandas/algos.c
-building 'pandas.algos' extension
 sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/algos.c -o build/temp.linux-sparc64-3.3/pandas/algos.o
 ,3277:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
@@ -460,23 +343,25 @@ pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused
 pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
 pandas/algos.c: In function '__pyx_pf_6pandas_5algos_54roll_window.isra.266':
-pandas/algos.c:26698:21: warning: '__pyx_pybuffernd_tot_wgt.diminfo[0].shape' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:26789:23: warning: '__pyx_pybuffernd_tot_wgt.diminfo[0].strides' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:26706:21: warning: '__pyx_pybuffernd_tot_wgt.diminfo[0].shape' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:26797:23: warning: '__pyx_pybuffernd_tot_wgt.diminfo[0].strides' may be used uninitialized in this function [-Wuninitialized]
 pandas/algos.c: In function '__pyx_pf_6pandas_5algos_452group_ohlc_float32.isra.87':
-pandas/algos.c:118532:213: warning: '__pyx_v_vclose' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:118642:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:118664:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:118499:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:118540:213: warning: '__pyx_v_vclose' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:118650:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:118672:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:118507:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
 pandas/algos.c: In function '__pyx_pf_6pandas_5algos_450group_ohlc_float64.isra.88':
-pandas/algos.c:117716:213: warning: '__pyx_v_vclose' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:117826:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:117848:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:117683:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:117724:213: warning: '__pyx_v_vclose' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:117834:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:117856:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:117691:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
 pandas/algos.c: In function 'PyInit_algos':
-pandas/algos.c:148941:16: note: variable tracking size limit exceeded with -fvar-tracking-assignments, retrying without
-,981:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wno-unused-result -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 build/temp.linux-sparc64-3.3/pandas/algos.o -o build/lib.linux-sparc64-3.3/pandas/algos.cpython-33m.so
+pandas/algos.c:148949:16: note: variable tracking size limit exceeded with -fvar-tracking-assignments, retrying without
+,1088:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wno-unused-result -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 build/temp.linux-sparc64-3.3/pandas/algos.o -o build/lib.linux-sparc64-3.3/pandas/algos.cpython-33m.so
 cythoning pandas/tslib.pyx to pandas/tslib.c
 building 'pandas.tslib' extension
+creating build/temp.linux-sparc64-3.3/pandas/src
+creating build/temp.linux-sparc64-3.3/pandas/src/datetime
 sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/tslib.c -o build/temp.linux-sparc64-3.3/pandas/tslib.o
 ,1968:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
@@ -562,7 +447,122 @@ pandas/lib.c:10048:15: warning: '__pyx_v_end' may be used uninitialized in this 
 pandas/lib.c:9761:14: note: '__pyx_v_end' was declared here
 pandas/lib.c:10046:15: warning: '__pyx_v_start' may be used uninitialized in this function [-Wuninitialized]
 pandas/lib.c:9760:14: note: '__pyx_v_start' was declared here
-,968:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wno-unused-result -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 build/temp.linux-sparc64-3.3/pandas/lib.o -o build/lib.linux-sparc64-3.3/pandas/lib.cpython-33m.so
+,977:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wno-unused-result -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 build/temp.linux-sparc64-3.3/pandas/lib.o -o build/lib.linux-sparc64-3.3/pandas/lib.cpython-33m.so
+cythoning pandas/index.pyx to pandas/index.c
+building 'pandas.index' extension
+sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/index.c -o build/temp.linux-sparc64-3.3/pandas/index.o
+,1859:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/index.c:314:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+In file included from pandas/src/klib/khash_python.h:3:0,
+                 from pandas/index.c:318:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/index.c:318:0:
+pandas/src/klib/khash_python.h: In function 'kh_del_float64':
+pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
+pandas/src/klib/khash_python.h:38:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
+pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
+pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
+pandas/index.c: In function '__pyx_f_6pandas_5index__bin_search':
+pandas/index.c:7594:13: warning: '__pyx_v_mid' may be used uninitialized in this function [-Wuninitialized]
+,492:0sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-3.3/pandas/src/datetime/np_datetime.o
+,670:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/datetime/np_datetime.c:18:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+/usr/include/python3.3m/datetime.h:191:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
+,508:0sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-3.3/pandas/src/datetime/np_datetime_strings.o
+,681:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/src/datetime/np_datetime_strings.c:17:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
+,1176:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wno-unused-result -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 build/temp.linux-sparc64-3.3/pandas/index.o build/temp.linux-sparc64-3.3/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-3.3/pandas/src/datetime/np_datetime_strings.o -o build/lib.linux-sparc64-3.3/pandas/index.cpython-33m.so
+cythoning pandas/parser.pyx to pandas/parser.c
+building 'pandas.parser' extension
+creating build/temp.linux-sparc64-3.3/pandas/src/parser
+sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/parser.c -o build/temp.linux-sparc64-3.3/pandas/parser.o
+,2577:1In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:17,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:15,
+                 from pandas/parser.c:315:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+In file included from pandas/src/klib/khash_python.h:3:0,
+                 from pandas/parser.c:318:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/parser.c:318:0:
+pandas/src/klib/khash_python.h: In function 'kh_del_float64':
+pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
+pandas/src/klib/khash_python.h:38:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
+pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
+pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/parser.c:321:0:
+pandas/src/parser/tokenizer.h: At top level:
+pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+In file included from pandas/parser.c:322:0:
+pandas/src/parser/io.h:33:0: warning: "HAVE_MMAP" redefined [enabled by default]
+/usr/include/sparc-linux-gnu/python3.3m/pyconfig.h:575:0: note: this is the location of the previous definition
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/__ufunc_api.h:236:1: warning: '_import_umath' defined but not used [-Wunused-function]
+pandas/parser.c:18183:18: warning: '__pyx_f_6pandas_6parser__get_na_mask' defined but not used [-Wunused-function]
+pandas/parser.c: In function '__pyx_f_6pandas_6parser_10TextReader__get_header':
+pandas/parser.c:6372:61: warning: '__pyx_v_data_line' may be used uninitialized in this function [-Wuninitialized]
+,484:0sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/parser/tokenizer.c -o build/temp.linux-sparc64-3.3/pandas/src/parser/tokenizer.o
+,1324:1In file included from pandas/src/parser/tokenizer.h:35:0,
+                 from pandas/src/parser/tokenizer.c:20:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/src/parser/tokenizer.c:20:0:
+pandas/src/parser/tokenizer.h: At top level:
+pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/parser/tokenizer.c:166:11: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+pandas/src/parser/tokenizer.c: In function 'parser_buffer_bytes':
+pandas/src/parser/tokenizer.c:562:11: warning: unused variable 'src' [-Wunused-variable]
+pandas/src/parser/tokenizer.c: In function 'to_longlong_thousands':
+pandas/src/parser/tokenizer.c:1725:11: warning: unused variable 'p_end' [-Wunused-variable]
+pandas/src/parser/tokenizer.c: In function 'xstrtod':
+pandas/src/parser/tokenizer.c:1900:5: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+,470:0sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/parser/io.c -o build/temp.linux-sparc64-3.3/pandas/src/parser/io.o
+,1051:1In file included from pandas/src/parser/tokenizer.h:35:0,
+                 from pandas/src/parser/io.h:2,
+                 from pandas/src/parser/io.c:1:
+pandas/src/klib/khash.h: In function 'kh_del_str':
+pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int32':
+pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
+pandas/src/klib/khash.h: In function 'kh_del_int64':
+pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
+In file included from pandas/src/parser/io.h:2:0,
+                 from pandas/src/parser/io.c:1:
+pandas/src/parser/tokenizer.h: At top level:
+pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+In file included from pandas/src/parser/io.c:1:0:
+pandas/src/parser/io.h:33:0: warning: "HAVE_MMAP" redefined [enabled by default]
+/usr/include/sparc-linux-gnu/python3.3m/pyconfig.h:575:0: note: this is the location of the previous definition
+,1085:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wno-unused-result -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 build/temp.linux-sparc64-3.3/pandas/parser.o build/temp.linux-sparc64-3.3/pandas/src/parser/tokenizer.o build/temp.linux-sparc64-3.3/pandas/src/parser/io.o -o build/lib.linux-sparc64-3.3/pandas/parser.cpython-33m.so
 cythoning pandas/src/sparse.pyx to pandas/src/sparse.c
 building 'pandas._sparse' extension
 sparc-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -fPIC -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.3m -I/home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/include/python3.3m -c pandas/src/sparse.c -o build/temp.linux-sparc64-3.3/pandas/src/sparse.o
@@ -802,7 +802,7 @@ copying build/lib.linux-sparc64-3.3/pandas/tests/test_rplot.py -> build/bdist.li
 copying build/lib.linux-sparc64-3.3/pandas/tests/test_internals.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.3/pandas/tests/test_categorical.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.3/pandas/tests/test_indexing.py -> build/bdist.linux-sparc64/egg/pandas/tests
-copying build/lib.linux-sparc64-3.3/pandas/tests/test_panel4d.p,8348:0y -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.3/pandas/tests/test_panel4d.p,10001:0y -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.3/pandas/tests/test_ndframe.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.3/pandas/tests/test_strings.py -> build/bdist.linux-sparc64/egg/pandas/tests
 creating build/bdist.linux-sparc64/egg/pandas/tests/data
@@ -878,7 +878,7 @@ copying build/lib.linux-sparc64-3.3/pandas/rpy/base.py -> build/bdist.linux-spar
 copying build/lib.linux-sparc64-3.3/pandas/rpy/mass.py -> build/bdist.linux-sparc64/egg/pandas/rpy
 copying build/lib.linux-sparc64-3.3/pandas/info.py -> build/bdist.linux-sparc64/egg/pandas
 copying build/lib.linux-sparc64-3.3/pandas/__init__.py -> build/bdist.linux-sparc64/egg/pandas
-,10001:0copying build/lib.linux-sparc64-3.3/pandas/_sparse.cpython-33m.so -> build/bdist.linux-sparc64/egg/pandas
+copying build/lib.linux-sparc64-3.3/pandas/_sparse.cpython-33m.so -> build/bdist.linux-sparc64/egg/pandas
 creating build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-3.3/pandas/util/counter.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-3.3/pandas/util/misc.py -> build/bdist.linux-sparc64/egg/pandas/util
@@ -894,7 +894,7 @@ copying build/lib.linux-sparc64-3.3/pandas/stats/misc.py -> build/bdist.linux-sp
 creating build/bdist.linux-sparc64/egg/pandas/stats/tests
 copying build/lib.linux-sparc64-3.3/pandas/stats/tests/test_math.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
 copying build/lib.linux-sparc64-3.3/pandas/stats/tests/test_moments.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
-copying build/lib.linux-sparc64-3.3/pandas/stats/tests/common.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
+copying build/lib.linux-sparc64-3.3/pandas/stats/tests/common.py -> build/bdist.linux-sparc,7876:064/egg/pandas/stats/tests
 copying build/lib.linux-sparc64-3.3/pandas/stats/tests/test_fama_macbeth.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
 copying build/lib.linux-sparc64-3.3/pandas/stats/tests/test_var.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
 copying build/lib.linux-sparc64-3.3/pandas/stats/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/stats/tests
@@ -974,12 +974,12 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/core/__init__.py to __init__
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/panelnd.py to panelnd.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/matrix.py to matrix.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/frame.py to frame.cpython-33.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/core/base.py to base.cpython-33.pyc
+,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/core/base.py to base.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/groupby.py to groupby.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/indexing.py to indexing.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/array.py to array.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/reshape.py to reshape.cpython-33.pyc
-byte-compi,5344:0ling build/bdist.linux-sparc64/egg/pandas/core/algorithms.py to algorithms.cpython-33.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/algorithms.py to algorithms.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/json.py to json.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/excel.py to excel.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/pickle.py to pickle.cpython-33.pyc
@@ -1032,7 +1032,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_tests.py to test_
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_stats.py to test_stats.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_base.py to test_base.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_groupby.py to test_groupby.cpython-33.pyc
-,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_compat.py to test_compat.cpython-33.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_compat.py to test_compat.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_generic.py to test_generic.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_series.py to test_series.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_tseries.py to test_tseries.cpython-33.pyc
@@ -1071,7 +1071,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/resample.py to resam
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/timedeltas.py to timedeltas.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/frequencies.py to frequencies.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/__init__.py to __init__.cpython-33.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/converter.py to converter.cpython-33.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/converter.py to co,1918:0nverter.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/common.py to common.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/vars.py to vars.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/rpy/__init__.py to __init__.cpython-33.pyc
@@ -1092,7 +1092,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/misc.py to misc.cpytho
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_math.py to test_math.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_moments.py to test_moments.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/common.py to common.cpython-33.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_fama_macbeth.py to test_fama_macbeth.cpython-33.pyc
+,4550:0byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_fama_macbeth.py to test_fama_macbeth.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_var.py to test_var.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/__init__.py to __init__.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_ols.py to test_ols.cpython-33.pyc
@@ -1107,20 +1107,20 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/__init__.py to __init_
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/var.py to var.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/sandbox/qtpandas.py to qtpandas.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/sandbox/__init__.py to __init__.cpython-33.pyc
-creating stub loader for pandas/parser.cpython-33m.so
-creating stub loader for pandas/index.cpython-33m.so
 creating stub loader for pandas/algos.cpython-33m.so
 creating stub loader for pandas/tslib.cpython-33m.so
 creating stub loader for pandas/hashtable.cpython-33m.so
 creating stub loader for pandas/lib.cpython-33m.so
+creating stub loader for pandas/index.cpython-33m.so
+creating stub loader for pandas/parser.cpython-33m.so
 creating stub loader for pandas/_sparse.cpython-33m.so
 creating stub loader for pandas/json.cpython-33m.so
-byte-compiling build/bdist.linux-sparc64/egg/pandas/parser.py to parser.cpython-33.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/index.py to index.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/algos.py to algos.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tslib.py to tslib.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/hashtable.py to hashtable.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/lib.py to lib.cpython-33.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/index.py to index.cpython-33.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/parser.py to parser.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/_sparse.py to _sparse.cpython-33.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/json.py to json.cpython-33.pyc
 creating build/bdist.linux-sparc64/egg/EGG-INFO
@@ -1132,15 +1132,15 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_625_g998ee30-py3.3-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+creating 'dist/pandas-0.12.0_624_gf2776f1-py3.3-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
 removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_625_g998ee30-py3.3-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.3/site-packages/pandas-0.12.0_625_g998ee30-py3.3-linux-sparc64.egg
-Extracting pandas-0.12.0_625_g998ee30-py3.3-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.3/site-packages
-Adding pandas 0.12.0-625-g998ee30 to easy-install.pth file
+Processing pandas-0.12.0_624_gf2776f1-py3.3-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.3/site-packages/pandas-0.12.0_624_gf2776f1-py3.3-linux-sparc64.egg
+Extracting pandas-0.12.0_624_gf2776f1-py3.3-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.3/site-packages
+Adding pandas 0.12.0-624-gf2776f1 to easy-install.pth file
 
-Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/p,652:0ython3.3/site-packages/pandas-0.12.0_625_g998ee30-py3.3-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-625-g998ee30
+Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.3/site-packages/pandas-0.12.0_624_gf2776f1-py3.3-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-624-gf2776f1
 Searching for numpy==1.7.1
 Best match: numpy 1.7.1
 Adding numpy 1.7.1 to easy-install.pth file
@@ -1156,7 +1156,7 @@ Best match: python-dateutil 2.0
 python-dateutil 2.0 is already the active version in easy-install.pth
 
 Using /usr/lib/python3/dist-packages
-Finished processing dependencies for pandas==0.12.0-625-g998ee30
+Finished processing dependencies for pandas==0.12.0-624-gf2776f1
 ,59:2program finished with exit code 0
-elapsedTime=3078.902524
+elapsedTime=3099.336344
 ,
