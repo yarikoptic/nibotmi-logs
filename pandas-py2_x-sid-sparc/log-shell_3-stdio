@@ -12,10 +12,14 @@
   TERM=xterm
   USER=buildslave
  using PTY: False
-,429:0running install
+,637:0running install
 running bdist_egg
 running egg_info
 creating pandas.egg-info
+writing requirements to pandas.egg-info/requires.txt
+writing pandas.egg-info/PKG-INFO
+writing top-level names to pandas.egg-info/top_level.txt
+writing dependency_links to pandas.egg-info/dependency_links.txt
 writing requirements to pandas.egg-info/requires.txt
 writing pandas.egg-info/PKG-INFO
 writing top-level names to pandas.egg-info/top_level.txt
@@ -136,6 +140,7 @@ copying pandas/util/rwproperty.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/clipboard.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/decorators.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/__init__.py -> build/lib.linux-sparc64-2.7/pandas/util
+copying pandas/util/print_versions.py -> build/lib.linux-sparc64-2.7/pandas/util
 creating build/lib.linux-sparc64-2.7/pandas/tests
 copying pandas/tests/test_common.py -> build/lib.linux-sparc64-2.7/pandas/tests
 copying pandas/tests/test_graphics.py -> build/lib.linux-sparc64-2.7/pandas/tests
@@ -169,8 +174,8 @@ creating build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/pivot.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/plotting.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/tile.py -> build/lib.linux-sparc64-2.7/pandas/tools
-copying pandas/tools/util.py -> build/lib.linux-sparc64-2.7/pandas/tools
-copying pandas/tools/merge.py -> build/lib.linux-,10001:0sparc64-2.7/pandas/tools
+copying pandas/tools/util.py -> build/lib,10001:0.linux-sparc64-2.7/pandas/tools
+copying pandas/tools/merge.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/rplot.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/__init__.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/describe.py -> build/lib.linux-sparc64-2.7/pandas/tools
@@ -279,15 +284,15 @@ copying pandas/tests/data/mindex_073.pickle -> build/lib.linux-sparc64-2.7/panda
 copying pandas/tests/data/tips.csv -> build/lib.linux-sparc64-2.7/pandas/tests/data
 copying pandas/tests/data/unicode_series.csv -> build/lib.linux-sparc64-2.7/pandas/tests/data
 copying pandas/tests/data/iris.csv -> build/lib.linux-sparc64-2.7/pandas/tests/data
-copying pandas/tools/tests/cut_data.csv -> build/lib.linux-sparc64-2.7/pandas/tools/tests
-creating build/lib.linux-sparc64-2.7/pandas/tser,516:0ies/tests/data
+copying pandas/tools/tests/cut_data.csv -> build/lib.linu,552:0x-sparc64-2.7/pandas/tools/tests
+creating build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/daterange_073.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/series.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/frame.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/series_daterange0.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 running build_ext
-cythoning pandas/index.pyx to pandas/index.c
-,502:0building 'pandas.index' extension
+,547:0cythoning pandas/index.pyx to pandas/index.c
+building 'pandas.index' extension
 creating build/temp.linux-sparc64-2.7
 creating build/temp.linux-sparc64-2.7/pandas
 creating build/temp.linux-sparc64-2.7/pandas/src
@@ -299,14 +304,14 @@ sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall 
                  from pandas/index.c:314:
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
 In file included from pandas/src/klib/khash_python.h:3:0,
-                 from pandas/index.c:319:
+                 from pandas/index.c:318:
 pandas/src/klib/khash.h: In function 'kh_del_str':
 pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash.h: In function 'kh_del_int32':
 pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash.h: In function 'kh_del_int64':
 pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/index.c:319:0:
+In file included from pandas/index.c:318:0:
 pandas/src/klib/khash_python.h: In function 'kh_del_float64':
 pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
@@ -316,7 +321,7 @@ pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused
 pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
 pandas/index.c: In function '__pyx_f_6pandas_5index__bin_search':
-pandas/index.c:7600:13: warning: '__pyx_v_mid' may be used uninitialized in this function [-Wuninitialized]
+pandas/index.c:7594:13: warning: '__pyx_v_mid' may be used uninitialized in this function [-Wuninitialized]
 ,316:0sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime.o
 ,661:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarrayobject.h:17,
@@ -362,20 +367,20 @@ pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused
 pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
 pandas/algos.c: In function '__pyx_pf_6pandas_5algos_54roll_window.isra.236':
-pandas/algos.c:26735:21: warning: '__pyx_pybuffernd_tot_wgt.diminfo[0].shape' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:26826:23: warning: '__pyx_pybuffernd_tot_wgt.diminfo[0].strides' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:26698:21: warning: '__pyx_pybuffernd_tot_wgt.diminfo[0].shape' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:26789:23: warning: '__pyx_pybuffernd_tot_wgt.diminfo[0].strides' may be used uninitialized in this function [-Wuninitialized]
 pandas/algos.c: In function '__pyx_pf_6pandas_5algos_452group_ohlc_float32.isra.57':
-pandas/algos.c:118613:213: warning: '__pyx_v_vclose' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:118723:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:118745:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:118580:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:118532:213: warning: '__pyx_v_vclose' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:118642:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:118664:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:118499:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
 pandas/algos.c: In function '__pyx_pf_6pandas_5algos_450group_ohlc_float64.isra.58':
-pandas/algos.c:117797:213: warning: '__pyx_v_vclose' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:117907:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:117929:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
-pandas/algos.c:117764:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:117716:213: warning: '__pyx_v_vclose' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:117826:22: warning: '__pyx_v_vlow' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:117848:22: warning: '__pyx_v_vhigh' may be used uninitialized in this function [-Wuninitialized]
+pandas/algos.c:117683:213: warning: '__pyx_v_vopen' may be used uninitialized in this function [-Wuninitialized]
 pandas/algos.c: In function 'initalgos':
-pandas/algos.c:149846:16: note: variable tracking size limit exceeded with -fvar-tracking-assignments, retrying without
+pandas/algos.c:148938:16: note: variable tracking size limit exceeded with -fvar-tracking-assignments, retrying without
 ,692:0sparc-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-sparc64-2.7/pandas/algos.o -o build/lib.linux-sparc64-2.7/pandas/algos.so
 cythoning pandas/lib.pyx to pandas/lib.c
 building 'pandas.lib' extension
@@ -386,10 +391,10 @@ sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall 
                  from pandas/lib.c:314:
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
 pandas/lib.c: In function '__pyx_pw_6pandas_3lib_53maybe_booleans_to_slice':
-pandas/lib.c:10056:15: warning: '__pyx_v_end' may be used uninitialized in this function [-Wuninitialized]
-pandas/lib.c:9769:14: note: '__pyx_v_end' was declared here
-pandas/lib.c:10054:15: warning: '__pyx_v_start' may be used uninitialized in this function [-Wuninitialized]
-pandas/lib.c:9768:14: note: '__pyx_v_start' was declared here
+pandas/lib.c:10038:15: warning: '__pyx_v_end' may be used uninitialized in this function [-Wuninitialized]
+pandas/lib.c:9751:14: note: '__pyx_v_end' was declared here
+pandas/lib.c:10036:15: warning: '__pyx_v_start' may be used uninitialized in this function [-Wuninitialized]
+pandas/lib.c:9750:14: note: '__pyx_v_start' was declared here
 In file included from pandas/lib.c:326:0:
 pandas/src/parse_helper.h: In function 'to_double':
 pandas/src/parse_helper.h:13:29: warning: 'p_end' may be used uninitialized in this function [-Wuninitialized]
@@ -421,7 +426,7 @@ pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
 pandas/tslib.c: At top level:
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/__ufunc_api.h:236:1: warning: '_import_umath' defined but not used [-Wunused-function]
-pandas/tslib.c:7906:18: warning: '__pyx_f_6pandas_5tslib__tz_format' defined but not used [-Wunused-function]
+pandas/tslib.c:7893:18: warning: '__pyx_f_6pandas_5tslib__tz_format' defined but not used [-Wunused-function]
 ,316:0sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime.o
 ,661:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarrayobject.h:17,
@@ -453,17 +458,17 @@ sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall 
 ,2329:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarrayobject.h:17,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/arrayobject.h:15,
-                 from pandas/parser.c:316:
+                 from pandas/parser.c:315:
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
 In file included from pandas/src/klib/khash_python.h:3:0,
-                 from pandas/parser.c:319:
+                 from pandas/parser.c:318:
 pandas/src/klib/khash.h: In function 'kh_del_str':
 pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash.h: In function 'kh_del_int32':
 pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash.h: In function 'kh_del_int64':
 pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/parser.c:319:0:
+In file included from pandas/parser.c:318:0:
 pandas/src/klib/khash_python.h: In function 'kh_del_float64':
 pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
@@ -472,13 +477,13 @@ pandas/src/klib/khash_python.h: In function 'kh_del_pyset':
 pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/parser.c:322:0:
+In file included from pandas/parser.c:321:0:
 pandas/src/parser/tokenizer.h: At top level:
 pandas/src/parser/tokenizer.h:226:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/__ufunc_api.h:236:1: warning: '_import_umath' defined but not used [-Wunused-function]
-pandas/parser.c:18253:18: warning: '__pyx_f_6pandas_6parser__get_na_mask' defined but not used [-Wunused-function]
+pandas/parser.c:18183:18: warning: '__pyx_f_6pandas_6parser__get_na_mask' defined but not used [-Wunused-function]
 pandas/parser.c: In function '__pyx_f_6pandas_6parser_10TextReader__get_header':
-pandas/parser.c:6402:61: warning: '__pyx_v_data_line' may be used uninitialized in this function [-Wuninitialized]
+pandas/parser.c:6372:61: warning: '__pyx_v_data_line' may be used uninitialized in this function [-Wuninitialized]
 ,308:0sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/parser/tokenizer.c -o build/temp.linux-sparc64-2.7/pandas/src/parser/tokenizer.o
 ,1324:1In file included from pandas/src/parser/tokenizer.h:35:0,
                  from pandas/src/parser/tokenizer.c:20:
@@ -519,17 +524,17 @@ sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall 
 ,1689:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarrayobject.h:17,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/arrayobject.h:15,
-                 from pandas/hashtable.c:316:
+                 from pandas/hashtable.c:315:
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
 In file included from pandas/src/klib/khash_python.h:3:0,
-                 from pandas/hashtable.c:318:
+                 from pandas/hashtable.c:317:
 pandas/src/klib/khash.h: In function 'kh_del_str':
 pandas/src/klib/khash.h:573:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash.h: In function 'kh_del_int32':
 pandas/src/klib/khash.h:574:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash.h: In function 'kh_del_int64':
 pandas/src/klib/khash.h:575:1: warning: statement with no effect [-Wunused-value]
-In file included from pandas/hashtable.c:318:0:
+In file included from pandas/hashtable.c:317:0:
 pandas/src/klib/khash_python.h: In function 'kh_del_float64':
 pandas/src/klib/khash_python.h:13:1: warning: statement with no effect [-Wunused-value]
 pandas/src/klib/khash_python.h: In function 'kh_del_pymap':
@@ -695,11 +700,11 @@ copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/test2.csv -> build/bdis
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/test.xlsx -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/banklist.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/stata4.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
-copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/spam.html -> bui,10001:0ld/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/spam.html -> bui,435:0ld/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/banklist.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/unicode_series.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/stata1_encoding.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
-copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/test1.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+,10001:0copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/test1.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/valid_markup.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/stata2.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 creating build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle
@@ -782,11 +787,11 @@ copying build/lib.linux-sparc64-2.7/pandas/tests/test_panel.py -> build/bdist.li
 copying build/lib.linux-sparc64-2.7/pandas/tests/test_config.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-2.7/pandas/tests/test_format.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-2.7/pandas/tests/test_frame.py -> build/bdist.linux-sparc64/egg/pandas/tests
-copying build/lib.linu,10001:0x-sparc64-2.7/pandas/tests/test_index.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-2.7/pandas/tests/test_index.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-2.7/pandas/tests/test_panelnd.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-2.7/pandas/version.py -> build/bdist.linux-sparc64/egg/pandas
 creating build/bdist.linux-sparc64/egg/pandas/tseries
-copying build/lib.linux-sparc64-2.7/pandas/tseries/index.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-2.7/pandas/tseries/index.py -> build/bdist.linux-sparc64,10001:0/egg/pandas/tseries
 creating build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_timeseries.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_converter.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
@@ -836,6 +841,7 @@ copying build/lib.linux-sparc64-2.7/pandas/util/rwproperty.py -> build/bdist.lin
 copying build/lib.linux-sparc64-2.7/pandas/util/clipboard.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-2.7/pandas/util/decorators.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-2.7/pandas/util/__init__.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-2.7/pandas/util/print_versions.py -> build/bdist.linux-sparc64/egg/pandas/util
 creating build/bdist.linux-sparc64/egg/pandas/stats
 copying build/lib.linux-sparc64-2.7/pandas/stats/moments.py -> build/bdist.linux-sparc64/egg/pandas/stats
 copying build/lib.linux-sparc64-2.7/pandas/stats/misc.py -> build/bdist.linux-sparc64/egg/pandas/stats
@@ -879,10 +885,10 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/pivot.py to pivot.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_merge.py to test_merge.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_tools.py to test_tools.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/__init__.py to __init__.pyc
-byte-compiling build/bdist.linux-sparc64/eg,4020:0g/pandas/tools/tests/test_tile.py to test_tile.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_tile.py to test_tile.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_util.py to test_util.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_pivot.py to test_pivot.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/plotting.py to plotting.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/plotting.py to plotting.,3980:0pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tile.py to tile.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/util.py to util.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/merge.py to merge.pyc
@@ -927,10 +933,10 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/io/parsers.py to parsers.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_excel.py to test_excel.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_ujson.py to test_ujson.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_pandas.py to test_pandas.pyc
-,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_wb.py to test_wb.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_parsers.py to test_parsers.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_data.py to test_data.pyc
+,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_data.py to test_data.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_clipboard.py to test_clipboard.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_pickle.py to test_pickle.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_pytables.py to test_pytables.pyc
@@ -1023,6 +1029,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/util/rwproperty.py to rwprop
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/clipboard.py to clipboard.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/decorators.py to decorators.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/util/print_versions.py to print_versions.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/moments.py to moments.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/misc.py to misc.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_math.py to test_math.pyc
@@ -1038,9 +1045,9 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/plm.py to plm.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/api.py to api.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/interface.py to interface.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/math.py to math.pyc
-byte-compiling build/bdist.linux-sparc,2028:064/egg/pandas/stats/ols.py to ols.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/ols.py to ols.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/__init__.py to __init__.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/var.py to var.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/var.,1842:0py to var.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/sandbox/qtpandas.py to qtpandas.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/sandbox/__init__.py to __init__.pyc
 creating stub loader for pandas/index.so
@@ -1068,15 +1075,15 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_274_gc472099-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+creating 'dist/pandas-0.12.0_316_gd6633ad-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
 ,1240:0removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_274_gc472099-py2.7-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_274_gc472099-py2.7-linux-sparc64.egg
-Extracting pandas-0.12.0_274_gc472099-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/lib/python2.7/site-packages
-Adding pandas 0.12.0-274-gc472099 to easy-install.pth file
+Processing pandas-0.12.0_316_gd6633ad-py2.7-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_316_gd6633ad-py2.7-linux-sparc64.egg
+Extracting pandas-0.12.0_316_gd6633ad-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/lib/python2.7/site-packages
+Adding pandas 0.12.0-316-gd6633ad to easy-install.pth file
 
-Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_274_gc472099-py2.7-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-274-gc472099
+Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_316_gd6633ad-py2.7-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-316-gd6633ad
 Searching for numpy==1.7.1
 Best match: numpy 1.7.1
 Adding numpy 1.7.1 to easy-install.pth file
@@ -1092,7 +1099,7 @@ Best match: python-dateutil 1.5
 python-dateutil 1.5 is already the active version in easy-install.pth
 
 Using /usr/lib/python2.7/dist-packages
-Finished processing dependencies for pandas==0.12.0-274-gc472099
+Finished processing dependencies for pandas==0.12.0-316-gd6633ad
 ,59:2program finished with exit code 0
-elapsedTime=3148.206598
+elapsedTime=3093.957342
 ,
