@@ -111,7 +111,7 @@ test_frame_invert (pandas.computation.tests.test_eval.TestEvalPythonPython) ... 
 test_frame_negate (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_frame_pos (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_modulus (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
-test_pow (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
+test_pow (pandas.computation.tests.test_eval.TestEvalPythonPython) ... SKIP: negative number cannot be raised to a fractional power
 test_scalar_unary (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_series_invert (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_series_negate (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
@@ -119,9 +119,9 @@ test_series_pos (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_simple_cmp_ops (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_single_invert_op (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_4d_ndarray_fails (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ... ok
-test_assignment_fails (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ... ok
-test_attr_expression (pandas.computation.tests.test,155:0_eval.TestOperationsNumExprPandas) ... ok
-test_basic_period_index_boolean_expression (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ... ,10001:0ok
+test_assignment_fails (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ,98:0... ok
+test_attr_expression (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ... ,10001:0ok
+test_basic_period_index_boolean_expression (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ... ok
 test_basic_period_index_subscript_expression (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ... ok
 test_bool_ops_with_constants (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ... ok
 test_constant (pandas.computation.tests.test_eval.TestOperationsNumExprPandas) ... ok
@@ -228,8 +228,8 @@ pandas.computation.tests.test_eval.test_syntax_error_exprs('python', 'pandas') .
 pandas.computation.tests.test_eval.test_syntax_error_exprs('numexpr', 'python') ... ok
 pandas.computation.tests.test_eval.test_syntax_error_exprs('numexpr', 'pandas') ... ok
 pandas.computation.tests.test_eval.test_name_error_exprs('python', 'python') ... ok
-pandas.computation.tests.test_eval.test_name_error_exprs('python', 'pandas') ... ok
-pandas.computation.tests.test_eval,210:0.test_name_error_exprs('numexpr', 'python') ... ok
+pan,325:0das.computation.tests.test_eval.test_name_error_exprs('python', 'pandas') ... ok
+pandas.computation.tests.test_eval.test_name_error_exprs('numexpr', 'python') ... ok
 pandas.computation.tests.test_eval.test_name_error_exprs('numexpr', 'pandas') ... ok
 test_round_trip_frame (pandas.io.tests.test_clipboard.TestClipboard) ... ,10001:0ok
 test_StringIO (pandas.io.tests.test_cparser.TestCParser) ... ok
@@ -349,13 +349,13 @@ test_bool (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_colaliases (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_excel_010_hemstring (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_excel_roundtrip_datetime (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
-test_excel_roundtrip_indexname (pandas.io,581:0.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
+test_excel_roundtrip_indexname (pandas.io,1553:0.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_excel_sheet_by_name_raise (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_excelwriter_contextmanager (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_int64 (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_mixed (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_roundtrip (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
-test_roundtrip_indexlabels (pandas.io.tests.test_excel.XlwtTests) ... ,10001:0SKIP: xlrd < 0.9, skipping
+test_roundtrip_indexlabels (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_sheets (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_to_excel_float_format (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 test_to_excel_multiindex (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
@@ -366,7 +366,7 @@ test_to_excel_unicode_filename (pandas.io.tests.test_excel.XlwtTests) ... SKIP: 
 test_tsframe (pandas.io.tests.test_excel.XlwtTests) ... SKIP: xlrd < 0.9, skipping
 Failure: SkipTest (need httplib2 and auth libs) ... SKIP: need httplib2 and auth libs
 test_bad_url_protocol (pandas.io.tests.test_html.TestReadHtml) ... ok
-test_banklist (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_banklist (pandas.io.tests.test_html.TestReadHtml) ... ,10001:0ok
 test_banklist_header (pandas.io.tests.test_html.TestReadHtml) ... ok
 test_banklist_no_match (pandas.io.tests.test_html.TestReadHtml) ... ok
 test_banklist_url (pandas.io.tests.test_html.TestReadHtml) ... ok
@@ -481,7 +481,7 @@ test_decodeArrayWithBigInt (pandas.io.tests.test_json.test_ujson.PandasJSONTests
 test_decodeBigValue (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... ok
 test_decodeFloatingPointAdditionalTests (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... ok
 test_decodeSmallValue (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... ok
-test_decodeTooBigValue (pandas.io.tests.test_json.test_ujson.PandasJSONTest,1054:0s) ... ok
+test_decodeTooBigValue (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... ok
 test_decodeTooSmallValue (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... ok
 test_decodeVeryTooBigValue (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... ok
 test_decodeVeryTooSmallValue (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... ok
@@ -492,7 +492,7 @@ test_encodeEmptySet (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... o
 test_encodeSet (pandas.io.tests.test_json.test_ujson.PandasJSONTests) ... ok
 test_datetime_units (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
 test_decimalDecodeTestPrecise (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
-test_decodeArrayDepthTooBig (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
+test_decodeArrayDepthTooBig (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... o,82:0k
 test_decodeBigEscape (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ,10001:0ok
 test_decodeBrokenArrayEnd (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
 test_decodeBrokenArrayStart (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
@@ -742,7 +742,7 @@ test_decompression_regex_sep (pandas.io.tests.test_parsers.TestCParserLowMemory)
 test_deep_skiprows (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_detect_string_na (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_dialect (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
-te,4669:0st_disable_bool_parsing (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
+te,3419:0st_disable_bool_parsing (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_duplicate_columns (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_empty_decimal_marker (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_empty_string (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
@@ -781,7 +781,7 @@ test_multiple_date_cols_int_cast (pandas.io.tests.test_parsers.TestCParserLowMem
 test_multiple_date_cols_with_header (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_multiple_skts_example (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_na_trailing_columns (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
-test_na_value_dict (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
+test_na_value_dict (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ,10001:0ok
 test_nat_parse (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_no_header (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_no_unnamed_index (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
@@ -796,7 +796,7 @@ test_parse_integers_above_fp_precision (pandas.io.tests.test_parsers.TestCParser
 test_parse_ragged_csv (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_parse_tz_aware (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_pass_dtype (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
-test_pass_names_with_index (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ,10001:0ok
+test_pass_names_with_index (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_passing_dtype (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_pure_python_failover (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_quoting (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
@@ -903,7 +903,7 @@ test_multi_character_decimal_marker (pandas.io.tests.test_parsers.TestPythonPars
 test_multi_index_no_level_names (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_multi_index_parse_dates (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_multiple_date_col (pandas.io.tests.test_parsers.TestPythonParser) ... ok
-test_multiple_date_col_multiple_index (pandas.io.tests.test_parsers.TestPythonParser) ... ok
+te,2224:0st_multiple_date_col_multiple_index (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_multiple_date_col_name_collision (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_multiple_date_col_named_components (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_multiple_date_col_timestamp_parse (pandas.io.tests.test_parsers.TestPythonParser) ... ok
@@ -917,7 +917,7 @@ test_nat_parse (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_negative_skipfooter_raises (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_no_header (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_no_unnamed_index (pandas.io.tests.test_parsers.TestPythonParser) ... ok
-test_non_string_na_values (pandas.io.tests.test_parsers.TestPython,974:0Parser) ... ok
+test_non_string_na_values (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_nonexistent_path (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_parse_bools (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_parse_dates_column_list (pandas.io.tests.test_parsers.TestPythonParser) ... ok
@@ -1195,9 +1195,9 @@ test_reindex_fill_value (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ..
 test_rename (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ok
 test_scalar_ops (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ok
 test_set_columns (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ok
-test_set_index (pandas.sparse.tests.test_sparse.TestSp,96:0arseDataFrame) ... ok
-test_set_value (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ,10001:0ok
-test_setitem (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ok
+test_set_index (pandas.sparse.tests.test_sparse.TestSp,170:0arseDataFrame) ... ok
+test_set_value (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ok
+test_setitem (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ,10001:0ok
 test_setitem_array (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ok
 test_setitem_corner (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ok
 test_shift (pandas.sparse.tests.test_sparse.TestSparseDataFrame) ... ok
@@ -1326,8 +1326,8 @@ test_cmov_window_special (pandas.stats.tests.test_moments.TestMoments) ... SKIP:
 test_corr_sanity (pandas.stats.tests.test_moments.TestMoments) ... ok
 test_ew_empty_arrays (pandas.stats.tests.test_moments.TestMoments) ... ok
 test_ewma (pandas.stats.tests.test_moments.TestMoments) ... ok
-test_ewma_halflife_arg (pandas.stats.tests.test_moments.TestMome,653:0nts) ... ok
-test_ewma_nan_handling (pandas.stats.tests.test_moments.TestMoments) ... ok
+test_ewma_halflife_arg (pandas.stats.tests.test_moments.TestMoments) ... ok
+test_ewma_nan_handling (pandas.stats.tests.test_moments.TestMo,579:0ments) ... ok
 test_ewma_span_com_args (pandas.stats.tests.test_moments.TestMoments) ... ok
 test_ewmcorr (pandas.stats.tests.test_moments.TestMoments) ... ok
 test_ewmcov (pandas.stats.tests.test_moments.TestMoments) ... ok
@@ -1589,7 +1589,7 @@ test_shift (pandas.tseries.tests.test_daterange.TestCustomDateRange) ... SKIP: C
 test_summary (pandas.tseries.tests.test_daterange.TestCustomDateRange) ... SKIP: CustomBusinessDay not available.
 test_summary_pytz (pandas.tseries.tests.test_daterange.TestCustomDateRange) ... SKIP: CustomBusinessDay not available.
 test_union (pandas.tseries.tests.test_daterange.TestCustomDateRange) ... SKIP: CustomBusinessDay not available.
-test_cached,2949:0_range (pandas.tseries.tests.test_daterange.TestDateRange) ... ok
+test_cached,8319:0_range (pandas.tseries.tests.test_daterange.TestDateRange) ... ok
 test_cached_range_bug (pandas.tseries.tests.test_daterange.TestDateRange) ... ok
 test_comparison (pandas.tseries.tests.test_daterange.TestDateRange) ... ok
 test_constructor (pandas.tseries.tests.test_daterange.TestDateRange) ... ok
@@ -1625,7 +1625,7 @@ test_generate (pandas.tseries.tests.test_daterange.TestGenRangeGeneration) ... o
 test_generate_cday (pandas.tseries.tests.test_daterange.TestGenRangeGeneration) ... SKIP: CustomBusinessDay not available.
 test_annual (pandas.tseries.tests.test_frequencies.TestFrequencyInference) ... ok
 test_annual_ambiguous (pandas.tseries.tests.test_frequencies.TestFrequencyInference) ... ok
-test_business_annual (pandas.tseries.tests.test_frequencies.TestFrequencyInference) ... ,10001:0ok
+test_business_annual (pandas.tseries.tests.test_frequencies.TestFrequencyInference) ... ok
 test_business_daily (pandas.tseries.tests.test_frequencies.TestFrequencyInference) ... ok
 test_business_monthly (pandas.tseries.tests.test_frequencies.TestFrequencyInference) ... ok
 test_business_start_monthly (pandas.tseries.tests.test_frequencies.TestFrequencyInference) ... ok
@@ -1694,7 +1694,7 @@ test_onOffset (pandas.tseries.tests.test_offsets.TestBusinessDay) ... ok
 test_repr (pandas.tseries.tests.test_offsets.TestBusinessDay) ... ok
 test_roll_date_object (pandas.tseries.tests.test_offsets.TestBusinessDay) ... ok
 test_with_offset (pandas.tseries.tests.test_offsets.TestBusinessDay) ... ok
-test_all_cacheableoffsets (pandas.tseries.tests.test_offsets.TestCaching) ... ok
+test_all_cacheableoffsets (pandas.tseries.tests.test_offsets.TestCaching) ... ,10001:0ok
 test_bmonth_end_index_creation (pandas.tseries.tests.test_offsets.TestCaching) ... ok
 test_month_end_index_creation (pandas.tseries.tests.test_offsets.TestCaching) ... ok
 test_should_cache_bmonth_end (pandas.tseries.tests.test_offsets.TestCaching) ... ok
@@ -1743,7 +1743,7 @@ test_repr (pandas.tseries.tests.test_offsets.TestQuarterBegin) ... ok
 test_isAnchored (pandas.tseries.tests.test_offsets.TestQuarterEnd) ... ok
 test_offset (pandas.tseries.tests.test_offsets.TestQuarterEnd) ... ok
 test_onOffset (pandas.tseries.tests.test_offsets.TestQuarterEnd) ... ok
-test_repr,6725:0 (pandas.tseries.tests.test_offsets.TestQuarterEnd) ... ok
+test_repr (pandas.tseries.tests.test_offsets.TestQuarterEnd) ... ok
 test_corner (pandas.tseries.tests.test_offsets.TestWeek) ... ok
 test_isAnchored (pandas.tseries.tests.test_offsets.TestWeek) ... ok
 test_offset (pandas.tseries.tests.test_offsets.TestWeek) ... ok
@@ -1819,7 +1819,7 @@ test_align_frame (pandas.tseries.tests.test_period.TestPeriodIndex) ... ok
 test_align_series (pandas.tseries.tests.test_period.TestPeriodIndex) ... ok
 test_append_concat (pandas.tseries.tests.test_period.TestPeriodIndex) ... ok
 test_as_frame_columns (pandas.tseries.tests.test_period.TestPeriodIndex) ... ok
-test_asfreq (pandas.tseries.tests.test_period.TestPeriodIndex) ... ok
+test_asfreq (pan,1355:0das.tseries.tests.test_period.TestPeriodIndex) ... ok
 test_asfreq_ts (pandas.tseries.tests.test_period.TestPeriodIndex) ... ok
 test_astype (pandas.tseries.tests.test_period.TestPeriodIndex) ... ok
 test_badinput (pandas.tseries.tests.test_period.TestPeriodIndex) ... ok
@@ -2226,6 +2226,7 @@ test_to_datetime_on_datetime64_series (pandas.tseries.tests.test_timeseries.Test
 test_to_datetime_other_datetime64_units (pandas.tseries.tests.test_timeseries.TestTimeSeries) ... ok
 test_to_datetime_types (pandas.tseries.tests.test_timeseries.TestTimeSeries) ... ok
 test_to_datetime_unit (pandas.tseries.tests.test_timeseries.TestTimeSeries) ... ok
+test_to_datetime_unprocessable_input (pandas.tseries.tests.test_timeseries.TestTimeSeries) ... ok
 test_to_html_timestamp (pandas.tseries.tests.test_timeseries.TestTimeSeries) ... ok
 test_to_period (pandas.tseries.tests.test_timeseries.TestTimeSeries) ... ok
 test_to_period_microsecond (pandas.tseries.tests.test_timeseries.TestTimeSeries) ... ok
@@ -2239,8 +2240,8 @@ test_index_dupes_contains (pandas.tseries.tests.test_timeseries.TestTimeSeriesDu
 test_index_unique (pandas.tseries.tests.test_timeseries.TestTimeSeriesDuplicates) ... ok
 test_indexing (pandas.tseries.tests.test_timeseries.TestTimeSeriesDuplicates) ... ok
 test_indexing_over_size_cutoff (pandas.tseries.tests.test_timeseries.TestTimeSeriesDuplicates) ... ok
-test_indexing_unordered (pandas.tseries.tests.test_timeseries.TestTimeSeriesDuplicates) ... ok
-test_is_unique_monotonic (pandas.tseries.tests.test_timeseries.TestTimeSeriesDuplic,4728:0ates) ... ok
+test_indexing_unordered (pandas.tseries.tests.test_timeseries.TestTimeSeriesDupl,4826:0icates) ... ok
+test_is_unique_monotonic (pandas.tseries.tests.test_timeseries.TestTimeSeriesDuplicates) ... ok
 test_range_slice (pandas.tseries.tests.test_timeseries.TestTimeSeriesDuplicates) ... ok
 test_basics_nanos (pandas.tseries.tests.test_timeseries.TestTimestamp) ... ok
 test_cant_compare_tz_naive_w_aware (pandas.tseries.tests.test_timeseries.TestTimestamp) ... ok
@@ -2563,7 +2564,7 @@ test_apply_convert_objects (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_differently_indexed (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_empty (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_empty_infer_type (pandas.tests.test_frame.TestDataFrame) ... ok
-test_apply_ignore_failures (pandas.tests.test_frame.TestDataFra,1341:0me) ... ok
+test_apply_ignore_failures (pandas.tests.test_frame.TestDataFra,1475:0me) ... ok
 test_apply_mixed_dtype_corner (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_modify_traceback (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_multi_index (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2582,9 +2583,9 @@ test_array_interface (pandas.tests.test_frame.TestDataFrame) ... ok
 test_as_matrix (pandas.tests.test_frame.TestDataFrame) ... ok
 test_as_matrix_consolidate (pandas.tests.test_frame.TestDataFrame) ... ok
 test_as_matrix_duplicates (pandas.tests.test_frame.TestDataFrame) ... ok
-test_as_matrix_lcd (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
+test_as_matrix_lcd (pandas.tests.test_frame.TestDataFrame) ... ok
 test_as_matrix_numeric_cols (pandas.tests.test_frame.TestDataFrame) ... ok
-test_asfreq (pandas.tests.test_frame.TestDataFrame) ... ok
+test_asfreq (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
 test_asfreq_datetimeindex (pandas.tests.test_frame.TestDataFrame) ... ok
 test_assign_columns (pandas.tests.test_frame.TestDataFrame) ... ok
 test_astype (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2722,9 +2723,9 @@ test_dropIncompleteRows (pandas.tests.test_frame.TestDataFrame) ... ok
 test_drop_col_still_multiindex (pandas.tests.test_frame.TestDataFrame) ... ok
 test_drop_duplicates (pandas.tests.test_frame.TestDataFrame) ... ok
 test_drop_duplicates_NA (pandas.tests.test_frame.TestDataFrame) ... ok
-test_drop_duplicates_inplace (pandas.tests,810:0.test_frame.TestDataFrame) ... ok
+test_drop_duplicates_inplace (pandas.tests.test_frame.TestDataFrame) ... ok
 test_drop_duplicates_tuple (pandas.tests.test_frame.TestDataFrame) ... ok
-test_drop_names (pandas.tests.test_frame.TestDataFrame) ... ok
+test_drop_names (pandas.te,1497:0sts.test_frame.TestDataFrame) ... ok
 test_dropna (pandas.tests.test_frame.TestDataFrame) ... ok
 test_dropna_corner (pandas.tests.test_frame.TestDataFrame) ... ok
 test_dropna_multiple_axes (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2733,7 +2734,7 @@ test_empty_nonzero (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fancy_getitem_int_labels (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fancy_getitem_slice_mixed (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fancy_index_int_labels_exceptions (pandas.tests.test_frame.TestDataFrame) ... ok
-test_fancy_setitem_int_labels (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
+test_fancy_setitem_int_labels (pandas.tests.test_frame.TestDataFrame) ... ok
 test_ffill (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fill_corner (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fillna (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2745,7 +2746,7 @@ test_fillna_inplace (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fillna_invalid_method (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fillna_invalid_value (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fillna_skip_certain_blocks (pandas.tests.test_frame.TestDataFrame) ... ok
-test_filter (pandas.tests.test_frame.TestDataFrame) ... ok
+test_filter (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
 test_filter_corner (pandas.tests.test_frame.TestDataFrame) ... ok
 test_filter_regex_search (pandas.tests.test_frame.TestDataFrame) ... ok
 test_first_last_valid (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2877,20 +2878,20 @@ test_operators_timedelta64 (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pct_change (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pct_change_shift_over_nas (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pickle (pandas.tests.test_frame.TestDataFrame) ... ok
-test_pivot (pandas.tests.test_frame.TestData,403:0Frame) ... ok
+test_pivot (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pivot_duplicates (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pivot_empty (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pivot_integer_bug (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pop (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pop_non_unique_cols (pandas.tests.test_frame.TestDataFrame) ... ok
-test_product (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
+test_product (pandas.tests.test_frame.TestDataFrame) ... ok
 test_quantile (pandas.tests.test_frame.TestDataFrame) ... ok
 test_rank (pandas.tests.test_frame.TestDataFrame) ... ok
 test_rank2 (pandas.tests.test_frame.TestDataFrame) ... ok
 test_rank_na_option (pandas.tests.test_frame.TestDataFrame) ... ok
 test_regex_replace_dict_mixed (pandas.tests.test_frame.TestDataFrame) ... ok
 test_regex_replace_dict_nested (pandas.tests.test_frame.TestDataFrame) ... ok
-test_regex_replace_dict_nested_gh4115 (pandas.tests.test_frame.TestDataFrame) ... ok
+test_regex_replace,1497:0_dict_nested_gh4115 (pandas.tests.test_frame.TestDataFrame) ... ok
 test_regex_replace_list_mixed (pandas.tests.test_frame.TestDataFrame) ... ok
 test_regex_replace_list_mixed_inplace (pandas.tests.test_frame.TestDataFrame) ... ok
 test_regex_replace_list_obj (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2909,7 +2910,7 @@ test_reindex_boolean (pandas.tests.test_frame.TestDataFrame) ... ok
 test_reindex_columns (pandas.tests.test_frame.TestDataFrame) ... ok
 test_reindex_corner (pandas.tests.test_frame.TestDataFrame) ... ok
 test_reindex_dups (pandas.tests.test_frame.TestDataFrame) ... ok
-test_reindex_fill_value (pandas.tests.test_frame.TestDataFrame) ... ok
+test_reindex_fill_value (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
 test_reindex_int (pandas.tests.test_frame.TestDataFrame) ... ok
 test_reindex_like (pandas.tests.test_frame.TestDataFrame) ... ok
 test_reindex_multi (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -3025,13 +3026,13 @@ test_to_csv_dups_cols (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_float32_nanrep (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_float_format (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_from_csv (pandas.tests.test_frame.TestDataFrame) ... ok
-test_to_csv_fro,515:0m_csv_w_all_infs (pandas.tests.test_frame.TestDataFrame) ... ok
+test_to_csv_from_csv_w_all_infs (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_from_csv_w_some_infs (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_index_no_leading_comma (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_legacy_raises_on_dupe_cols (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_line_terminators (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_mixed (pandas.tests.test_frame.TestDataFrame) ... ok
-test_to_csv_moar (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
+test_to_csv_moar (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_multiindex (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_new_dupe_cols (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_no_index (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -3051,12 +3052,12 @@ test_to_records_with_multindex (pandas.tests.test_frame.TestDataFrame) ... ok
 test_transpose (pandas.tests.test_frame.TestDataFrame) ... ok
 test_transpose_get_view (pandas.tests.test_frame.TestDataFrame) ... ok
 test_truncate (pandas.tests.test_frame.TestDataFrame) ... ok
-test_truncate_copy (pandas.tests.test_frame.TestDataFrame) ... ok
+test_truncate_copy (pandas.tests.test_frame.TestDataFrame) ... ,333:0ok
 test_tshift (pandas.tests.test_frame.TestDataFrame) ... ok
 Regression test for tslib.tz_convert(vals, tz1, tz2). ... ok
 test_unicode_string_with_unicode (pandas.tests.test_frame.TestDataFrame) ... ok
 test_unstack_bool (pandas.tests.test_frame.TestDataFrame) ... ok
-test_unstack_dtypes (pandas.tests.test_frame.TestDataFrame) ... ok
+test_unstack_dtypes (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
 test_unstack_to_series (pandas.tests.test_frame.TestDataFrame) ... ok
 test_update (pandas.tests.test_frame.TestDataFrame) ... ok
 test_update_dtypes (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -3152,13 +3153,13 @@ pandas.tests.test_frame.TestDataFrameQueryStrings.test_query_with_string_columns
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_list_query_method('python', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_list_query_method('python', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_list_query_method('pandas', 'python') ... ok
-pandas.tests.test_frame.TestDat,723:0aFrameQueryStrings.test_str_list_query_method('pandas', 'numexpr') ... ok
+pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_list_query_method('pandas', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_query_method('python', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_query_method('python', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_query_method('pandas', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_query_method('pandas', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_multiindex_get_index_resolvers('pandas', 'python') ... ok
-pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_multiindex_get_index_resolvers('pandas', 'numexpr') ... ,10001:0ok
+pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_multiindex_get_index_resolvers('pandas', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_named_multiindex('pandas', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_named_multiindex('pandas', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_partially_named_multiindex('pandas', 'python') ... ok
@@ -3167,7 +3168,7 @@ pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_unnamed
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_unnamed_multiindex('pandas', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_raise_on_panel4d_with_multiindex('python', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_raise_on_panel4d_with_multiindex('python', 'numexpr') ... ok
-pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_raise_on_panel4d_with_multiindex('pandas', 'python') ... ok
+pandas.tests.test_frame.TestDataFr,1494:0ameQueryWithMultiIndex.test_raise_on_panel4d_with_multiindex('pandas', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_raise_on_panel4d_with_multiindex('pandas', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_raise_on_panel_with_multiindex('python', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_raise_on_panel_with_multiindex('python', 'numexpr') ... ok
@@ -3183,7 +3184,7 @@ test_rename_mi (pandas.tests.test_generic.TestDataFrame) ... ok
 test_get_numeric_data (pandas.tests.test_generic.TestPanel) ... ok
 test_nonzero (pandas.tests.test_generic.TestPanel) ... ok
 test_numpy_1_7_compat_numeric_methods (pandas.tests.test_generic.TestPanel) ... SKIP: numpy < 1.7
-test_rename (pandas.tests.test_generic.TestPanel) ... ok
+test_rename (pandas.tests.test_generic.TestPanel) ... ,10001:0ok
 test_get_numeric_data (pandas.tests.test_generic.TestSeries) ... ok
 test_get_numeric_data_preserve_dtype (pandas.tests.test_generic.TestSeries) ... ok
 test_nonzero (pandas.tests.test_generic.TestSeries) ... ok
@@ -3248,7 +3249,7 @@ test_invalid_plot_data (pandas.tests.test_graphics.TestSeriesPlots) ... ok
 test_irregular_datetime (pandas.tests.test_graphics.TestSeriesPlots) ... ok
 test_kde (pandas.tests.test_graphics.TestSeriesPlots) ... ok
 test_kde_color (pandas.tests.test_graphics.TestSeriesPlots) ... ok
-test_kde_kwargs (pandas.tests.test_graphics.TestSeriesPlots) ... /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_778_gc9d004f-py2.7-linux-sparc64.egg/pandas/tools/plotting.py:1175: UserWarning: bw_method was added in Scipy 0.11.0. Scipy version in use is 0.10.1.
+test_kde_kwargs (pandas.tests.test_graphics.TestSeriesPlots) ... /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_783_geb49283-py2.7-linux-sparc64.egg/pandas/tools/plotting.py:1175: UserWarning: bw_method was added in Scipy 0.11.0. Scipy version in use is 0.10.1.
   warnings.warn(msg)
 ok
 test_lag_plot (pandas.tests.test_graphics.TestSeriesPlots) ... ok
@@ -3281,7 +3282,7 @@ test_apply_frame_concat_series (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_frame_to_series (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_multiindex_fail (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_multikey_corner (pandas.tests.test_groupby.TestGroupBy) ... ok
-test_apply_no_name_column_conflict (pandas.tests.test_groupby.TestGroupBy) .,1406:0.. ok
+test_apply_no_name_column_conflict (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_series_to_frame (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_series_yield_constant (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_transform (pandas.tests.test_groupby.TestGroupBy) ... ok
@@ -3300,7 +3301,7 @@ test_cython_agg_nothing_to_agg (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_cython_fail_agg (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_cython_grouper_series_bug_noncontig (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_cython_median (pandas.tests.test_groupby.TestGroupBy) ... ok
-test_cythonized_aggers (pandas.tests.test_groupby.TestGroupBy) ... ,10001:0ok
+test_cythonized_aggers (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_dictify (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_dispatch_transform (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_dont_clobber_name_column (pandas.tests.test_groupby.TestGroupBy) ... ok
@@ -3316,7 +3317,7 @@ test_filter_series (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_filter_single_column_df (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_first_last_nth (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_first_last_nth_dtypes (pandas.tests.test_groupby.TestGroupBy) ... ok
-test_frame_describe_multikey (pandas.tests.test_groupby.TestGroupBy) ... ok
+test_frame_describe_mult,589:0ikey (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_frame_groupby (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_frame_groupby_columns (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_frame_groupby_hist (pandas.tests.test_groupby.TestGroupBy) ... /usr/lib/pymodules/python2.7/matplotlib/__init__.py:923: UserWarning:  This call to matplotlib.use() has no effect
@@ -3325,7 +3326,7 @@ matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
 or matplotlib.backends is imported for the first time.
 
   if warn: warnings.warn(_use_error_msg)
-ok
+,10001:0ok
 test_frame_groupby_plot_boxplot (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_frame_multi_key_function_list (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_frame_set_name_single (pandas.tests.test_groupby.TestGroupBy) ... ok
@@ -3441,7 +3442,7 @@ test_asof (pandas.tests.test_index.TestIndex) ... ok
 test_astype (pandas.tests.test_index.TestIndex) ... ok
 test_boolean_cmp (pandas.tests.test_index.TestIndex) ... ok
 test_booleanindex (pandas.tests.test_index.TestIndex) ... ok
-,2263:0test_comparators (pandas.tests.test_index.TestIndex) ... ok
+test_comparators (pandas.tests.test_index.TestIndex) ... ok
 test_compat (pandas.tests.test_index.TestIndex) ... ok
 test_constructor (pandas.tests.test_index.TestIndex) ... ok
 test_constructor_corner (pandas.tests.test_index.TestIndex) ... ok
@@ -3468,16 +3469,16 @@ test_intersection (pandas.tests.test_index.TestIndex) ... ok
 test_is_ (pandas.tests.test_index.TestIndex) ... ok
 test_is_all_dates (pandas.tests.test_index.TestIndex) ... ok
 test_is_monotonic_incomparable (pandas.tests.test_index.TestIndex) ... ok
-test_is_numeric (pandas.tests.test_index.TestIndex) ... ok
+test_is_numeric (pandas.tests.test_index.Te,338:0stIndex) ... ok
 test_isin (pandas.tests.test_index.TestIndex) ... ok
 test_join_self (pandas.tests.test_index.TestIndex) ... ok
 test_mutability (pandas.tests.test_index.TestIndex) ... ok
 test_nanosecond_index_access (pandas.tests.test_index.TestIndex) ... SKIP: numpy >= 1.7 required
-test_new_axis (pandas.tests.test_index.TestIndex) ... ok
+test_new_axis (pandas.tests.test_index.TestIndex) ... ,10001:0ok
 test_pickle (pandas.tests.test_index.TestIndex) ... ok
 test_set_name_methods (pandas.tests.test_index.TestIndex) ... ok
 test_shift (pandas.tests.test_index.TestIndex) ... ok
-test_slice_keep_name (pandas.tests.test_index.TestIndex) ... ,10001:0ok
+test_slice_keep_name (pandas.tests.test_index.TestIndex) ... ok
 test_slice_locs (pandas.tests.test_index.TestIndex) ... ok
 test_slice_locs_dup (pandas.tests.test_index.TestIndex) ... ok
 test_sort (pandas.tests.test_index.TestIndex) ... ok
@@ -3622,10 +3623,10 @@ test_iloc_mask (pandas.tests.test_indexing.TestIndexing) ... ok
 test_iloc_multiindex (pandas.tests.test_indexing.TestIndexing) ... ok
 test_iloc_non_unique_indexing (pandas.tests.test_indexing.TestIndexing) ... ok
 test_iloc_panel_issue (pandas.tests.test_indexing.TestIndexing) ... ok
-test_iloc_setitem (pandas.tests.test_indexing.TestIndexing) ... ok
+test_iloc_setitem (pandas.test,983:0s.test_indexing.TestIndexing) ... ok
 test_iloc_setitem_series (pandas.tests.test_indexing.TestIndexing) ... ok
 test_indexing_mixed_frame_bug (pandas.tests.test_indexing.TestIndexing) ... ok
-test_ix_assign_column_mixed (pandas.tests.test_i,745:0ndexing.TestIndexing) ... ok
+test_ix_assign_column_mixed (pandas.tests.test_indexing.TestIndexing) ... ok
 test_ix_general (pandas.tests.test_indexing.TestIndexing) ... ok
 test_ix_get_set_consistency (pandas.tests.test_indexing.TestIndexing) ... ok
 test_ix_slicing_strings (pandas.tests.test_indexing.TestIndexing) ... ok
@@ -3936,8 +3937,8 @@ test_count (pandas.tests.test_panel.TestPanel) ... ok
 test_ctor_dict (pandas.tests.test_panel.TestPanel) ... ok
 test_ctor_orderedDict (pandas.tests.test_panel.TestPanel) ... ok
 test_cumsum (pandas.tests.test_panel.TestPanel) ... ok
-test_delit,52:0em_and_pop (pandas.tests.test_panel.TestPanel) ... ,10001:0ok
-test_dropna (pandas.tests.test_panel.TestPanel) ... ok
+test_delit,107:0em_and_pop (pandas.tests.test_panel.TestPanel) ... ok
+test_dropna (pandas.tests.test_panel.TestPanel) ... ,10001:0ok
 test_ffill_bfill (pandas.tests.test_panel.TestPanel) ... ok
 test_fillna (pandas.tests.test_panel.TestPanel) ... ok
 test_filter (pandas.tests.test_panel.TestPanel) ... ok
@@ -4094,15 +4095,15 @@ test_5d_construction (pandas.tests.test_panelnd.TestPanelnd) ... ok
 test_convert_dummies (pandas.tests.test_reshape.TestConvertDummies) ... ok
 test_basic (pandas.tests.test_reshape.TestGetDummies) ... ok
 test_include_na (pandas.tests.test_reshape.TestGetDummies) ... ok
-test_just_na (pandas.tests.test_reshape.TestGetDumm,195:0ies) ... ok
-test_pairs (pandas.tests.test_reshape.TestLreshape) ... ok
+test_just_na (pandas.tests.test_reshape.TestGetDummies) ... ok
+test_pairs (pandas.tests.test_reshape.TestL,467:0reshape) ... ok
 test_col_level (pandas.tests.test_reshape.TestMelt) ... ok
-test_custom_value_name (pandas.tests.test_reshape.TestMelt) ... ,10001:0ok
+test_custom_value_name (pandas.tests.test_reshape.TestMelt) ... ok
 test_custom_var_and_value_name (pandas.tests.test_reshape.TestMelt) ... ok
 test_custom_var_name (pandas.tests.test_reshape.TestMelt) ... ok
 test_default_col_names (pandas.tests.test_reshape.TestMelt) ... ok
 test_multiindex (pandas.tests.test_reshape.TestMelt) ... ok
-test_value_vars (pandas.tests.test_reshape.TestMelt) ... ok
+test_value_vars (pandas.tests.test_reshape.TestMelt) ... ,10001:0ok
 test_rplot1 (pandas.tests.test_rplot.TestRPlot) ... ok
 test_rplot2 (pandas.tests.test_rplot.TestRPlot) ... ok
 test_rplot3 (pandas.tests.test_rplot.TestRPlot) ... ok
@@ -4248,11 +4249,11 @@ test_getitem_setitem_datetime_tz (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_setitem_datetimeindex (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_setitem_ellipsis (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_setitem_integers (pandas.tests.test_series.TestSeries) ... ok
-test_,2408:0getitem_setitem_periodindex (pandas.tests.test_series.TestSeries) ... ok
+test_getitem_setitem_periodindex (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_setitem_slice_bug (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_setitem_slice_integers (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_unordered_dup (pandas.tests.test_series.TestSeries) ... ok
-test_head_tail (pandas.tests.test_series.TestSeries) ... ok
+test_head_tail (pandas.te,1970:0sts.test_series.TestSeries) ... ok
 test_idxmax (pandas.tests.test_series.TestSeries) ... ok
 test_idxmin (pandas.tests.test_series.TestSeries) ... ok
 test_iget (pandas.tests.test_series.TestSeries) ... ok
@@ -4283,9 +4284,9 @@ test_map_type_inference (pandas.tests.test_series.TestSeries) ... ok
 test_mask (pandas.tests.test_series.TestSeries) ... ok
 test_max (pandas.tests.test_series.TestSeries) ... ok
 test_mean (pandas.tests.test_series.TestSeries) ... ok
-test_median (pandas.tests.test_series.TestSeries) ... ok
+test_median (pandas.tests.test_series.TestSeries) ... ,10001:0ok
 test_min (pandas.tests.test_series.TestSeries) ... ok
-test_modulo (pandas.tests.test_series.TestSeries) ... ,10001:0ok
+test_modulo (pandas.tests.test_series.TestSeries) ... ok
 test_more_na_comparisons (pandas.tests.test_series.TestSeries) ... ok
 test_mpl_compat_hack (pandas.tests.test_series.TestSeries) ... ok
 test_multilevel_name_print (pandas.tests.test_series.TestSeries) ... ok
@@ -4432,9 +4433,9 @@ test_findall (pandas.tests.test_strings.TestStringMethods) ... ok
 test_get (pandas.tests.test_strings.TestStringMethods) ... ok
 test_iter (pandas.tests.test_strings.TestStringMethods) ... ok
 test_iter_empty (pandas.tests.test_strings.TestStringMethods) ... ok
-test_iter_numeric_try_string (pandas.tests.test_strings.TestStringMethods) ... ok
+test_iter_numeric_try_string (pandas.tests.test_strings.TestStringMethods) ..,10001:0. ok
 test_iter_object_try_string (pandas.tests.test_strings.TestStringMethods) ... ok
-test_iter_single_element ,10001:0(pandas.tests.test_strings.TestStringMethods) ... ok
+test_iter_single_element (pandas.tests.test_strings.TestStringMethods) ... ok
 test_join (pandas.tests.test_strings.TestStringMethods) ... ok
 test_len (pandas.tests.test_strings.TestStringMethods) ... ok
 test_lower_upper (pandas.tests.test_strings.TestStringMethods) ... ok
@@ -4514,9 +4515,9 @@ pandas.tests.test_tseries.test_group_ohlc ... ok
 pandas.tests.test_tseries.test_try_parse_dates ... ok
 
 ----------------------------------------------------------------------
-Ran 4488 tests in 5513.947s
+Ran 4489 tests in 5519.095s
 
-OK (SKIP=205)
+OK (SKIP=206)
 month: 11, year: 2013
 month: 11, year: 2013
 month: 11, year: 2013
@@ -4526,313 +4527,313 @@ month: 11, year: 2013
 None
 0          NaN
 1          NaN
-2     0.145703
-3     0.410958
-4     0.891887
-5     0.352874
-6     0.574687
-7     0.523779
-8     0.697635
-9    -0.104711
-10    0.012823
-11    0.148066
-12    0.092694
-13    0.042517
-14    0.358486
-15    0.421971
-16    0.081379
-17   -0.352780
-18   -0.305571
-19   -0.033849
-20   -0.149512
-21    0.202543
-22    0.363709
-23    0.341057
-24   -0.150734
-25    0.338114
-26   -0.088645
-27   -0.209636
+2     0.711887
+3     0.913851
+4     0.632473
+5     0.544027
+6     0.254414
+7     0.117087
+8    -0.192016
+9     0.380406
+10    0.365904
+11    0.243891
+12    0.165947
+13    0.429476
+14    0.297076
+15    0.644757
+16    0.635327
+17    0.740131
+18    0.273063
+19   -0.009916
+20   -0.069139
+21   -0.278654
+22   -0.544602
+23   -0.081529
+24   -0.265004
+25   -0.188824
+26   -0.326789
+27   -0.098765
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.574808
-3     0.796839
-4    -0.049217
-5    -0.243550
-6    -0.754400
-7     0.038547
-8    -0.325612
-9    -0.450737
-10   -0.319183
-11   -0.217286
-12   -0.321473
-13   -0.084145
-14    0.224685
-15    0.737959
-16    0.865088
-17    0.875861
-18    0.881028
-19    0.723236
-20    0.790318
-21    0.033632
-22    0.019499
-23   -0.154083
-24    0.275449
-25    0.569998
-26    0.743503
-27    0.766777
+2    -0.243872
+3    -0.529472
+4     0.074483
+5     0.339594
+6     0.254983
+7     0.393535
+8     0.651201
+9    -0.329216
+10   -0.629903
+11   -0.417357
+12   -0.627688
+13   -0.346785
+14   -0.063209
+15    0.315718
+16    0.107735
+17    0.233890
+18   -0.276566
+19   -0.559031
+20   -0.744501
+21   -0.345791
+22    0.424029
+23    0.919736
+24    0.404723
+25    0.524034
+26    0.485167
+27    0.314032
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.252348
-3    -0.300351
-4     0.583302
-5     0.449629
-6     0.071882
-7    -0.637985
-8    -0.652298
-9    -0.691696
-10   -0.736413
-11   -0.858244
-12   -0.833050
-13   -0.807627
-14   -0.738149
-15   -0.320351
-16   -0.531862
-17   -0.287590
-18   -0.278490
-19   -0.708065
-20   -0.890605
-21   -0.932879
-22   -0.890850
-23   -0.160767
-24   -0.462037
-25   -0.474501
-26   -0.466718
-27   -0.529652
+2    -0.249595
+3    -0.139375
+4    -0.320401
+5    -0.060421
+6    -0.702425
+7    -0.522549
+8    -0.626164
+9    -0.892846
+10   -0.851439
+11   -0.792271
+12   -0.767682
+13   -0.794859
+14   -0.717513
+15   -0.422168
+16    0.374477
+17   -0.526511
+18   -0.027051
+19   -0.135356
+20   -0.109243
+21   -0.582161
+22   -0.160663
+23   -0.874885
+24   -0.218541
+25   -0.172981
+26   -0.452044
+27   -0.542631
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.543304
-3    -0.535249
-4    -0.783448
-5    -0.390748
-6    -0.405435
-7    -0.822856
-8    -0.772658
-9    -0.779649
-10   -0.638537
-11   -0.791022
-12   -0.949360
-13   -0.913658
-14   -0.887552
-15   -0.891111
-16   -0.229404
-17   -0.227697
-18   -0.411522
-19   -0.579498
-20   -0.603990
-21   -0.840970
-22   -0.831124
-23    0.153896
-24    0.723275
-25    0.693470
-26    0.681457
-27    0.725467
+2    -0.124396
+3     0.172106
+4    -0.234811
+5     0.035888
+6    -0.308429
+7     0.141283
+8    -0.250219
+9     0.554810
+10    0.547562
+11    0.823089
+12    0.850332
+13    0.755653
+14    0.834029
+15    0.707461
+16    0.622506
+17    0.226624
+18    0.032693
+19   -0.092265
+20    0.529684
+21    0.530987
+22   -0.324284
+23   -0.237782
+24    0.310244
+25    0.141764
+26    0.492921
+27    0.137115
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.419075
-3     0.423257
-4     0.456383
-5     0.560240
-6    -0.180910
-7    -0.540291
-8    -0.550109
-9    -0.490926
-10   -0.451539
-11   -0.753486
-12   -0.895059
-13   -0.920150
-14   -0.798771
-15   -0.858491
-16   -0.277624
-17   -0.407158
-18   -0.546431
-19    0.011898
-20   -0.039098
-21    0.177015
-22    0.478578
-23    0.404362
-24    0.435626
-25   -0.206580
-26   -0.745931
-27   -0.725430
+2    -0.430950
+3    -0.079004
+4    -0.413492
+5    -0.428197
+6    -0.720741
+7    -0.019802
+8    -0.261243
+9     0.494540
+10    0.416312
+11    0.390746
+12    0.180472
+13    0.034176
+14    0.330234
+15    0.402362
+16    0.126004
+17   -0.131698
+18   -0.485490
+19   -0.921830
+20   -0.021374
+21    0.016326
+22    0.239394
+23    0.537229
+24    0.866839
+25    0.782581
+26    0.938845
+27    0.922129
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.868571
-3     0.934809
-4     0.677224
-5     0.371970
-6     0.464138
-7     0.041455
-8     0.063176
-9    -0.066681
-10   -0.069163
-11   -0.247133
-12   -0.632509
-13   -0.862983
-14   -0.823729
-15   -0.676005
-16    0.685932
-17    0.808243
-18   -0.196517
-19   -0.249965
-20   -0.254253
-21   -0.419778
-22   -0.302131
-23    0.221676
-24    0.435565
-25    0.016966
-26    0.135524
-27    0.270968
+2    -0.192613
+3    -0.153394
+4    -0.138997
+5     0.853518
+6     0.218020
+7     0.169152
+8    -0.153945
+9    -0.017965
+10   -0.087011
+11   -0.321794
+12   -0.549995
+13   -0.569706
+14   -0.857216
+15   -0.911571
+16   -0.834295
+17   -0.570826
+18   -0.641541
+19   -0.708335
+20   -0.364700
+21   -0.019017
+22    0.289071
+23    0.074591
+24    0.202640
+25    0.721579
+26    0.675349
+27    0.738108
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.098733
-3     0.081870
-4    -0.353382
-5    -0.417303
-6    -0.624607
-7    -0.569044
-8    -0.294785
-9    -0.691444
-10   -0.625373
-11   -0.967094
-12   -0.967555
-13   -0.970707
-14   -0.429207
-15    0.239272
-16   -0.000063
-17    0.000942
-18   -0.339756
-19   -0.670642
-20   -0.050572
-21   -0.251950
-22   -0.519283
-23   -0.653192
-24   -0.770766
-25   -0.818586
-26   -0.817412
-27   -0.048752
+2    -0.200166
+3    -0.457482
+4    -0.361251
+5    -0.493227
+6    -0.523871
+7    -0.792722
+8    -0.620832
+9    -0.590861
+10   -0.120465
+11    0.018332
+12   -0.012064
+13   -0.100048
+14    0.356960
+15    0.812207
+16    0.830294
+17    0.463269
+18    0.350047
+19    0.120615
+20   -0.238314
+21    0.170095
+22   -0.011907
+23    0.205261
+24    0.074814
+25    0.083091
+26    0.262763
+27    0.280259
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.663068
-3     0.073555
-4     0.124171
-5     0.293727
-6    -0.043637
-7    -0.018502
-8     0.518193
-9     0.637736
-10   -0.420118
-11   -0.012572
-12    0.358609
-13    0.447763
-14   -0.249799
-15    0.001073
-16    0.086464
-17    0.224511
-18    0.197958
-19    0.334218
-20    0.124517
-21   -0.296512
-22    0.072766
-23    0.076330
-24   -0.014406
-25    0.182578
-26   -0.183643
-27   -0.404054
+2    -0.246073
+3    -0.684733
+4     0.146236
+5     0.399946
+6     0.216704
+7     0.906465
+8     0.774890
+9     0.703341
+10    0.718295
+11    0.572874
+12   -0.045086
+13   -0.178324
+14   -0.092868
+15   -0.094176
+16    0.023238
+17    0.406762
+18    0.691537
+19    0.005799
+20    0.314983
+21   -0.010534
+22   -0.080824
+23   -0.233355
+24   -0.017914
+25   -0.533038
+26    0.540477
+27    0.582468
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.823308
-3    -0.063462
-4     0.480042
-5     0.627129
-6     0.824376
-7     0.864306
-8     0.714464
-9     0.594211
-10    0.049398
-11   -0.418563
-12    0.176463
-13    0.007341
-14    0.282513
-15    0.264823
-16    0.390556
-17    0.166752
-18   -0.229231
-19   -0.203277
-20   -0.406081
-21   -0.164657
-22   -0.209306
-23    0.200011
-24    0.136039
-25    0.632399
-26   -0.235211
-27   -0.601224
+2    -0.887614
+3    -0.335262
+4     0.079808
+5    -0.051073
+6    -0.250289
+7     0.064163
+8     0.343412
+9     0.385151
+10    0.177272
+11    0.660546
+12    0.775929
+13    0.580563
+14   -0.235535
+15   -0.092990
+16    0.144739
+17   -0.140986
+18    0.280090
+19    0.691463
+20    0.777142
+21    0.796142
+22    0.928974
+23    0.103756
+24   -0.544477
+25   -0.816990
+26   -0.749854
+27   -0.761026
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.546663
-3     0.541705
-4     0.197699
-5    -0.009739
-6     0.314970
-7     0.258857
-8    -0.395370
-9    -0.225998
-10    0.166252
-11   -0.410983
-12   -0.209658
-13   -0.284300
-14    0.588834
-15   -0.292173
-16   -0.469348
-17   -0.105644
-18   -0.295153
-19   -0.750580
-20   -0.640327
-21   -0.569690
-22   -0.753286
-23   -0.517719
-24    0.037172
-25   -0.079866
-26   -0.619716
-27   -0.559019
+2    -0.298720
+3     0.099038
+4     0.901183
+5     0.466016
+6     0.497956
+7    -0.218428
+8    -0.328970
+9    -0.247150
+10    0.252727
+11    0.025404
+12    0.194362
+13   -0.112561
+14    0.068074
+15   -0.137541
+16   -0.352892
+17   -0.466244
+18   -0.238243
+19   -0.934482
+20   -0.851295
+21   -0.78406,1934:07
+22   -0.714257
+23   -0.629606
+24   -0.213625
+25   -0.064528
+26    0.026664
+27   -0.152176
 28         NaN
-29  ,1758:0       NaN
+29         NaN
 dtype: float64
 False
                     b
@@ -4973,25 +4974,30 @@ columns
 spam
 ----------------------------------------
     0  1  2  3  4  5  6  7  8  9
-0   1  8  1  7  0  5  1  9  8  0
-15  1  2  5  5  1  7  0  8  3  6
+3   0  4  5  9  0  0  2  9  6  7
+5   0  1  3  6  8  7  7  9  2  7
+13  0  3  0  1  8  9  7  7  9  2
 ----------------------------------------
 ----------------------------------------
-0     8
-15    2
+3     4
+5     1
+13    3
 ----------------------------------------
-0     8
-15    2
+3     4
+5     1
+13    3
 ----------------------------------------
-0     8
-15    2
+3     4
+5     1
+13    3
 ----------------------------------------
-0     8
-15    2
+3     4
+5     1
+13    3
 None
 Warning: discarding nonzero nanoseconds
 ,151:0XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":102"
       after 15 requests (13 known processed) with 0 events remaining.
 ,59:2program finished with exit code 0
-elapsedTime=5549.829495
+elapsedTime=5560.647859
 ,
