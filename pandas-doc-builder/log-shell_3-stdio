@@ -170,7 +170,7 @@ copying pandas/tools/util.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/merge.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/rplot.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/__init__.py -> build/lib.linux-sparc64-2.7/pandas/tools
-copying pandas/tools/describe.py -> build/lib.linux-sparc64-2.7/pa,9863:0ndas/tools
+copying pandas/tools/describe.py -> build/lib.linux-sparc64-2.7/pa,10001:0ndas/tools
 creating build/lib.linux-sparc64-2.7/pandas/tools/tests
 copying pandas/tools/tests/test_merge.py -> build/lib.linux-sparc64-2.7/pandas/tools/tests
 copying pandas/tools/tests/test_tools.py -> build/lib.linux-sparc64-2.7/pandas/tools/tests
@@ -266,6 +266,9 @@ copying pandas/io/tests/data/salary.table -> build/lib.linux-sparc64-2.7/pandas/
 copying pandas/io/tests/data/spam.html -> build/lib.linux-sparc64-2.7/pandas/io/tests/data
 copying pandas/io/tests/data/banklist.html -> build/lib.linux-sparc64-2.7/pandas/io/tests/data
 copying pandas/io/tests/data/valid_markup.html -> build/lib.linux-sparc64-2.7/pandas/io/tests/data
+creating build/lib.linux-sparc64-2.7/pandas/io/tests/test_json/data
+copying pandas/io/tests/test_json/data/tsframe_v012.json -> build/lib.linux-sparc64-2.7/pandas/io/tests/test_json/data
+copying pandas/io/tests/test_json/data/tsframe_iso_v012.json -> build/lib.linux-sparc64-2.7/pandas/io/tests/test_json/data
 creating build/lib.linux-sparc64-2.7/pandas/tests/data
 copying pandas/tests/data/multiindex_v1.pickle -> build/lib.linux-sparc64-2.7/pandas/tests/data
 copying pandas/tests/data/mindex_073.pickle -> build/lib.linux-sparc64-2.7/pandas/tests/data
@@ -277,7 +280,7 @@ creating build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/daterange_073.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/series.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/frame.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
-copying pandas/tseries/tests/data/series_daterange0.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
+copying,173:0 pandas/tseries/tests/data/series_daterange0.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 running build_ext
 cythoning pandas/index.pyx to pandas/index.c
 ,502:0building 'pandas.index' extension
@@ -545,12 +548,16 @@ creating build/temp.linux-sparc64-2.7/pandas/src/ujson/python
 creating build/temp.linux-sparc64-2.7/pandas/src/ujson/lib
 sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/ujson/python/ujson.c -o build/temp.linux-sparc64-2.7/pandas/src/ujson/python/ujson.o -D_GNU_SOURCE
 sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/ujson/python/objToJSON.c -o build/temp.linux-sparc64-2.7/pandas/src/ujson/python/objToJSON.o -D_GNU_SOURCE
-,664:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
+,1005:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarrayobject.h:17,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/arrayobject.h:15,
                  from pandas/src/ujson/python/objToJSON.c:40:
 /usr/lib/pymodules/python2.7/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
-pandas/src/ujson/python/objToJSON.c:175:14: warning: 'PyIntToINT64' defined but not used [-Wunused-function]
+pandas/src/ujson/python/objToJSON.c: In function 'NpyArr_encodeLabels':
+pandas/src/ujson/python/objToJSON.c:1065:20: warning: unused variable 'labelsTmp' [-Wunused-variable]
+pandas/src/ujson/python/objToJSON.c: At top level:
+pandas/src/ujson/python/objToJSON.c:188:14: warning: 'PyIntToINT64' defined but not used [-Wunused-function]
+pandas/src/ujson/python/objToJSON.c:303:14: warning: 'NpyDatetime64ToJSON' defined but not used [-Wunused-function]
 ,405:0sparc-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/ujson/python/JSONtoObj.c -o build/temp.linux-sparc64-2.7/pandas/src/ujson/python/JSONtoObj.o -D_GNU_SOURCE
 ,555:1In file included from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarraytypes.h:1728:0,
                  from /usr/lib/pymodules/python2.7/numpy/core/include/numpy/ndarrayobject.h:17,
@@ -667,6 +674,9 @@ copying build/lib.linux-sparc64-2.7/pandas/io/parsers.py -> build/bdist.linux-sp
 creating build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_excel.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 creating build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
+creating build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/data
+copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_json/data/tsframe_v012.json -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/data
+copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_json/data/tsframe_iso_v012.json -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_json/test_ujson.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_json/test_pandas.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_json/__init__.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
@@ -679,10 +689,10 @@ copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/test.xlsx -> build/bdis
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/banklist.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/stata4.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/spam.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
-copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/banklist.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/banklist.,10001:0html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/unicode_series.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/test1.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
-copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/valid,10001:0_markup.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
+copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/valid_markup.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/stata2.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 creating build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle
 creating build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_pickle/0.11.0
@@ -767,10 +777,10 @@ copying build/lib.linux-sparc64-2.7/pandas/tests/test_index.py -> build/bdist.li
 copying build/lib.linux-sparc64-2.7/pandas/tests/test_panelnd.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-2.7/pandas/version.py -> build/bdist.linux-sparc64/egg/pandas
 creating build/bdist.linux-sparc64/egg/pandas/tseries
-copying build/lib.linux-sparc64-2.7/pandas/tseries/index.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying bu,10001:0ild/lib.linux-sparc64-2.7/pandas/tseries/index.py -> build/bdist.linux-sparc64/egg/pandas/tseries
 creating build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_timeseries.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
-copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_converter.py -> build/,10001:0bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_converter.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_cursor.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_frequencies.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 creating build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
@@ -864,12 +874,12 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_util.py to 
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_pivot.py to test_pivot.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/plotting.py to plotting.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tile.py to tile.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/util.py to util.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/,4129:0util.py to util.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/merge.py to merge.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/rplot.py to rplot.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/describe.py to describe.pyc
-byte-compiling build,3371:0/bdist.linux-sparc64/egg/pandas/compat/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/scipy.py to scipy.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/datetools.py to datetools.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/expressions.py to expressions.pyc
@@ -909,11 +919,11 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_pand
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_wb.py to test_wb.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_parsers.py to test_parsers.pyc
-,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_data.py to test_data.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_data.py to test_data.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_clipboard.py to test_clipboard.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_pickle.py to test_pickle.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_pytables.py to test_pytables.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_html.py to test_html.pyc
+,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_html.py to test_html.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/generate_legacy_pickles.py to generate_legacy_pickles.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_cparser.py to test_cparser.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_ga.py to test_ga.pyc
@@ -1022,14 +1032,14 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/sandbox/qtpandas.py to qtpan
 byte-compiling build/bdist.linux-sparc64/egg/pandas/sandbox/__init__.py to __init__.pyc
 creating stub loader for pandas/index.so
 creating stub loader for pandas/algos.so
-creating,1562:0 stub loader for pandas/lib.so
+creating stub loader for pandas/lib.so
 creating stub loader for pandas/tslib.so
 creating stub loader for pandas/parser.so
 creating stub loader for pandas/hashtable.so
 creating stub loader for pandas/_sparse.so
 creating stub loader for pandas/json.so
 byte-compiling build/bdist.linux-sparc64/egg/pandas/index.py to index.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/algos.py to algos.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/algos.py to algos.,1176:0pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/lib.py to lib.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tslib.py to tslib.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/parser.py to parser.pyc
@@ -1045,15 +1055,15 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_174_g9fc8636-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+creating 'dist/pandas-0.12.0_182_gb5ff81d-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
 ,1228:0removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_174_g9fc8636-py2.7-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_174_g9fc8636-py2.7-linux-sparc64.egg
-Extracting pandas-0.12.0_174_g9fc8636-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages
-Adding pandas 0.12.0-174-g9fc8636 to easy-install.pth file
+Processing pandas-0.12.0_182_gb5ff81d-py2.7-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_182_gb5ff81d-py2.7-linux-sparc64.egg
+Extracting pandas-0.12.0_182_gb5ff81d-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages
+Adding pandas 0.12.0-182-gb5ff81d to easy-install.pth file
 
-Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_174_g9fc8636-py2.7-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-174-g9fc8636
+Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/lib/python2.7/site-packages/pandas-0.12.0_182_gb5ff81d-py2.7-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-182-gb5ff81d
 Searching for numpy==1.7.1
 Best match: numpy 1.7.1
 Adding numpy 1.7.1 to easy-install.pth file
@@ -1069,7 +1079,7 @@ Best match: python-dateutil 1.5
 python-dateutil 1.5 is already the active version in easy-install.pth
 
 Using /usr/lib/python2.7/dist-packages
-Finished processing dependencies for pandas==0.12.0-174-g9fc8636
+Finished processing dependencies for pandas==0.12.0-182-gb5ff81d
 ,59:2program finished with exit code 0
-elapsedTime=3022.970788
+elapsedTime=3058.942328
 ,
