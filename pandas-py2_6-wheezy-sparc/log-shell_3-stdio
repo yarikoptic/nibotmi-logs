@@ -268,7 +268,7 @@ copying pandas/io/tests/data/legacy_pickle/0.11.0/x86_64_linux_3.3.0.pickle -> b
 copying pandas/io/tests/data/legacy_pickle/0.11.0/0.11.0_x86_64_linux_3.3.0.pickle -> build/lib.linux-sparc64-2.6/pandas/io/tests/data/legacy_pickle/0.11.0
 creating build/lib.linux-sparc64-2.6/pandas/io/tests/data/legacy_pickle/0.12.0
 copying pandas/io/tests/data/legacy_pickle/0.12.0/0.12.0_x86_64_linux_2.7.3.pickle -> build/lib.linux-sparc64-2.6/pandas/io/tests/data/legacy_pickle/0.12.0
-copying pandas/io/tests/data/legacy_pickle/0.12.0/0.12.0_AMD64_windows_2.7.3.pickle -> build/l,3398:0ib.linux-sparc64-2.6/pandas/io/tests/data/legacy_pickle/0.12.0
+copying pandas/io/tests/data/legacy_pickle/0.12.0/0.12.0_AMD64_windows_2.7.3.pickle -> build/l,3353:0ib.linux-sparc64-2.6/pandas/io/tests/data/legacy_pickle/0.12.0
 copying pandas/io/tests/data/test2.csv -> build/lib.linux-sparc64-2.6/pandas/io/tests/data
 copying pandas/io/tests/data/banklist.csv -> build/lib.linux-sparc64-2.6/pandas/io/tests/data
 copying pandas/io/tests/data/unicode_series.csv -> build/lib.linux-sparc64-2.6/pandas/io/tests/data
@@ -305,8 +305,8 @@ copying pandas/tseries/tests/data/series.pickle -> build/lib.linux-sparc64-2.6/p
 copying pandas/tseries/tests/data/frame.pickle -> build/lib.linux-sparc64-2.6/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/series_daterange0.pickle -> build/lib.linux-sparc64-2.6/pandas/tseries/tests/data
 running build_ext
-cythoning pandas/index.pyx to pandas/index.c
-,486:0building 'pandas.index' extension
+,531:0cythoning pandas/index.pyx to pandas/index.c
+building 'pandas.index' extension
 creating build/temp.linux-sparc64-2.6
 creating build/temp.linux-sparc64-2.6/pandas
 creating build/temp.linux-sparc64-2.6/pandas/src
@@ -334,11 +334,7 @@ pandas/index.c:7600:13: warning: '__pyx_v_mid' may be used uninitialized in this
 ,300:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.6/numpy/core/include -I/usr/include/python2.6 -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime.o
 ,109:1/usr/include/python2.6/datetime.h:186:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
 ,316:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.6/numpy/core/include -I/usr/include/python2.6 -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime_strings.o
-,571:1pandas/src/datetime/np_datetime_strings.c: In function 'make_iso_8601_datetime':
-pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
-pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
-pandas/src/datetime/np_datetime_strings.c: At top level:
-pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
+,113:1pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
 ,620:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions build/temp.linux-sparc64-2.6/pandas/index.o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime_strings.o -o build/lib.linux-sparc64-2.6/pandas/index.so
 cythoning pandas/algos.pyx to pandas/algos.c
 building 'pandas.algos' extension
@@ -414,11 +410,7 @@ pandas/tslib.c:7907:18: warning: '__pyx_f_6pandas_5tslib__tz_format' defined but
 ,300:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.6/numpy/core/include -I/usr/include/python2.6 -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime.o
 ,109:1/usr/include/python2.6/datetime.h:186:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
 ,316:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.6/numpy/core/include -I/usr/include/python2.6 -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime_strings.o
-,571:1pandas/src/datetime/np_datetime_strings.c: In function 'make_iso_8601_datetime':
-pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
-pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
-pandas/src/datetime/np_datetime_strings.c: At top level:
-pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
+,113:1pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
 ,1001:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.6/numpy/core/include -I/usr/include/python2.6 -c pandas/src/period.c -o build/temp.linux-sparc64-2.6/pandas/src/period.o
 gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions build/temp.linux-sparc64-2.6/pandas/tslib.o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime_strings.o build/temp.linux-sparc64-2.6/pandas/src/period.o -o build/lib.linux-sparc64-2.6/pandas/tslib.so
 cythoning pandas/parser.pyx to pandas/parser.c
@@ -539,11 +531,7 @@ pandas/src/ujson/lib/ultrajsondec.c:78:13: warning: 'ClearError' defined but not
 ,385:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.6/numpy/core/include -I/usr/include/python2.6 -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime.o -D_GNU_SOURCE
 ,109:1/usr/include/python2.6/datetime.h:186:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
 ,401:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/ujson/python -Ipandas/src/ujson/lib -Ipandas/src/datetime -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.6/numpy/core/include -I/usr/include/python2.6 -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime_strings.o -D_GNU_SOURCE
-,571:1pandas/src/datetime/np_datetime_strings.c: In function 'make_iso_8601_datetime':
-pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
-pandas/src/datetime/np_datetime_strings.c:1151:5: warning: format '%Ld' expects argument of type 'long long int', but argument 4 has type 'long int' [-Wformat]
-pandas/src/datetime/np_datetime_strings.c: At top level:
-pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
+,113:1pandas/src/datetime/np_datetime_strings.c:127:1: warning: 'get_gmtime' defined but not used [-Wunused-function]
 ,10001:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions build/temp.linux-sparc64-2.6/pandas/src/ujson/python/ujson.o build/temp.linux-sparc64-2.6/pandas/src/ujson/python/objToJSON.o build/temp.linux-sparc64-2.6/pandas/src/ujson/python/JSONtoObj.o build/temp.linux-sparc64-2.6/pandas/src/ujson/lib/ultrajsonenc.o build/temp.linux-sparc64-2.6/pandas/src/ujson/lib/ultrajsondec.o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime.o build/temp.linux-sparc64-2.6/pandas/src/datetime/np_datetime_strings.o -o build/lib.linux-sparc64-2.6/pandas/json.so
 creating build/bdist.linux-sparc64
 creating build/bdist.linux-sparc64/egg
@@ -637,7 +625,7 @@ creating build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
 creating build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/data
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_json/data/tsframe_v012.json -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/data
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_json/data/tsframe_iso_v012.json -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/data
-copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_json/test_ujson.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_,6173:0json
+copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_json/test_ujson.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_,4693:0json
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_json/test_pandas.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_json/__init__.py -> build/bdist.linux-sparc64/egg/pandas/io/tests/test_json
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_wb.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
@@ -675,7 +663,7 @@ copying build/lib.linux-sparc64-2.6/pandas/io/tests/data/stata3.csv -> build/bdi
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/data/salary.table -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/data/utf16_ex.txt -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 creating build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
-copying build/lib.linux-sparc64-2.6/pandas/io/tests/data/legacy_hdf/pytables_native2.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
+,10001:0copying build/lib.linux-sparc64-2.6/pandas/io/tests/data/legacy_hdf/pytables_native2.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/data/legacy_hdf/legacy.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/data/legacy_hdf/legacy_table_0.11.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/data/legacy_hdf/pytables_native.h5 -> build/bdist.linux-sparc64/egg/pandas/io/tests/data/legacy_hdf
@@ -686,7 +674,7 @@ copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_clipboard.py -> build/b
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_pickle.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_pytables.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_html.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
-,10001:0copying build/lib.linux-sparc64-2.6/pandas/io/tests/generate_legacy_pickles.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-2.6/pandas/io/tests/generate_legacy_pickles.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_cparser.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/test_ga.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.6/pandas/io/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
@@ -762,7 +750,7 @@ copying build/lib.linux-sparc64-2.6/pandas/tseries/tests/test_resample.py -> bui
 copying build/lib.linux-sparc64-2.6/pandas/tseries/tests/test_timezones.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.6/pandas/tseries/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.6/pandas/tseries/tests/test_plotting.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
-copying build/lib.linux-sparc64-2.6/pandas/tseries/tests/test_timeseries_legacy.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-2.6/pandas/tseries/tests/test_timeseries_legacy.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tes,10001:0ts
 copying build/lib.linux-sparc64-2.6/pandas/tseries/tests/test_util.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.6/pandas/tseries/plotting.py -> build/bdist.linux-sparc64/egg/pandas/tseries
 copying build/lib.linux-sparc64-2.6/pandas/tseries/offsets.py -> build/bdist.linux-sparc64/egg/pandas/tseries
@@ -776,7 +764,7 @@ copying build/lib.linux-sparc64-2.6/pandas/tseries/timedeltas.py -> build/bdist.
 copying build/lib.linux-sparc64-2.6/pandas/tseries/frequencies.py -> build/bdist.linux-sparc64/egg/pandas/tseries
 copying build/lib.linux-sparc64-2.6/pandas/tseries/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tseries
 copying build/lib.linux-sparc64-2.6/pandas/tseries/converter.py -> build/bdist.linux-sparc64/egg/pandas/tseries
-creating build/bdist.linux-spa,10001:0rc64/egg/pandas/rpy
+creating build/bdist.linux-sparc64/egg/pandas/rpy
 copying build/lib.linux-sparc64-2.6/pandas/rpy/common.py -> build/bdist.linux-sparc64/egg/pandas/rpy
 copying build/lib.linux-sparc64-2.6/pandas/rpy/vars.py -> build/bdist.linux-sparc64/egg/pandas/rpy
 copying build/lib.linux-sparc64-2.6/pandas/rpy/__init__.py -> build/bdist.linux-sparc64/egg/pandas/rpy
@@ -867,7 +855,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/scipy.py to scipy.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/datetools.py to datetools.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/series.py to series.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/index.py to index.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/core/sparse.py to sparse.pyc
+byte-compiling buil,2478:0d/bdist.linux-sparc64/egg/pandas/core/sparse.py to sparse.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/categorical.py to categorical.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/config_init.py to config_init.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/nanops.py to nanops.pyc
@@ -885,7 +873,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/core/__init__.py to __init__
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/panelnd.py to panelnd.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/matrix.py to matrix.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/frame.py to frame.pyc
-byte-co,1103:0mpiling build/bdist.linux-sparc64/egg/pandas/core/base.py to base.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/core/base.py to base.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/groupby.py to groupby.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/indexing.py to indexing.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/array.py to array.pyc
@@ -897,8 +885,8 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/io/pickle.py to pickle.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/parsers.py to parsers.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_excel.py to test_excel.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_ujson.py to test_ujson.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_pandas.py to test_pandas.pyc
-,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/__init__.py to __init__.pyc
+,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_pandas.py to test_pandas.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_wb.py to test_wb.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_parsers.py to test_parsers.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_data.py to test_data.pyc
@@ -1007,8 +995,8 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_var.py to t
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_ols.py to test_ols.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/fama_macbeth.py to fama_macbeth.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/common.py to common.pyc
-byte-compiling build/bdist,2358:0.linux-sparc64/egg/pandas/stats/plm.py to plm.pyc
+byt,2463:0e-compiling build/bdist.linux-sparc64/egg/pandas/stats/common.py to common.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/plm.py to plm.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/api.py to api.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/interface.py to interface.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/math.py to math.pyc
@@ -1042,15 +1030,15 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_465_g70fdc25-py2.6-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+creating 'dist/pandas-0.12.0_473_gb039c1d-py2.6-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
 ,1258:0removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_465_g70fdc25-py2.6-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_6-wheezy-sparc/build/venv/lib/python2.6/site-packages/pandas-0.12.0_465_g70fdc25-py2.6-linux-sparc64.egg
-Extracting pandas-0.12.0_465_g70fdc25-py2.6-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_6-wheezy-sparc/build/venv/lib/python2.6/site-packages
-Adding pandas 0.12.0-465-g70fdc25 to easy-install.pth file
+Processing pandas-0.12.0_473_gb039c1d-py2.6-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_6-wheezy-sparc/build/venv/lib/python2.6/site-packages/pandas-0.12.0_473_gb039c1d-py2.6-linux-sparc64.egg
+Extracting pandas-0.12.0_473_gb039c1d-py2.6-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_6-wheezy-sparc/build/venv/lib/python2.6/site-packages
+Adding pandas 0.12.0-473-gb039c1d to easy-install.pth file
 
-Installed /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_6-wheezy-sparc/build/venv/lib/python2.6/site-packages/pandas-0.12.0_465_g70fdc25-py2.6-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-465-g70fdc25
+Installed /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_6-wheezy-sparc/build/venv/lib/python2.6/site-packages/pandas-0.12.0_473_gb039c1d-py2.6-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-473-gb039c1d
 Searching for numpy==1.6.2
 Best match: numpy 1.6.2
 Adding numpy 1.6.2 to easy-install.pth file
@@ -1066,7 +1054,7 @@ Best match: python-dateutil 1.5
 python-dateutil 1.5 is already the active version in easy-install.pth
 
 Using /usr/lib/python2.6/dist-packages
-Finished processing dependencies for pandas==0.12.0-465-g70fdc25
+Finished processing dependencies for pandas==0.12.0-473-gb039c1d
 ,59:2program finished with exit code 0
-elapsedTime=3226.665072
+elapsedTime=3144.838517
 ,
