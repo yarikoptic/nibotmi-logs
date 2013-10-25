@@ -42,6 +42,7 @@ copying pandas/version.py -> build/lib.linux-sparc64-2.7/pandas
 copying pandas/info.py -> build/lib.linux-sparc64-2.7/pandas
 copying pandas/__init__.py -> build/lib.linux-sparc64-2.7/pandas
 creating build/lib.linux-sparc64-2.7/pandas/compat
+copying pandas/compat/pickle_compat.py -> build/lib.linux-sparc64-2.7/pandas/compat
 copying pandas/compat/__init__.py -> build/lib.linux-sparc64-2.7/pandas/compat
 copying pandas/compat/scipy.py -> build/lib.linux-sparc64-2.7/pandas/compat
 creating build/lib.linux-sparc64-2.7/pandas/core
@@ -131,6 +132,7 @@ copying pandas/util/counter.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/misc.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/terminal.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/testing.py -> build/lib.linux-sparc64-2.7/pandas/util
+copying pandas/util/rwproperty.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/clipboard.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/decorators.py -> build/lib.linux-sparc64-2.7/pandas/util
 copying pandas/util/__init__.py -> build/lib.linux-sparc64-2.7/pandas/util
@@ -168,9 +170,9 @@ copying pandas/tools/plotting.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/tile.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/util.py -> build/lib.linux-sparc64-2.7/pandas/tools
 copying pandas/tools/merge.py -> build/lib.linux-sparc64-2.7/pandas/tools
-copying pandas/tools/rplot.py -> build/lib.linux-sparc64-2.7/pandas/tools
+copying pandas/tools/rplot.py -> build/lib.linux-sparc64,10001:0-2.7/pandas/tools
 copying pandas/tools/__init__.py -> build/lib.linux-sparc64-2.7/pandas/tools
-copying pandas/tools/describe.py -> build/lib.linux-sparc64-2.7/pa,10001:0ndas/tools
+copying pandas/tools/describe.py -> build/lib.linux-sparc64-2.7/pandas/tools
 creating build/lib.linux-sparc64-2.7/pandas/tools/tests
 copying pandas/tools/tests/test_merge.py -> build/lib.linux-sparc64-2.7/pandas/tools/tests
 copying pandas/tools/tests/test_tools.py -> build/lib.linux-sparc64-2.7/pandas/tools/tests
@@ -278,9 +280,9 @@ copying pandas/tests/data/iris.csv -> build/lib.linux-sparc64-2.7/pandas/tests/d
 copying pandas/tools/tests/cut_data.csv -> build/lib.linux-sparc64-2.7/pandas/tools/tests
 creating build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/daterange_073.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
-copying pandas/tseries/tests/data/series.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
+copying pandas/tseries/tests/data/series.pickle -> buil,334:0d/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 copying pandas/tseries/tests/data/frame.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
-copying,173:0 pandas/tseries/tests/data/series_daterange0.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
+copying pandas/tseries/tests/data/series_daterange0.pickle -> build/lib.linux-sparc64-2.7/pandas/tseries/tests/data
 running build_ext
 cythoning pandas/index.pyx to pandas/index.c
 ,486:0building 'pandas.index' extension
@@ -307,7 +309,7 @@ pandas/src/klib/khash_python.h:44:1: warning: statement with no effect [-Wunused
 pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
 pandas/index.c: In function '__pyx_f_6pandas_5index__bin_search':
-pandas/index.c:7591:13: warning: '__pyx_v_mid' may be used uninitialized in this function [-Wuninitialized]
+pandas/index.c:7600:13: warning: '__pyx_v_mid' may be used uninitialized in this function [-Wuninitialized]
 ,300:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime.o
 ,109:1/usr/include/python2.7/datetime.h:188:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
 ,316:0gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-2.7/pandas/src/datetime/np_datetime_strings.o
@@ -357,10 +359,10 @@ cythoning pandas/lib.pyx to pandas/lib.c
 building 'pandas.lib' extension
 gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/pymodules/python2.7/numpy/core/include -I/usr/include/python2.7 -c pandas/lib.c -o build/temp.linux-sparc64-2.7/pandas/lib.o
 ,621:1pandas/lib.c: In function '__pyx_pw_6pandas_3lib_53maybe_booleans_to_slice':
-pandas/lib.c:10029:15: warning: '__pyx_v_end' may be used uninitialized in this function [-Wuninitialized]
-pandas/lib.c:9742:14: note: '__pyx_v_end' was declared here
-pandas/lib.c:10027:15: warning: '__pyx_v_start' may be used uninitialized in this function [-Wuninitialized]
-pandas/lib.c:9741:14: note: '__pyx_v_start' was declared here
+pandas/lib.c:10056:15: warning: '__pyx_v_end' may be used uninitialized in this function [-Wuninitialized]
+pandas/lib.c:9769:14: note: '__pyx_v_end' was declared here
+pandas/lib.c:10054:15: warning: '__pyx_v_start' may be used uninitialized in this function [-Wuninitialized]
+pandas/lib.c:9768:14: note: '__pyx_v_start' was declared here
 In file included from pandas/lib.c:326:0:
 pandas/src/parse_helper.h: In function 'to_double':
 pandas/src/parse_helper.h:13:29: warning: 'p_end' may be used uninitialized in this function [-Wuninitialized]
@@ -556,6 +558,7 @@ copying build/lib.linux-sparc64-2.7/pandas/tools/rplot.py -> build/bdist.linux-s
 copying build/lib.linux-sparc64-2.7/pandas/tools/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tools
 copying build/lib.linux-sparc64-2.7/pandas/tools/describe.py -> build/bdist.linux-sparc64/egg/pandas/tools
 creating build/bdist.linux-sparc64/egg/pandas/compat
+copying build/lib.linux-sparc64-2.7/pandas/compat/pickle_compat.py -> build/bdist.linux-sparc64/egg/pandas/compat
 copying build/lib.linux-sparc64-2.7/pandas/compat/__init__.py -> build/bdist.linux-sparc64/egg/pandas/compat
 copying build/lib.linux-sparc64-2.7/pandas/compat/scipy.py -> build/bdist.linux-sparc64/egg/pandas/compat
 creating build/bdist.linux-sparc64/egg/pandas/core
@@ -611,7 +614,7 @@ copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/banklist.csv -> build/b
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/stata4.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/spam.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/banklist.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
-copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/unicode_series.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/dat,4438:0a
+copying build/,10001:0lib.linux-sparc64-2.7/pandas/io/tests/data/unicode_series.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/test1.csv -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/valid_markup.html -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/data/stata2.dta -> build/bdist.linux-sparc64/egg/pandas/io/tests/data
@@ -647,7 +650,7 @@ copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_cparser.py -> build/bdi
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_ga.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_sql.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
-,10001:0copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_date_converters.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
+copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_date_converters.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.7/pandas/io/tests/test_stata.py -> build/bdist.linux-sparc64/egg/pandas/io/tests
 copying build/lib.linux-sparc64-2.7/pandas/io/common.py -> build/bdist.linux-sparc64/egg/pandas/io
 copying build/lib.linux-sparc64-2.7/pandas/io/api.py -> build/bdist.linux-sparc64/egg/pandas/io
@@ -698,7 +701,7 @@ copying build/lib.linux-sparc64-2.7/pandas/tests/test_index.py -> build/bdist.li
 copying build/lib.linux-sparc64-2.7/pandas/tests/test_panelnd.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-2.7/pandas/version.py -> build/bdist.linux-sparc64/egg/pandas
 creating build/bdist.linux-sparc64/egg/pandas/tseries
-copying build/lib.linux-sparc64-2.7/pandas/tseries/index.py -> build/bdist.linux-sparc64/egg/pandas/tseries
+copying build/lib.linux-sparc64-2.7/pandas/tseries/index.py -> build/bdist.linux-sp,9084:0arc64/egg/pandas/tseries
 creating build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_timeseries.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-2.7/pandas/tseries/tests/test_converter.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
@@ -740,10 +743,11 @@ copying build/lib.linux-sparc64-2.7/pandas/parser.so -> build/bdist.linux-sparc6
 copying build/lib.linux-sparc64-2.7/pandas/hashtable.so -> build/bdist.linux-sparc64/egg/pandas
 copying build/lib.linux-sparc64-2.7/pandas/__init__.py -> build/bdist.linux-sparc64/egg/pandas
 creating build/bdist.linux-sparc64/egg/pandas/util
-copying build/lib.linux-sparc64-2.7,9505:0/pandas/util/counter.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-2.7/pandas/util/counter.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-2.7/pandas/util/misc.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-2.7/pandas/util/terminal.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-2.7/pandas/util/testing.py -> build/bdist.linux-sparc64/egg/pandas/util
+copying build/lib.linux-sparc64-2.7/pandas/util/rwproperty.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-2.7/pandas/util/clipboard.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-2.7/pandas/util/decorators.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-2.7/pandas/util/__init__.py -> build/bdist.linux-sparc64/egg/pandas/util
@@ -785,7 +789,9 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/panel.py to panel.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/api.py to api.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/frame.py to frame.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/array.py to array.pyc
+,177:1SyntaxError: ('invalid syntax', ('build/bdist.linux-sparc64/egg/pandas/sparse/frame.py', 272, 2, '>>>>>>> ENH/CLN: refactor of common code from frame/panel to generic.py\n'))
+
+,6972:0byte-compiling build/bdist.linux-sparc64/egg/pandas/sparse/array.py to array.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/pivot.py to pivot.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_merge.py to test_merge.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tests/test_tools.py to test_tools.pyc
@@ -800,6 +806,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/merge.py to merge.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/rplot.py to rplot.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/describe.py to describe.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/pickle_compat.py to pickle_compat.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/__init__.py to __init__.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/scipy.py to scipy.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/datetools.py to datetools.pyc
@@ -844,7 +851,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_data.py to tes
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_clipboard.py to test_clipboard.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_pickle.py to test_pickle.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_pytables.py to test_pytables.pyc
-,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_html.py to test_html.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_html.py to test_html.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/generate_legacy_pickles.py to generate_legacy_pickles.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_cparser.py to test_cparser.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_ga.py to test_ga.pyc
@@ -865,7 +872,8 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/io/__init__.py to __init__.p
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/ga.py to ga.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/data.py to data.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/pytables.py to pytables.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_common.py to test_common.pyc
+,141:1Sorry: IndentationError: ('expected an indented block', ('build/bdist.linux-sparc64/egg/pandas/io/pytables.py', 2676, 0, '<<<<<<< HEAD\n'))
+,4259:0byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_common.py to test_common.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_graphics.py to test_graphics.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_expressions.py to test_expressions.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_rplot.py to test_rplot.pyc
@@ -910,7 +918,9 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/plotting.py to plott
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/offsets.py to offsets.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/period.py to period.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/interval.py to interval.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/api.py to api.pyc
+,172:1SyntaxError: ('invalid syntax', ('build/bdist.linux-sparc64/egg/pandas/tseries/period.py', 17, 42, '                                _maybe_box, _values_from_object)\n'))
+
+,5680:0byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/api.py to api.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/tools.py to tools.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/util.py to util.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tseries/resample.py to resample.pyc
@@ -928,6 +938,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/util/counter.py to counter.p
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/misc.py to misc.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/terminal.py to terminal.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/testing.py to testing.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/util/rwproperty.py to rwproperty.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/clipboard.py to clipboard.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/decorators.py to decorators.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/__init__.py to __init__.pyc
@@ -960,7 +971,7 @@ creating stub loader for pandas/hashtable.so
 creating stub loader for pandas/_sparse.so
 creating stub loader for pandas/json.so
 byte-compiling build/bdist.linux-sparc64/egg/pandas/index.py to index.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/algos.py to algos.,1176:0pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/algos.py to algos.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/lib.py to lib.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tslib.py to tslib.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/parser.py to parser.pyc
@@ -976,15 +987,20 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_186_ge52ff84-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
-,1258:0removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_186_ge52ff84-py2.7-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_186_ge52ff84-py2.7-linux-sparc64.egg
-Extracting pandas-0.12.0_186_ge52ff84-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages
-Adding pandas 0.12.0-186-ge52ff84 to easy-install.pth file
+creating 'dist/pandas-0.12.0_192_g370f8c8-py2.7-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+removing 'build/bdist.linux-sparc64/egg' (and everything under it)
+Processing pandas-0.12.0_192_g370f8c8-py2.7-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_192_g370f8c8-py2.7-linux-sparc64.egg
+Extracting pandas-0.12.0_192_g370f8c8-py2.7-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages
+,872:1SyntaxError: ('invalid syntax', ('/home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_192_g370f8c8-py2.7-linux-sparc64.egg/pandas/sparse/frame.py', 272, 2, '>>>>>>> ENH/CLN: refactor of common code from frame/panel to generic.py\n'))
 
-Installed /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_186_ge52ff84-py2.7-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-186-ge52ff84
+Sorry: IndentationError: ('expected an indented block', ('/home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_192_g370f8c8-py2.7-linux-sparc64.egg/pandas/io/pytables.py', 2676, 0, '<<<<<<< HEAD\n'))
+SyntaxError: ('invalid syntax', ('/home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_192_g370f8c8-py2.7-linux-sparc64.egg/pandas/tseries/period.py', 17, 42, '                                _maybe_box, _values_from_object)\n'))
+
+,790:0Adding pandas 0.12.0-192-g370f8c8 to easy-install.pth file
+
+Installed /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py2_x-wheezy-sparc/build/venv/lib/python2.7/site-packages/pandas-0.12.0_192_g370f8c8-py2.7-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-192-g370f8c8
 Searching for numpy==1.6.2
 Best match: numpy 1.6.2
 Adding numpy 1.6.2 to easy-install.pth file
@@ -1000,7 +1016,7 @@ Best match: python-dateutil 1.5
 python-dateutil 1.5 is already the active version in easy-install.pth
 
 Using /usr/lib/python2.7/dist-packages
-Finished processing dependencies for pandas==0.12.0-186-ge52ff84
+Finished processing dependencies for pandas==0.12.0-192-g370f8c8
 ,59:2program finished with exit code 0
-elapsedTime=3103.895326
+elapsedTime=3203.912158
 ,
