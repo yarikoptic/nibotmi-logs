@@ -131,8 +131,6 @@ copying pandas/util/counter.py -> build/lib.linux-sparc64-3.2/pandas/util
 copying pandas/util/misc.py -> build/lib.linux-sparc64-3.2/pandas/util
 copying pandas/util/terminal.py -> build/lib.linux-sparc64-3.2/pandas/util
 copying pandas/util/testing.py -> build/lib.linux-sparc64-3.2/pandas/util
-copying pandas/util/compat.py -> build/lib.linux-sparc64-3.2/pandas/util
-copying pandas/util/py3compat.py -> build/lib.linux-sparc64-3.2/pandas/util
 copying pandas/util/clipboard.py -> build/lib.linux-sparc64-3.2/pandas/util
 copying pandas/util/decorators.py -> build/lib.linux-sparc64-3.2/pandas/util
 copying pandas/util/__init__.py -> build/lib.linux-sparc64-3.2/pandas/util
@@ -153,6 +151,7 @@ copying pandas/tests/test_algos.py -> build/lib.linux-sparc64-3.2/pandas/tests
 copying pandas/tests/test_tests.py -> build/lib.linux-sparc64-3.2/pandas/tests
 copying pandas/tests/test_stats.py -> build/lib.linux-sparc64-3.2/pandas/tests
 copying pandas/tests/test_groupby.py -> build/lib.linux-sparc64-3.2/pandas/tests
+copying pandas/tests/test_compat.py -> build/lib.linux-sparc64-3.2/pandas/tests
 copying pandas/tests/test_series.py -> build/lib.linux-sparc64-3.2/pandas/tests
 copying pandas/tests/test_tseries.py -> build/lib.linux-sparc64-3.2/pandas/tests
 copying pandas/tests/__init__.py -> build/lib.linux-sparc64-3.2/pandas/tests
@@ -170,9 +169,9 @@ copying pandas/tools/util.py -> build/lib.linux-sparc64-3.2/pandas/tools
 copying pandas/tools/merge.py -> build/lib.linux-sparc64-3.2/pandas/tools
 copying pandas/tools/rplot.py -> build/lib.linux-sparc64-3.2/pandas/tools
 copying pandas/tools/__init__.py -> build/lib.linux-sparc64-3.2/pandas/tools
-copying pandas/tools/describe.py -> build/lib.linux-sparc64-3.2/pandas/tool,9809:0s
+copying pandas/tools/describe.py -> build/lib.linux-sparc64-3.2/pandas/tools
 creating build/lib.linux-sparc64-3.2/pandas/tools/tests
-copying pandas/tools/tests/test_merge.py -> build/lib.linux-sparc64-3.2/pandas/tools/tests
+copying pan,9740:0das/tools/tests/test_merge.py -> build/lib.linux-sparc64-3.2/pandas/tools/tests
 copying pandas/tools/tests/test_tools.py -> build/lib.linux-sparc64-3.2/pandas/tools/tests
 copying pandas/tools/tests/__init__.py -> build/lib.linux-sparc64-3.2/pandas/tools/tests
 copying pandas/tools/tests/test_tile.py -> build/lib.linux-sparc64-3.2/pandas/tools/tests
@@ -381,7 +380,7 @@ pandas/src/klib/khash_python.h: In function 'kh_del_strbox':
 pandas/src/klib/khash_python.h:49:1: warning: statement with no effect [-Wunused-value]
 pandas/tslib.c: At top level:
 /usr/lib/python3/dist-packages/numpy/core/include/numpy/__ufunc_api.h:226:1: warning: '_import_umath' defined but not used [-Wunused-function]
-pandas/tslib.c:7903:18: warning: '__pyx_f_6pandas_5tslib__tz_format' defined but not used [-Wunused-function]
+pandas/tslib.c:7901:18: warning: '__pyx_f_6pandas_5tslib__tz_format' defined but not used [-Wunused-function]
 ,383:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/datetime/np_datetime.c -o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime.o
 ,111:1/usr/include/python3.2mu/datetime.h:185:25: warning: 'PyDateTimeAPI' defined but not used [-Wunused-variable]
 ,399:0gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -fPIC -Ipandas/src/klib -Ipandas/src -I/usr/lib/python3/dist-packages/numpy/core/include -I/usr/include/python3.2mu -c pandas/src/datetime/np_datetime_strings.c -o build/temp.linux-sparc64-3.2/pandas/src/datetime/np_datetime_strings.o
@@ -677,6 +676,7 @@ copying build/lib.linux-sparc64-3.2/pandas/tests/test_algos.py -> build/bdist.li
 copying build/lib.linux-sparc64-3.2/pandas/tests/test_tests.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.2/pandas/tests/test_stats.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.2/pandas/tests/test_groupby.py -> build/bdist.linux-sparc64/egg/pandas/tests
+copying build/lib.linux-sparc64-3.2/pandas/tests/test_compat.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.2/pandas/tests/test_series.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.2/pandas/tests/test_tseries.py -> build/bdist.linux-sparc64/egg/pandas/tests
 copying build/lib.linux-sparc64-3.2/pandas/tests/__init__.py -> build/bdist.linux-sparc64/egg/pandas/tests
@@ -693,8 +693,8 @@ copying build/lib.linux-sparc64-3.2/pandas/tseries/index.py -> build/bdist.linux
 creating build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_timeseries.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_converter.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
-copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_cursor.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
-copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_frequencies.py -> build/bdist.linux-,10001:0sparc64/egg/pandas/tseries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_cursor.py -> build/bdist.linux-sparc64/egg/pandas/ts,10001:0eries/tests
+copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/test_frequencies.py -> build/bdist.linux-sparc64/egg/pandas/tseries/tests
 creating build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
 copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/data/daterange_073.pickle -> build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
 copying build/lib.linux-sparc64-3.2/pandas/tseries/tests/data/series.pickle -> build/bdist.linux-sparc64/egg/pandas/tseries/tests/data
@@ -737,8 +737,6 @@ copying build/lib.linux-sparc64-3.2/pandas/util/counter.py -> build/bdist.linux-
 copying build/lib.linux-sparc64-3.2/pandas/util/misc.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-3.2/pandas/util/terminal.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-3.2/pandas/util/testing.py -> build/bdist.linux-sparc64/egg/pandas/util
-copying build/lib.linux-sparc64-3.2/pandas/util/compat.py -> build/bdist.linux-sparc64/egg/pandas/util
-copying build/lib.linux-sparc64-3.2/pandas/util/py3compat.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-3.2/pandas/util/clipboard.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-3.2/pandas/util/decorators.py -> build/bdist.linux-sparc64/egg/pandas/util
 copying build/lib.linux-sparc64-3.2/pandas/util/__init__.py -> build/bdist.linux-sparc64/egg/pandas/util
@@ -790,8 +788,8 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/tile.py to tile.cpytho
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/util.py to util.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/merge.py to merge.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/rplot.py to rplot.cpython-32.pyc
-byte-co,3368:0mpiling build/bdist.linux-sparc64/egg/pandas/tools/__init__.py to __init__.cpython-32.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/describe.py to describe.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/__init__.py to __init__.cpython-32.pyc
+byte-comp,3269:0iling build/bdist.linux-sparc64/egg/pandas/tools/describe.py to describe.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/__init__.py to __init__.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/scipy.py to scipy.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/datetools.py to datetools.cpython-32.pyc
@@ -873,6 +871,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_algos.py to test_
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_tests.py to test_tests.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_stats.py to test_stats.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_groupby.py to test_groupby.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_compat.py to test_compat.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_series.py to test_series.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/test_tseries.py to test_tseries.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tests/__init__.py to __init__.cpython-32.pyc
@@ -918,14 +917,12 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/util/counter.py to counter.c
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/misc.py to misc.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/terminal.py to terminal.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/testing.py to testing.cpython-32.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/util/compat.py to compat.cpython-32.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/util/py3compat.py to py3compat.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/clipboard.py to clipboard.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/decorators.py to decorators.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/util/__init__.py to __init__.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/moments.py to moments.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/misc.py to misc.cpython-32.pyc
-byte-,3612:0compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_math.py to test_math.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_math.py to test_math.cp,3525:0ython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_moments.py to test_moments.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/common.py to common.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_fama_macbeth.py to test_fama_macbeth.cpython-32.pyc
@@ -968,15 +965,15 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_59_g6c304c7-py3.2-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+creating 'dist/pandas-0.12.0_82_g6ae36e4-py3.2-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
 ,1267:0removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_59_g6c304c7-py3.2-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py3_x-wheezy-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_59_g6c304c7-py3.2-linux-sparc64.egg
-Extracting pandas-0.12.0_59_g6c304c7-py3.2-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py3_x-wheezy-sparc/build/venv/lib/python3.2/site-packages
-Adding pandas 0.12.0-59-g6c304c7 to easy-install.pth file
+Processing pandas-0.12.0_82_g6ae36e4-py3.2-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py3_x-wheezy-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_82_g6ae36e4-py3.2-linux-sparc64.egg
+Extracting pandas-0.12.0_82_g6ae36e4-py3.2-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py3_x-wheezy-sparc/build/venv/lib/python3.2/site-packages
+Adding pandas 0.12.0-82-g6ae36e4 to easy-install.pth file
 
-Installed /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py3_x-wheezy-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_59_g6c304c7-py3.2-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-59-g6c304c7
+Installed /home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py3_x-wheezy-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_82_g6ae36e4-py3.2-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-82-g6ae36e4
 Searching for numpy==1.6.2
 Best match: numpy 1.6.2
 Adding numpy 1.6.2 to easy-install.pth file
@@ -992,17 +989,7 @@ Best match: python-dateutil 2.0
 python-dateutil 2.0 is already the active version in easy-install.pth
 
 Using /usr/lib/python3/dist-packages
-Finished processing dependencies for pandas==0.12.0-59-g6c304c7
-,508:1  File "build/bdist.linux-sparc64/egg/pandas/tests/test_series.py", line 2041
-    a = Timestamp(datetime(1993,01,07,13,30,00))
-                                 ^
-SyntaxError: invalid token
-
-  File "/home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py3_x-wheezy-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_59_g6c304c7-py3.2-linux-sparc64.egg/pandas/tests/test_series.py", line 2041
-    a = Timestamp(datetime(1993,01,07,13,30,00))
-                                 ^
-SyntaxError: invalid token
-
+Finished processing dependencies for pandas==0.12.0-82-g6ae36e4
 ,59:2program finished with exit code 0
-elapsedTime=3050.107194
+elapsedTime=2988.426204
 ,
