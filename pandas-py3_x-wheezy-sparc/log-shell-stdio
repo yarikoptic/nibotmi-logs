@@ -9,14 +9,30 @@
   PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
   PWD=/home/buildslave/nd-bb-slave-sparc-wheezy/pandas-py3_x-wheezy-sparc/build
   SHELL=/bin/sh
-  TERM=xterm
+  TERM=linux
   USER=buildslave
  using PTY: False
-,550:0New python executable in venv/bin/python3
+,111:0New python executable in venv/bin/python3
 Also creating executable in venv/bin/python
-Installing distribute............................................................................................................................................................................................................................................................................................................................................................done.
-Installing pip...............done.
-Running virtualenv with interpreter /usr/bin/python3
-,58:2program finished with exit code 0
-elapsedTime=145.777004
+Installing distribute...,1100:1Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 2283, in <module>
+    main()
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 938, in main
+    never_download=options.never_download)
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 1052, in create_environment
+    search_dirs=search_dirs, never_download=never_download)
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 601, in install_distribute
+    search_dirs=search_dirs, never_download=never_download)
+  File "/usr/lib/python2.7/dist-packages/virtualenv.py", line 556, in _install_req
+    cwd = tempfile.mkdtemp()
+  File "/usr/lib/python3.2/tempfile.py", line 298, in mkdtemp
+    dir = gettempdir()
+  File "/usr/lib/python3.2/tempfile.py", line 242, in gettempdir
+    tempdir = _get_default_tempdir()
+  File "/usr/lib/python3.2/tempfile.py", line 189, in _get_default_tempdir
+    "No usable temporary directory found in %s" % dirlist)
+IOError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/usr/share/python-virtualenv']
+,54:0Running virtualenv with interpreter /usr/bin/python3
+,56:2program finished with exit code 1
+elapsedTime=3.794794
 ,
