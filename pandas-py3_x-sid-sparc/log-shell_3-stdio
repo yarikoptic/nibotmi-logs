@@ -378,10 +378,10 @@ gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE
                  from pandas/lib.c:314:
 /usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_deprecated_api.h:11:2: warning: #warning "Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
 pandas/lib.c: In function '__pyx_pw_6pandas_3lib_53maybe_booleans_to_slice':
-pandas/lib.c:10062:15: warning: '__pyx_v_end' may be used uninitialized in this function [-Wuninitialized]
-pandas/lib.c:9775:14: note: '__pyx_v_end' was declared here
-pandas/lib.c:10060:15: warning: '__pyx_v_start' may be used uninitialized in this function [-Wuninitialized]
-pandas/lib.c:9774:14: note: '__pyx_v_start' was declared here
+pandas/lib.c:10064:15: warning: '__pyx_v_end' may be used uninitialized in this function [-Wuninitialized]
+pandas/lib.c:9777:14: note: '__pyx_v_end' was declared here
+pandas/lib.c:10062:15: warning: '__pyx_v_start' may be used uninitialized in this function [-Wuninitialized]
+pandas/lib.c:9776:14: note: '__pyx_v_start' was declared here
 ,591:0gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.linux-sparc64-3.2/pandas/lib.o -o build/lib.linux-sparc64-3.2/pandas/lib.cpython-32mu.so
 cythoning pandas/tslib.pyx to pandas/tslib.c
 building 'pandas.tslib' extension
@@ -868,7 +868,7 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/util.py to util.cpytho
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/merge.py to merge.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/rplot.py to rplot.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/tools/__init__.py to __init__.cpython-32.pyc
-byte-comp,3487:0iling build/bdist.linux-sparc64/egg/pandas/tools/describe.py to describe.cpython-32.pyc
+byte-comp,3373:0iling build/bdist.linux-sparc64/egg/pandas/tools/describe.py to describe.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/__init__.py to __init__.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/compat/scipy.py to scipy.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/core/datetools.py to datetools.cpython-32.pyc
@@ -904,8 +904,8 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/io/excel.py to excel.cpython
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/pickle.py to pickle.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/parsers.py to parsers.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_excel.py to test_excel.cpython-32.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_ujson.py to test_ujson.cpython-32.pyc
-,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_pandas.py to test_pandas.cpython-32.pyc
+,10001:0byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_ujson.py to test_ujson.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/test_pandas.py to test_pandas.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_json/__init__.py to __init__.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_wb.py to test_wb.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/io/tests/test_parsers.py to test_parsers.cpython-32.pyc
@@ -1002,8 +1002,8 @@ byte-compiling build/bdist.linux-sparc64/egg/pandas/util/__init__.py to __init__
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/moments.py to moments.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/misc.py to misc.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_math.py to test_math.cpython-32.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_moments.py to test_moments.cpython-32.pyc
-byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/common.py to common.cpython-32,3308:0.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_moments.py to test_mom,3422:0ents.cpython-32.pyc
+byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/common.py to common.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_fama_macbeth.py to test_fama_macbeth.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/test_var.py to test_var.cpython-32.pyc
 byte-compiling build/bdist.linux-sparc64/egg/pandas/stats/tests/__init__.py to __init__.cpython-32.pyc
@@ -1044,15 +1044,15 @@ copying pandas.egg-info/requires.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 copying pandas.egg-info/top_level.txt -> build/bdist.linux-sparc64/egg/EGG-INFO
 writing build/bdist.linux-sparc64/egg/EGG-INFO/native_libs.txt
 creating dist
-creating 'dist/pandas-0.12.0_104_gf18378d-py3.2-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
+creating 'dist/pandas-0.12.0_110_gaca1a42-py3.2-linux-sparc64.egg' and adding 'build/bdist.linux-sparc64/egg' to it
 ,1256:0removing 'build/bdist.linux-sparc64/egg' (and everything under it)
-Processing pandas-0.12.0_104_gf18378d-py3.2-linux-sparc64.egg
-creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_104_gf18378d-py3.2-linux-sparc64.egg
-Extracting pandas-0.12.0_104_gf18378d-py3.2-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages
-Adding pandas 0.12.0-104-gf18378d to easy-install.pth file
+Processing pandas-0.12.0_110_gaca1a42-py3.2-linux-sparc64.egg
+creating /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_110_gaca1a42-py3.2-linux-sparc64.egg
+Extracting pandas-0.12.0_110_gaca1a42-py3.2-linux-sparc64.egg to /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages
+Adding pandas 0.12.0-110-gaca1a42 to easy-install.pth file
 
-Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_104_gf18378d-py3.2-linux-sparc64.egg
-Processing dependencies for pandas==0.12.0-104-gf18378d
+Installed /home/buildslave/nd-bb-slave-sparc-sid/pandas-py3_x-sid-sparc/build/venv/lib/python3.2/site-packages/pandas-0.12.0_110_gaca1a42-py3.2-linux-sparc64.egg
+Processing dependencies for pandas==0.12.0-110-gaca1a42
 Searching for numpy==1.7.1
 Best match: numpy 1.7.1
 Adding numpy 1.7.1 to easy-install.pth file
@@ -1068,7 +1068,7 @@ Best match: python-dateutil 2.0
 python-dateutil 2.0 is already the active version in easy-install.pth
 
 Using /usr/lib/python3/dist-packages
-Finished processing dependencies for pandas==0.12.0-104-gf18378d
+Finished processing dependencies for pandas==0.12.0-110-gaca1a42
 ,59:2program finished with exit code 0
-elapsedTime=2999.850084
+elapsedTime=2983.357547
 ,
