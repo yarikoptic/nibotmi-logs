@@ -96,7 +96,7 @@ test_frame_invert (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... 
 test_frame_negate (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... ok
 test_frame_pos (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... ok
 test_modulus (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... ok
-test_pow (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... SKIP: negative number cannot be raised to a fractional power
+test_pow (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... ok
 test_scalar_unary (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... ok
 test_series_invert (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... ok
 test_series_negate (pandas.computation.tests.test_eval.TestEvalPythonPandas) ... ok
@@ -113,7 +113,7 @@ test_frame_invert (pandas.computation.tests.test_eval.TestEvalPythonPython) ... 
 test_frame_negate (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_frame_pos (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_modulus (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
-test_pow (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
+test_pow (pandas.computation.tests.test_eval.TestEvalPythonPython) ... SKIP: negative number cannot be raised to a fractional power
 test_scalar_unary (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_series_invert (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
 test_series_negate (pandas.computation.tests.test_eval.TestEvalPythonPython) ... ok
@@ -310,14 +310,14 @@ test_reader_closes_file (pandas.io.tests.test_excel.ExcelReaderTests) ... ok
 test_xlsx_table (pandas.io.tests.test_excel.ExcelReaderTests) ... ok
 test_ExcelWriter_dispatch (pandas.io.tests.test_excel.ExcelWriterEngineTests) ... ok
 test_register_writer (pandas.io.tests.test_excel.ExcelWriterEngineTests) ... ok
-test_bool (pandas.io.tests.test_excel.OpenpyxlTests) ... FAIL
+test_bool (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
 test_colaliases (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
 test_excel_010_hemstring (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
 test_excel_roundtrip_datetime (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
-test_excel_roundtrip_indexname (pandas.io.tests.test_excel.OpenpyxlTests) ... FAIL
-test_excel_sheet_by_name_raise (pandas.io.tests.test_excel.OpenpyxlTests) ... FAIL
+test_excel_roundtrip_indexname (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
+test_excel_sheet_by_name_raise (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
 test_excelwriter_contextmanager (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
-test_int64 (pandas.io.tests.test_excel.OpenpyxlTests) ... FAIL
+test_int64 (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
 test_mixed (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
 test_roundtrip (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
 test_roundtrip_indexlabels (pandas.io.tests.test_excel.OpenpyxlTests) ... ok
@@ -347,14 +347,14 @@ test_to_excel_multiindex_dates (pandas.io.tests.test_excel.XlsxWriterTests) ... 
 test_to_excel_periodindex (pandas.io.tests.test_excel.XlsxWriterTests) ... SKIP: xlsxwriter not installed, skipping
 test_to_excel_unicode_filename (pandas.io.tests.test_excel.XlsxWriterTests) ... SKIP: xlsxwriter not installed, skipping
 test_tsframe (pandas.io.tests.test_excel.XlsxWriterTests) ... SKIP: xlsxwriter not installed, skipping
-test_bool (pandas.io.tests.test_excel.XlwtTests) ... FAIL
+test_bool (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_colaliases (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_excel_010_hemstring (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_excel_roundtrip_datetime (pandas.io.tests.test_excel.XlwtTests) ... ok
-test_excel_roundtrip_indexname (pandas.io.tests.test_excel.XlwtTests) ... FAIL
-test_excel_sheet_by_name_raise (pandas.io.tests.test_excel.XlwtTests) ... FAIL
+test_excel_roundtrip_indexname (pandas.io.tests.test_excel.XlwtTests) ... ok
+test_excel_sheet_by_name_raise (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_excelwriter_contextmanager (pandas.io.tests.test_excel.XlwtTests) ... ok
-test_int64 (pandas.io.tests.test_excel.XlwtTests) ... FAIL
+test_int64 (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_mixed (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_roundtrip (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_roundtrip_indexlabels (pandas.io.tests.test_excel.XlwtTests) ... ok
@@ -362,63 +362,68 @@ test_sheets (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_to_excel_float_format (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_to_excel_multiindex (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_to_excel_multiindex_dates (pandas.io.tests.test_excel.XlwtTests) ... ok
-test_to_excel_periodindex (pandas.io.tests,505:0.test_excel.XlwtTests) ... ok
+test_to_excel_periodindex (pandas.io.tests.test_excel.Xlwt,481:0Tests) ... ok
 test_to_excel_styleconverter (pandas.io.tests.test_excel.XlwtTests) ... ok
 test_to_excel_unicode_filename (pandas.io.tests.test_excel.XlwtTests) ... SKIP: no unicode file names on this system
 test_tsframe (pandas.io.tests.test_excel.XlwtTests) ... ok
 Failure: SkipTest (need httplib2 and auth libs) ... SKIP: need httplib2 and auth libs
-test_bad_url_protocol (pandas.io.tests.test_html.TestReadHtmlBase) ... ok
-test_banklist (pandas.io.tests.test_html.TestReadHtmlBase) ... ,10001:0ERROR
-test_banklist_header (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_banklist_no_match (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_banklist_url (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_file_like (pandas.io.tests.test_html.TestReadHtmlBase) ... /home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py:835: UserWarning: infer_types will be removed in 0.14
-  warnings.warn("infer_types will be removed in 0.14", UserWarning)
-ERROR
-test_file_url (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_gold_canyon (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_header_and_index_no_types (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_header_and_index_with_types (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_index (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_infer_types (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_invalid_table_attrs (pandas.io.tests.test_html.TestReadHtmlBase) ... ok
-test_invalid_url (pandas.io.tests.test_html.TestReadHtmlBase) ... ok
-test_multiindex_header (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_multiindex_header_index (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_multiindex_header_index_skiprows (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_multiindex_header_skiprows (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_multiindex_index (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_multiple_matches (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_negative_skiprows_banklist (pandas.io.tests.test_html.TestReadHtmlBase) ... ok
-test_negative_skiprows_spam (pandas.io.tests.test_html.TestReadHtmlBase) ... ok
-test_pythonxy_plugins_table (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_regex_idempotency (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_int (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_invalid (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_list (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_ndarray (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_set (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_slice (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_slice_long (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_slice_short (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_skiprows_xrange (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_spam_header (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_spam_no_match (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_spam_no_types (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_spam_url (pandas.io.tests.test_html.TestReadHtmlBase) ... SKIP: Skipping test <urlopen error [Errno -2] Name or service not known>
-test_spam_with_types (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_string (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_string_io (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_to_html_compat (pandas.io.tests.test_html.TestReadHtmlBase) ... ERROR
-test_banklist_data_fail (pandas.io.tests.test_html.TestReadHtmlLxml) ... ok
-test_fallback_success (pandas.io.tests.test_html.TestReadHtmlLxml) ... ERROR
-test_spam_data_fail (pandas.io.tests.test_html.TestReadHtmlLxml) ... ok
-test_works_on_valid_markup (pandas.io.tests.test_html.TestReadHtmlLxml) ... ERROR
+test_bad_url_protocol (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_banklist (pandas.io.tests.test_html.TestReadHtml) ... ,10001:0ok
+test_banklist_header (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_banklist_no_match (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_banklist_url (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_countries_municipalities (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_different_number_of_rows (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_file_like (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_file_url (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_gold_canyon (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_header_and_index_no_types (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_header_and_index_with_types (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_index (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_infer_types (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_invalid_table_attrs (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_invalid_url (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_multiindex_header (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_multiindex_header_index (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_multiindex_header_index_skiprows (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_multiindex_header_skiprows (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_multiindex_header_skiprows_tuples (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_multiindex_index (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_multiple_matches (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_negative_skiprows (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_nyse_wsj_commas_table (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_parse_dates_combine (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_parse_dates_list (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_pythonxy_plugins_table (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_regex_idempotency (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_int (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_invalid (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_list (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_ndarray (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_set (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_slice (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_slice_long (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_slice_short (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_skiprows_xrange (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_spam_header (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_spam_no_match (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_spam_no_types (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_spam_url (pandas.io.tests.test_html.TestReadHtml) ... SKIP: Skipping test <urlopen error [Errno -2] Name or service not known>
+test_spam_with_types (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_string (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_string_io (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_thousands_macau_index_col (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_thousands_macau_stats (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_to_html_compat (pandas.io.tests.test_html.TestReadHtml) ... ok
+test_data_fail (pandas.io.tests.test_html.TestReadHtmlLxml) ... ok
+test_fallback_success (pandas.io.tests.test_html.TestReadHtmlLxml) ... ok
+test_works_on_valid_markup (pandas.io.tests.test_html.TestReadHtmlLxml) ... ok
 pandas.io.tests.test_html.test_bs4_version_fails ... ok
 pandas.io.tests.test_html.test_invalid_flavor ... ok
 pandas.io.tests.test_html.test_bs4_finds_tables ... ok
 pandas.io.tests.test_html.test_lxml_finds_tables ... ok
 pandas.io.tests.test_html.test_lxml_finds_tbody ... ok
+pandas.io.tests.test_html.test_same_ordering ... ok
 test_axis_dates (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_convert_dates (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_date_format_frame (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
@@ -436,13 +441,13 @@ test_frame_to_json_except (pandas.io.tests.test_json.test_pandas.TestPandasConta
 test_misc_example (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_path (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_reconstruction_index (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
-test_round_trip_exception_ (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
+test_round_trip_exception_ (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... SKIP: Skipping test HTTP Error 503: Connection timed out
 test_series_from_json_precise_float (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_series_from_json_to_json (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_series_non_unique_index (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_series_to_json_except (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_typ (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
-test_url (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... SKIP: Skipping test HTTP Error 410: Gone
+test_url (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... SKIP: Skipping test <urlopen error [Errno 60] Connection timed out>
 test_v12_compat (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 test_weird_nested_json (pandas.io.tests.test_json.test_pandas.TestPandasContainer) ... ok
 testArrayNumpyExcept (pandas.io.tests.test_json.test_ujson.NumpyJSONTests) ... ok
@@ -488,8 +493,8 @@ test_datetime_units (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
 test_decimalDecodeTestPrecise (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
 test_decodeArrayDepthTooBig (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
 test_decodeBigEscape (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
-test_decodeBrokenArrayEnd (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
-test,3428:0_decodeBrokenArrayStart (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
+test_decodeBrokenArrayEnd (pandas.io.tests.test_json.test_ujson.UltraJSONT,3445:0ests) ... ok
+test_decodeBrokenArrayStart (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
 test_decodeBrokenDictKeyTypeLeakTest (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
 test_decodeBrokenDictLeakTest (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
 test_decodeBrokenListLeakTest (pandas.io.tests.test_json.test_ujson.UltraJSONTests) ... ok
@@ -650,7 +655,7 @@ test_multiple_date_col (pandas.io.tests.test_parsers.TestCParserHighMemory) ... 
 test_multiple_date_col_multiple_index (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_multiple_date_col_name_collision (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_multiple_date_col_named_components (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
-test_multiple_date_col_,2637:0timestamp_parse (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
+test_multiple_date_col_,2540:0timestamp_parse (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_multiple_date_cols_chunked (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_multiple_date_cols_index (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_multiple_date_cols_int_cast (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
@@ -679,8 +684,8 @@ test_read_csv (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_read_csv_dataframe (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_read_csv_no_index_name (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_read_csv_parse_simple_list (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
-test_read_nrows (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
-test_read_table_buglet_4x_multiindex (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ,10001:0ok
+test_read_nrows (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ,10001:0ok
+test_read_table_buglet_4x_multiindex (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_read_table_duplicate_index (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_read_table_duplicate_index_implicit (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_read_table_unicode (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
@@ -696,7 +701,7 @@ test_string_nas (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_trailing_delimiters (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_unicode_encoding (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_unnamed_columns (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
-test_url (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
+test_url (pandas.io.tests.test_parsers.TestCParserHighMemory) ... SKIP: Skipping test HTTP Error 503: Connection timed out
 test_usecols_index_col_conflict (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_utf16_bom_skiprows (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
 test_utf16_example (pandas.io.tests.test_parsers.TestCParserHighMemory) ... ok
@@ -797,9 +802,9 @@ test_read_table_duplicate_index_implicit (pandas.io.tests.test_parsers.TestCPars
 test_read_table_unicode (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_read_table_wrong_num_columns (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_read_text_list (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
-test_separator_date_conflict (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
+test_separator_date_conflict (pandas.io.tests.test_parsers.TestCParse,1694:0rLowMemory) ... ok
 test_single_line (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
-test_skip_footer (pandas.io.tests.test_parsers.TestCPars,1489:0erLowMemory) ... ok
+test_skip_footer (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_skipinitialspace (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_skiprows_bug (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_squeeze (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
@@ -808,7 +813,7 @@ test_tokenize_CR_with_quoting (pandas.io.tests.test_parsers.TestCParserLowMemory
 test_trailing_delimiters (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_unicode_encoding (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_unnamed_columns (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
-test_url (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
+test_url (pandas.io.tests.test_parsers.TestCParserLowMemory) ... SKIP: Skipping test HTTP Error 503: Connection timed out
 test_usecols (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_usecols_dtypes (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
 test_usecols_implicit_index_col (pandas.io.tests.test_parsers.TestCParserLowMemory) ... ok
@@ -936,11 +941,11 @@ test_string_nas (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_trailing_delimiters (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_unicode_encoding (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_unnamed_columns (pandas.io.tests.test_parsers.TestPythonParser) ... ok
-test_url (pandas.io.tests.test_parsers.TestPythonParser) ... ok
+test_url (pandas.io.tests.test_parsers.TestPythonParser) ... SKIP: Skipping test HTTP Error 503: Connection timed out
 test_usecols_index_col_conflict (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_utf16_bom_skiprows (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_utf16_example (pandas.io.tests.test_parsers.TestPythonParser) ... ok
-test_verbose_import (pandas.io.tests.test_parsers.TestPythonParser) ... ok,95:0
+test_verbose_import ,149:0(pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_warn_if_chunks_have_mismatched_type (pandas.io.tests.test_parsers.TestPythonParser) ... ,10001:0ok
 test_yy_format (pandas.io.tests.test_parsers.TestPythonParser) ... ok
 test_read_pickles_0_10_1 (pandas.io.tests.test_pickle.TestPickle) ... SKIP: known failure on non-little endian
@@ -2542,15 +2547,15 @@ test_apply_empty (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_empty_infer_type (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_ignore_failures (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_mixed_dtype_corner (pandas.tests.test_frame.TestDataFrame) ... ok
-test_apply_modify_traceback (pandas.tests.test_frame.TestData,496:0Frame) ... ok
+test_apply_modify_traceback (pandas.tests.test_frame.TestData,565:0Frame) ... ok
 test_apply_multi_index (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_raw (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_reduce_Series (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_standard_nonunique (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_with_args_kwds (pandas.tests.test_frame.TestDataFrame) ... ok
 test_apply_yield_list (pandas.tests.test_frame.TestDataFrame) ... ok
-test_applymap (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
-test_arith_flex_frame (pandas.tests.test_frame.TestDataFrame) ... ok
+test_applymap (pandas.tests.test_frame.TestDataFrame) ... ok
+test_arith_flex_frame (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
 test_arith_flex_series (pandas.tests.test_frame.TestDataFrame) ... ok
 test_arith_getitem_commute (pandas.tests.test_frame.TestDataFrame) ... ok
 test_arith_mixed (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2689,8 +2694,8 @@ test_describe_empty_int_columns (pandas.tests.test_frame.TestDataFrame) ... ok
 test_describe_no_numeric (pandas.tests.test_frame.TestDataFrame) ... ok
 test_describe_percentiles (pandas.tests.test_frame.TestDataFrame) ... ok
 test_diff (pandas.tests.test_frame.TestDataFrame) ... ok
-test_diff,1343:0_float_n (pandas.tests.test_frame.TestDataFrame) ... ok
-test_diff_mixed_dtype (pandas.tests.test_frame.TestDataFrame) ... ok
+test_diff_float_n (pandas.tests.test_frame.TestDataFrame) ... ok
+test_diff_mix,1437:0ed_dtype (pandas.tests.test_frame.TestDataFrame) ... ok
 test_diff_neg_n (pandas.tests.test_frame.TestDataFrame) ... ok
 test_div (pandas.tests.test_frame.TestDataFrame) ... ok
 test_dot (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2708,9 +2713,9 @@ test_dropna_multiple_axes (pandas.tests.test_frame.TestDataFrame) ... ok
 test_dtypes (pandas.tests.test_frame.TestDataFrame) ... ok
 test_empty_nonzero (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fancy_getitem_int_labels (pandas.tests.test_frame.TestDataFrame) ... ok
-test_fancy_getitem_slice_mixed (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
+test_fancy_getitem_slice_mixed (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fancy_index_int_labels_exceptions (pandas.tests.test_frame.TestDataFrame) ... ok
-test_fancy_setitem_int_labels (pandas.tests.test_frame.TestDataFrame) ... ok
+test_fancy_setitem_int_labels (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
 test_ffill (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fill_corner (pandas.tests.test_frame.TestDataFrame) ... ok
 test_fillna (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2852,13 +2857,13 @@ test_pct_change (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pct_change_shift_over_nas (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pickle (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pivot (pandas.tests.test_frame.TestDataFrame) ... ok
-test_pivot_duplicates (pandas.tests.test_frame.TestDataFrame) ,327:0... ok
+test_pivot_duplicates (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pivot_empty (pandas.tests.test_frame.TestDataFrame) ... ok
 test_pivot_integer_bug (pandas.tests.test_frame.TestDataFrame) ... ok
-test_pop (pandas.tests.test_frame.TestDataFrame) ... ok
+test_pop (pandas.tests,225:0.test_frame.TestDataFrame) ... ok
 test_pop_non_unique_cols (pandas.tests.test_frame.TestDataFrame) ... ok
-test_product (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
-test_quantile (pandas.tests.test_frame.TestDataFrame) ... ok
+test_product (pandas.tests.test_frame.TestDataFrame) ... ok
+test_quantile (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
 test_rank (pandas.tests.test_frame.TestDataFrame) ... ok
 test_rank2 (pandas.tests.test_frame.TestDataFrame) ... ok
 test_rank_na_option (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -2999,8 +3004,8 @@ test_to_csv_from_csv_w_all_infs (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_from_csv_w_some_infs (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_index_no_leading_comma (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_legacy_raises_on_dupe_cols (pandas.tests.test_frame.TestDataFrame) ... ok
-test_to_csv_line_terminators ,174:0(pandas.tests.test_frame.TestDataFrame) ... ok
-test_to_csv_mixed (pandas.tests.test_frame.TestDataFrame) ... ok
+test_to_csv_line_terminators (pandas.tests.test_frame.TestDataFrame) ... ok
+test_to_csv_mi,113:0xed (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_moar (pandas.tests.test_frame.TestDataFrame) ... ,10001:0ok
 test_to_csv_multiindex (pandas.tests.test_frame.TestDataFrame) ... ok
 test_to_csv_new_dupe_cols (pandas.tests.test_frame.TestDataFrame) ... ok
@@ -3122,14 +3127,14 @@ pandas.tests.test_frame.TestDataFrameQueryStrings.test_query_with_string_columns
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_list_query_method('python', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_list_query_method('python', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_list_query_method('pandas', 'python') ... ok
-pandas.tests.test_frame.TestDat,596:0aFrameQueryStrings.test_str_list_query_method('pandas', 'numexpr') ... ok
+pandas.tests.test_frame.TestDat,726:0aFrameQueryStrings.test_str_list_query_method('pandas', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_query_method('python', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_query_method('python', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_query_method('pandas', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryStrings.test_str_query_method('pandas', 'numexpr') ... ok
-pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_multiindex_get_index_resolvers('pandas', 'python') ... ,10001:0ok
+pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_multiindex_get_index_resolvers('pandas', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_multiindex_get_index_resolvers('pandas', 'numexpr') ... ok
-pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_named_multiindex('pandas', 'python') ... ok
+,10001:0pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_named_multiindex('pandas', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_named_multiindex('pandas', 'numexpr') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_partially_named_multiindex('pandas', 'python') ... ok
 pandas.tests.test_frame.TestDataFrameQueryWithMultiIndex.test_query_with_partially_named_multiindex('pandas', 'numexpr') ... ok
@@ -3252,9 +3257,9 @@ test_apply_multikey_corner (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_no_name_column_conflict (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_series_to_frame (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_series_yield_constant (pandas.tests.test_groupby.TestGroupBy) ... ok
-test_apply_transform (pandas.tests.test_groupby.Te,1196:0stGroupBy) ... ok
+test_apply_transform (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_apply_typecast_fail (pandas.tests.test_groupby.TestGroupBy) ... ok
-test_apply_use_categorical_name (pandas.tests.test_groupby.TestGroupBy) ... ok
+test_apply_use_categorical_name (pandas.,1066:0tests.test_groupby.TestGroupBy) ... ok
 test_apply_with_mixed_dtype (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_as_index_series_return_frame (pandas.tests.test_groupby.TestGroupBy) ... ok
 test_attr_wrapper (pandas.tests.test_groupby.TestGroupBy) ... ok
@@ -3581,10 +3586,10 @@ test_iloc_non_unique_indexing (pandas.tests.test_indexing.TestIndexing) ... ok
 test_iloc_panel_issue (pandas.tests.test_indexing.TestIndexing) ... ok
 test_iloc_setitem (pandas.tests.test_indexing.TestIndexing) ... ok
 test_iloc_setitem_series (pandas.tests.test_indexing.TestIndexing) ... ok
-test_indexing_mix,1087:0ed_frame_bug (pandas.tests.test_indexing.TestIndexing) ... ok
+test_indexing_mix,279:0ed_frame_bug (pandas.tests.test_indexing.TestIndexing) ... ok
 test_ix_assign_column_mixed (pandas.tests.test_indexing.TestIndexing) ... ok
 test_ix_general (pandas.tests.test_indexing.TestIndexing) ... ok
-test_ix_get_set_consistency (pandas.tests.test_indexing.TestIndexing) ... ok
+test_ix_get_set_consistency (pandas.tests.test_indexing.TestIndexing) ... ,10001:0ok
 test_ix_slicing_strings (pandas.tests.test_indexing.TestIndexing) ... ok
 test_ix_weird_slicing (pandas.tests.test_indexing.TestIndexing) ... ok
 test_loc_general (pandas.tests.test_indexing.TestIndexing) ... ok
@@ -3595,7 +3600,7 @@ test_loc_getitem_label (pandas.tests.test_indexing.TestIndexing) ... ok
 test_loc_getitem_label_list (pandas.tests.test_indexing.TestIndexing) ... ok
 test_loc_getitem_label_out_of_range (pandas.tests.test_indexing.TestIndexing) ... ok
 test_loc_getitem_label_slice (pandas.tests.test_indexing.TestIndexing) ... ok
-test_loc_multiindex (pandas.tests.test_indexing.TestIndexing) ... ,10001:0ok
+test_loc_multiindex (pandas.tests.test_indexing.TestIndexing) ... ok
 test_loc_name (pandas.tests.test_indexing.TestIndexing) ... ok
 test_loc_setitem_frame (pandas.tests.test_indexing.TestIndexing) ... ok
 test_loc_to_fail (pandas.tests.test_indexing.TestIndexing) ... ok
@@ -3731,18 +3736,18 @@ pandas.tests.test_msgpack.test_subtype.test_types ... ok
 pandas.tests.test_msgpack.test_unpack_raw.test_write_bytes ... ok
 pandas.tests.test_msgpack.test_unpack_raw.test_write_bytes_multi_buffer ... ok
 test_alignment (pandas.tests.test_multilevel.TestMultiLevel) ... ok
-test_append (pandas.tests.test_multilevel.TestMultiLevel) ... ok
+test_append (pandas.,329:0tests.test_multilevel.TestMultiLevel) ... ok
 test_assign_index_sequences (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_binops_level (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_count (pandas.tests.test_multilevel.TestMultiLevel) ... ok
-test_count_level (pandas.tests.test_multilevel.TestMultiLevel) ... ok
+test_count_level (pandas.tests.test_multilevel.TestMultiLevel) ... ,10001:0ok
 test_count_level_corner (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_count_level_series (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_dataframe_constructor (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_dataframe_insert_column_all_na (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_delevel_infer_dtype (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_drop_level (pandas.tests.test_multilevel.TestMultiLevel) ... ok
-test_dr,1141:0op_nonunique (pandas.tests.test_multilevel.TestMultiLevel) ... ok
+test_drop_nonunique (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_drop_preserve_names (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_duplicate_groupby_issues (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_duplicate_mi (pandas.tests.test_multilevel.TestMultiLevel) ... ok
@@ -3755,7 +3760,7 @@ test_frame_getitem_setitem_boolean (pandas.tests.test_multilevel.TestMultiLevel)
 test_frame_getitem_setitem_multislice (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_frame_getitem_setitem_slice (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_frame_getitem_view (pandas.tests.test_multilevel.TestMultiLevel) ... ok
-test_frame_group_ops (pandas.tests.test_multilevel.TestMultiLevel) ... ,10001:0ok
+test_frame_group_ops (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_frame_series_agg_multiple_levels (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_frame_setitem_ix (pandas.tests.test_multilevel.TestMultiLevel) ... ok
 test_frame_setitem_multi_column (pandas.tests.test_multilevel.TestMultiLevel) ... ok
@@ -3867,9 +3872,9 @@ test_ops_differently_indexed (pandas.tests.test_panel.TestLongPanel) ... ok
 test_ops_scalar (pandas.tests.test_panel.TestLongPanel) ... ok
 test_pivot (pandas.tests.test_panel.TestLongPanel) ... ok
 test_sort (pandas.tests.test_panel.TestLongPanel) ... ok
-test_sum (pandas.tests.test_panel.TestLongPanel) ... ok
+test_sum (pandas,161:0.tests.test_panel.TestLongPanel) ... ok
 test_to_string (pandas.tests.test_panel.TestLongPanel) ... ok
-test_truncate (pandas.tests.test_panel.TestLongPanel) ... ok
+test_truncate (pandas.tests.test_panel.TestLongPanel) ... ,10001:0ok
 test_abs (pandas.tests.test_panel.TestPanel) ... ok
 test_arith (pandas.tests.test_panel.TestPanel) ... ok
 test_combineFrame (pandas.tests.test_panel.TestPanel) ... ok
@@ -3893,8 +3898,8 @@ test_count (pandas.tests.test_panel.TestPanel) ... ok
 test_ctor_dict (pandas.tests.test_panel.TestPanel) ... ok
 test_ctor_orderedDict (pandas.tests.test_panel.TestPanel) ... ok
 test_cumsum (pandas.tests.test_panel.TestPanel) ... ok
-test_delit,107:0em_and_pop (pandas.tests.test_panel.TestPanel) ... ok
-test_dropna (pandas.tests.test_panel.TestPanel) ... ,10001:0ok
+test_delitem_and_pop (pandas.tests.test_panel.TestPanel) ... ok
+test_dropna (pandas.tests.test_panel.TestPanel) ... ok
 test_ffill_bfill (pandas.tests.test_panel.TestPanel) ... ok
 test_fillna (pandas.tests.test_panel.TestPanel) ... ok
 test_filter (pandas.tests.test_panel.TestPanel) ... ok
@@ -4029,8 +4034,8 @@ test_set_axis (pandas.tests.test_panel4d.TestPanel4d) ... ok
 test_set_value (pandas.tests.test_panel4d.TestPanel4d) ... ok
 test_setitem (pandas.tests.test_panel4d.TestPanel4d) ... ok
 test_setitem_ndarray (pandas.tests.test_panel4d.TestPanel4d) ... SKIP: skipping for now
-test_shift (pandas.tests.test_panel4d.TestPanel4d) ... SKIP: skipping for now
-test_skew (pandas.tests.test_panel4d.TestPanel4d) ... ok
+test_shift (pandas.tests.test_panel4,97:0d.TestPanel4d) ... SKIP: skipping for now
+test_skew (pandas.tests.test_panel4d.TestPanel4d) ... ,10001:0ok
 test_sort_index (pandas.tests.test_panel4d.TestPanel4d) ... ok
 test_std (pandas.tests.test_panel4d.TestPanel4d) ... ok
 test_sum (pandas.tests.test_panel4d.TestPanel4d) ... ok
@@ -4053,13 +4058,13 @@ test_include_na (pandas.tests.test_reshape.TestGetDummies) ... ok
 test_just_na (pandas.tests.test_reshape.TestGetDummies) ... ok
 test_pairs (pandas.tests.test_reshape.TestLreshape) ... ok
 test_col_level (pandas.tests.test_reshape.TestMelt) ... ok
-test_custom,436:0_value_name (pandas.tests.test_reshape.TestMelt) ... ok
+test_custom_value_name (pandas.tests.test_reshape.TestMelt) ... ok
 test_custom_var_and_value_name (pandas.tests.test_reshape.TestMelt) ... ok
 test_custom_var_name (pandas.tests.test_reshape.TestMelt) ... ok
 test_default_col_names (pandas.tests.test_reshape.TestMelt) ... ok
 test_multiindex (pandas.tests.test_reshape.TestMelt) ... ok
 test_value_vars (pandas.tests.test_reshape.TestMelt) ... ok
-test_rplot1 (pandas.tests.test_rplot.TestRPlot) ... ,10001:0ok
+test_rplot1 (pandas.tests.test_rplot.TestRPlot) ... ok
 test_rplot2 (pandas.tests.test_rplot.TestRPlot) ... ok
 test_rplot3 (pandas.tests.test_rplot.TestRPlot) ... ok
 test_rplot_iris (pandas.tests.test_rplot.TestRPlot) ... ok
@@ -4182,7 +4187,7 @@ test_fillna_invalid_method (pandas.tests.test_series.TestSeries) ... ok
 test_fillna_raise (pandas.tests.test_series.TestSeries) ... ok
 test_first_last_valid (pandas.tests.test_series.TestSeries) ... ok
 test_fromDict (pandas.tests.test_series.TestSeries) ... ok
-test_fromValue (pandas.tests.test_series.TestSeries) ... ok
+test_fromValue (pandas.tests.test_series.TestSeries) ... o,1940:0k
 test_from_csv (pandas.tests.test_series.TestSeries) ... ok
 test_get_set_boolean_different_order (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_ambiguous_keyerror (pandas.tests.test_series.TestSeries) ... ok
@@ -4209,7 +4214,7 @@ test_getitem_setitem_slice_bug (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_setitem_slice_integers (pandas.tests.test_series.TestSeries) ... ok
 test_getitem_unordered_dup (pandas.tests.test_series.TestSeries) ... ok
 test_head_tail (pandas.tests.test_series.TestSeries) ... ok
-test_idxmax (pandas.,1558:0tests.test_series.TestSeries) ... ok
+test_idxmax (pandas.tests.test_series.TestSeries) ... ,10001:0ok
 test_idxmin (pandas.tests.test_series.TestSeries) ... ok
 test_iget (pandas.tests.test_series.TestSeries) ... ok
 test_iget_nonunique (pandas.tests.test_series.TestSeries) ... ok
@@ -4233,7 +4238,7 @@ test_keys (pandas.tests.test_series.TestSeries) ... ok
 test_kurt (pandas.tests.test_series.TestSeries) ... ok
 test_map (pandas.tests.test_series.TestSeries) ... ok
 test_map_decimal (pandas.tests.test_series.TestSeries) ... ok
-test_map_int (pandas.tests.test_series.TestSeries) ... ,10001:0ok
+test_map_int (pandas.tests.test_series.TestSeries) ... ok
 test_map_na_exclusion (pandas.tests.test_series.TestSeries) ... ok
 test_map_type_inference (pandas.tests.test_series.TestSeries) ... ok
 test_mask (pandas.tests.test_series.TestSeries) ... ok
@@ -4363,7 +4368,7 @@ test_where_broadcast (pandas.tests.test_series.TestSeries) ... ok
 test_where_dups (pandas.tests.test_series.TestSeries) ... ok
 test_where_inplace (pandas.tests.test_series.TestSeries) ... ok
 test_where_setitem_invalid (pandas.tests.test_series.TestSeries) ... ok
-test_basic_indexing (pandas.tests.test_series.TestSeriesNonUnique) ... ok
+test_basic_indexing (pandas.,773:0tests.test_series.TestSeriesNonUnique) ... ok
 test_datetime_indexing (pandas.tests.test_series.TestSeriesNonUnique) ... ok
 test_int_indexing (pandas.tests.test_series.TestSeriesNonUnique) ... ok
 test_repeat (pandas.tests.test_series.TestSeriesNonUnique) ... ok
@@ -4373,7 +4378,7 @@ test_set_index_makes_timeseries (pandas.tests.test_series.TestSeriesNonUnique) .
 test_timeseries_coercion (pandas.tests.test_series.TestSeriesNonUnique) ... ok
 test_unique_data_ownership (pandas.tests.test_series.TestSeriesNonUnique) ... ok
 test_rank_2d_tie_methods (pandas.tests.test_stats.TestRank) ... ok
-test_rank_descending (pandas.tests.test_stats.TestRank) ... ok
+test_rank_descending (pandas.tests.test_stats.TestRank) ... ,10001:0ok
 test_rank_int (pandas.tests.test_stats.TestRank) ... ok
 test_rank_tie_methods (pandas.tests.test_stats.TestRank) ... ok
 test_cat (pandas.tests.test_strings.TestStringMethods) ... ok
@@ -4385,7 +4390,7 @@ test_encode_decode_errors (pandas.tests.test_strings.TestStringMethods) ... ok
 test_endswith (pandas.tests.test_strings.TestStringMethods) ... ok
 test_extract (pandas.tests.test_strings.TestStringMethods) ... ok
 test_findall (pandas.tests.test_strings.TestStringMethods) ... ok
-test_get (pandas.tes,10001:0ts.test_strings.TestStringMethods) ... ok
+test_get (pandas.tests.test_strings.TestStringMethods) ... ok
 test_iter (pandas.tests.test_strings.TestStringMethods) ... ok
 test_iter_empty (pandas.tests.test_strings.TestStringMethods) ... ok
 test_iter_numeric_try_string (pandas.tests.test_strings.TestStringMethods) ... ok
@@ -4469,1023 +4474,324 @@ pandas.tests.test_tseries.test_series_bin_grouper ... ok
 pandas.tests.test_tseries.test_group_ohlc ... ok
 pandas.tests.test_tseries.test_try_parse_dates ... ok
 
-======================================================================
-ERROR: test_banklist (pandas.io.tests.test_html.TestReadHtmlBase)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 138, in test_banklist
-    attrs={'id': 'table'})
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
+Ran 4455 tests in 5542.382s
 
-======================================================================
-ERROR: test_banklist_header (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 397, in test_banklist_header
-    attrs={'id': 'table'})[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_banklist_no_match (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 168, in test_banklist_no_match
-    dfs = self.run_read_html(self.banklist_data, attrs={'id': 'table'})
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2,10001:0.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_banklist_url (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 884, in network_wrapper
-    return t(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 121, in test_banklist_url
-    attrs={"id": 'table'})
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_file_like (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 286, in test_file_like
-    df1 = self.run_read_html(f, '.*Water.*', infer_types=False)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_file_url (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 307, in test_file_url
-    attrs={'id': 'table'})
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_gold_canyon (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 431, in test_gold_canyon
-    attrs={'id': 'table'}, infer_types=False)[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_header_and_index_no_types (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 241, in test_header_and_index_no_types
-    index_col=0, infer_types=False)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_header_and_index_with_types (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 248, in test_header_and_index_with_types
-    index_col=0)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_index (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd6,10001:03ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 235, in test_index
-    df1 = self.run_read_html(self.spam_data, '.*Water.*', index_col=0)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_infer_types (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 254, in test_infer_types
-    infer_types=False)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_multiindex_header (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 325, in test_multiindex_header
-    df = self._bank_data(header=[0, 1])[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 321, in _bank_data
-    attrs={'id': 'table'}, *args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_multiindex_header_index (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 335, in test_multiindex_header_index
-    df = self._bank_data(header=[0, 1], index_col=[0, 1])[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 321, in _bank_data
-    attrs={'id': 'table'}, *args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_multiindex_header_index_skiprows (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 347, in test_multiindex_header_index_skiprows
-    df = self._bank_data(header=[0, 1], index_col=[0, 1], skiprows=1)[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 321, in _bank_data
-    attrs={'id': 'table'}, *args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_multiindex_header_skiprows (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 341, in test_multiindex_header_skiprows
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_multiindex_index (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 330, in test_multiindex_index
-    df = self._bank_data(index_col=[0, 1])[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 321, in _bank_data
-    attrs={'id': 'table'}, *args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7,10001:0-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_multiple_matches (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 884, in network_wrapper
-    return t(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 375, in test_multiple_matches
-    attrs={'class': 'wikitable'})
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_pythonxy_plugins_table (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 884, in network_wrapper
-    return t(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 382, in test_pythonxy_plugins_table
-    attrs={'class': 'wikitable'})
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_regex_idempotency (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 356, in test_regex_idempotency
-    attrs={'id': 'table'})
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_int (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 178, in test_skiprows_int
-    df1 = self.run_read_html(self.spam_data, '.*Water.*', skiprows=1)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_invalid (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 232, in test_skiprows_invalid
-    '.*Water.*', skiprows='asdf')
-  File "/usr/lib/python2.7/unittest/case.py", line 475, in assertRaises
-    callableObj(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_list (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 190, in test_skiprows_list
-    df1 = self.run_read_html(self.spam_data, '.*Water.*', skiprows=[1, 2])
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/ho,10001:0me/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_ndarray (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 225, in test_skiprows_ndarray
-    skiprows=np.arange(2))
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_set (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 197, in test_skiprows_set
-    skiprows=set([1, 2]))
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_slice (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 203, in test_skiprows_slice
-    df1 = self.run_read_html(self.spam_data, '.*Water.*', skiprows=1)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_slice_long (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 217, in test_skiprows_slice_long
-    skiprows=slice(2, 5))
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_slice_short (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 210, in test_skiprows_slice_short
-    skiprows=slice(2))
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_skiprows_xrange (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 185, in test_skiprows_xrange
-    skiprows=range(2))[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_spam_header (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/bu,10001:0ildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 173, in test_spam_header
-    df = self.run_read_html(self.spam_data, '.*Water.*', header=1)[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_spam_no_match (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 163, in test_spam_no_match
-    dfs = self.run_read_html(self.spam_data)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_spam_no_types (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 146, in test_spam_no_types
-    infer_types=False)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_spam_with_types (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 155, in test_spam_with_types
-    df1 = self.run_read_html(self.spam_data, '.*Water.*')
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_string (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 279, in test_string
-    df1 = self.run_read_html(data, '.*Water.*', infer_types=False)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_string_io (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 271, in test_string_io
-    df1 = self.run_read_html(data1, '.*Water.*', infer_types=False)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_to_html_compat (pandas.io.tests.test_html.TestReadHtmlBase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 112, in test_to_html_compat
-    index_col=0)[0]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 90, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_h,6072:0tml
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_fallback_success (pandas.io.tests.test_html.TestReadHtmlLxml)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 471, in test_fallback_success
-    'html5lib'])
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 440, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-ERROR: test_works_on_valid_markup (pandas.io.tests.test_html.TestReadHtmlLxml)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 459, in test_works_on_valid_markup
-    dfs = self.run_read_html(filename, index_col=0, flavor=['lxml'])
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_html.py", line 440, in run_read_html
-    return read_html(*args, **kwargs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 843, in read_html
-    parse_dates, attrs)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 712, in _parse
-    parse_dates) for table in tables]
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/html.py", line 607, in _data_to_frame
-    import ipdb; ipdb.set_trace()
-ImportError: No module named ipdb
-
-======================================================================
-FAIL: test_bool (pandas.io.tests.test_excel.OpenpyxlTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_excel.py", line 462, in test_bool
-    tm.assert_frame_equal(frame, recons)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 312, in assert_frame_equal
-    assert_index_equal(left.columns, right.columns)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 192, in assert_index_equal
-    right.dtype))
-AssertionError: [index] left [int64 Int64Index([0, 1], dtype=int64)], right [Index([u'Unnamed: 0', 1.0], dtype=object) object]
-
-======================================================================
-FAIL: test_excel_roundtrip_indexname (pandas.io.tests.test_excel.OpenpyxlTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_excel.py", line 580, in test_excel_roundtrip_indexname
-    tm.assert_frame_equal(result, df)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 312, in assert_frame_equal
-    assert_index_equal(left.columns, right.columns)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 192, in assert_index_equal
-    right.dtype))
-AssertionError: [index] left [object Index([u'Unnamed: 1', 1.0, 2.0, 3.0], dtype=object)], right [Int64Index([0, 1, 2, 3], dtype=int64) int64]
-
-======================================================================
-,10001:0FAIL: test_excel_sheet_by_name_raise (pandas.io.tests.test_excel.OpenpyxlTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_excel.py", line 341, in test_excel_sheet_by_name_raise
-    tm.assert_frame_equal(gt, df)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 312, in assert_frame_equal
-    assert_index_equal(left.columns, right.columns)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 192, in assert_index_equal
-    right.dtype))
-AssertionError: [index] left [int64 Int64Index([0, 1], dtype=int64)], right [Index([u'Unnamed: 0', 1.0], dtype=object) object]
-
-======================================================================
-FAIL: test_int64 (pandas.io.tests.test_excel.OpenpyxlTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_excel.py", line 442, in test_int64
-    tm.assert_frame_equal(frame, recons, check_dtype=False)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 312, in assert_frame_equal
-    assert_index_equal(left.columns, right.columns)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 192, in assert_index_equal
-    right.dtype))
-AssertionError: [index] left [int64 Int64Index([0, 1], dtype=int64)], right [Index([u'Unnamed: 0', 1.0], dtype=object) object]
-
-======================================================================
-FAIL: test_bool (pandas.io.tests.test_excel.XlwtTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_excel.py", line 462, in test_bool
-    tm.assert_frame_equal(frame, recons)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 312, in assert_frame_equal
-    assert_index_equal(left.columns, right.columns)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 192, in assert_index_equal
-    right.dtype))
-AssertionError: [index] left [int64 Int64Index([0, 1], dtype=int64)], right [Index([u'Unnamed: 0', 1.0], dtype=object) object]
-
-======================================================================
-FAIL: test_excel_roundtrip_indexname (pandas.io.tests.test_excel.XlwtTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_excel.py", line 580, in test_excel_roundtrip_indexname
-    tm.assert_frame_equal(result, df)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 312, in assert_frame_equal
-    assert_index_equal(left.columns, right.columns)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 192, in assert_index_equal
-    right.dtype))
-AssertionError: [index] left [object Index([u'Unnamed: 1', 1.0, 2.0, 3.0], dtype=object)], right [Int64Index([0, 1, 2, 3], dtype=int64) int64]
-
-======================================================================
-FAIL: test_excel_sheet_by_name_raise (pandas.io.tests.test_excel.XlwtTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_excel.py", line 341, in test_excel_sheet_by_name_raise
-    tm.assert_frame_equal(gt, df)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 312, in assert_frame_equal
-    assert_index_equal(left.columns, right.columns)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 192, in assert_index_equal
-    right.dtype))
-AssertionError: [index] left [int64 Int64Index([0, 1], dtype=int64)], right [Index([u'Unnamed: 0', 1.0], dtype=object) object]
-
-======================================================================
-FAIL: test_int64 (pandas.io.tests.test_excel.XlwtTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/io/tests/test_excel.py", line 442, in test_int64
-    tm.assert_frame_equal(frame, recons, check_dtype=False)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 312, in assert_frame_equal
-    assert_index_equal(left.columns, right.columns)
-  File "/home/buildslave/nd-bb-slave-sparc-sid/pandas-py2_x-sid-sparc/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_708_gd63ac05-py2.7-linux-sparc64.egg/pandas/util/testing.py", line 192, in assert_index_equal
-    right.dtype))
-AssertionError: [index] left [int64 Int64Index([0, 1], dtype=int64)], right [Index([u'Unnamed: 0', 1.0], dtype=object) object]
-
-----------------------------------------------------------------------
-Ran 4448 tests in 5410.630s
-
-FAILED (SKIP=89, errors=37, failures=8)
+OK (SKIP=93)
 month: 11, year: 2013
 month: 11, year: 2013
 month: 11, year: 2013
 month: 11, year: 2013
-Failed: ImportError('No module named ipdb',)
-Failed: ImportError('No module named ipdb',)
-Failed: ImportError('No module named ipdb',)
 [u'Idx']
 [u'Idx']
 None
 0          NaN
 1          NaN
-2    -0.295548
-3     0.004959
-4     0.526457
-5     0.639529
-6     0.207331
-7     0.492540
-8    -0.398165
-9    -0.976222
-10   -0.859316
-11   -0.772754
-12   -0.724690
-13   -0.618453
-14   -0.404160
-15   -0.624963
-16   -0.500066
-17   -0.745719
-18    0.105089
-19    0.439340
-20    0.180109
-21    0.516258
-22   -0.510025
-23   -0.023915
-24   -0.774856
-25   -0.752717
-26   -0.641512
-27   -0.454404
+2     0.251798
+3     0.592775
+4     0.466399
+5     0.121910
+6     0.064268
+7    -0.053749
+8    -0.237099
+9     0.081531
+10    0.192463
+11   -0.011256
+12    0.242668
+13    0.683209
+14   -0.075532
+15    0.958937
+16    0.811345
+17    0.798348
+18    0.615915
+19   -0.126956
+20   -0.715300
+21   -0.644227
+22    0.029919
+23   -0.176603
+24    0.000074
+25   -0.112829
+26    0.022006
+27   -0.735959
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.327435
-3     0.616762
-4     0.617272
-5    -0.149587
-6     0.744447
-7     0.971812
-8     0.908903
-9     0.678538
-10    0.273185
-11    0.192127
-12   -0.253395
-13   -0.516995
-14   -0.376014
-15   -0.311245
-16   -0.419285
-17   -0.325437
-18   -0.097826
-19   -0.809756
-20   -0.646283
-21   -0.573702
-22   -0.140387
-23   -0.357144
-24   -0.466573
-25   -0.087067
-26   -0.361647
-27   -0.281353
+2    -0.506495
+3    -0.745986
+4    -0.833061
+5    -0.654674
+6    -0.276951
+7    -0.161152
+8    -0.345842
+9    -0.450509
+10   -0.568232
+11   -0.740837
+12    0.038292
+13   -0.280003
+14    0.016119
+15    0.360275
+16    0.664972
+17    0.138894
+18   -0.312915
+19   -0.448121
+20   -0.862864
+21   -0.891916
+22   -0.681590
+23   -0.624014
+24   -0.397325
+25   -0.528273
+26   -0.231346
+27   -0.094034
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.326837
-3     0.069990
-4     0.287210
-5     0.737753
-6     0.772421
-7     0.641995
-8     0.291187
-9     0.114079
-10   -0.312563
-11    0.360213
-12    0.171722
-13    0.538670
-14    0.435875
-15   -0.372930
-16    0.639833
-17    0.651121
-18    0.624927
-19    0.219981
-20    0.611732
-21    0.491154
-22   -0.148332
-23   -0.078705
-24    0.537330
-25   -0.223234
-26   -0.262434
-27   -0.056901
+2     0.511524
+3    -0.005199
+4    -0.000115
+5     0.010890
+6    -0.235922
+7    -0.587305
+8     0.266858
+9    -0.101441
+10    0.122686
+11    0.699244
+12    0.473937
+13   -0.211212
+14   -0.453490
+15   -0.883066
+16   -0.363908
+17   -0.045182
+18    0.061230
+19    0.453947
+20    0.814693
+21    0.538680
+22    0.582635
+23    0.247198
+24    0.599505
+25    0.609432
+26    0.422999
+27   -0.140936
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.731437
-3     0.712439
-4     0.136097
-5    -0.312843
-6    -0.180564
-7    -0.890855
-8    -0.618313
-9    -0.581381
-10    0.552309
-11   -0.077162
-12   -0.404397
-13   -0.375554
-14   -0.285928
-15   -0.534761
-16    0.289314
-17   -0.067632
-18   -0.288771
-19   -0.518961
-20   -0.839268
-21   -0.817939
-22   -0.638111
-23   -0.466549
-24    0.757490
-25    0.676045
-26    0.499554
-27    0.445135
+2    -0.706186
+3    -0.489886
+4    -0.519961
+5    -0.370551
+6     0.594289
+7     0.650353
+8     0.665059
+9     0.685308
+10    0.937651
+11    0.967772
+12    0.895862
+13    0.257716
+14    0.487863
+15    0.308762
+16    0.174979
+17    0.138458
+18    0.053405
+19   -0.287264
+20   -0.099203
+21   -0.493353
+22   -0.674668
+23    0.299600
+24    0.227241
+25    0.161732
+26    0.752976
+27    0.681719
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.708188
-3    -0.664123
-4    -0.726093
-5    -0.854744
-6    -0.516967
-7     0.214691
-8    -0.016921
-9    -0.751170
-10   -0.276904
-11    0.285113
-12    0.093855
-13    0.417402
-14   -0.464916
-15   -0.202991
-16   -0.243545
-17   -0.306040
-18   -0.422995
-19   -0.100643
-20   -0.305146
-21    0.633976
-22    0.315425
-23   -0.008536
-24    0.104726
-25    0.160311
-26   -0.031285
-27    0.252265
+2    -0.868175
+3    -0.933021
+4    -0.977606
+5    -0.967331
+6    -0.494318
+7    -0.302707
+8     0.727997
+9     0.587569
+10    0.603094
+11   -0.077820
+12    0.032936
+13    0.141165
+14    0.036011
+15    0.233746
+16   -0.036085
+17    0.035273
+18   -0.148702
+19    0.094675
+20   -0.413400
+21   -0.324575
+22   -0.922480
+23   -0.237911
+24    0.070542
+25    0.294526
+26   -0.326279
+27   -0.111388
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.260956
-3    -0.437364
-4    -0.757345
-5    -0.748340
-6    -0.522755
-7    -0.280426
-8     0.007103
-9     0.712334
-10    0.179493
-11    0.140766
-12    0.097345
-13   -0.023066
-14   -0.887079
-15   -0.578144
-16   -0.192609
-17    0.486191
-18   -0.221731
-19   -0.294553
-20   -0.495640
-21   -0.430973
-22   -0.290206
-23    0.0244,3915:053
-24    0.149590
-25    0.648976
-26    0.557383
-27    0.204536
+2     0.545083
+3     0.548267
+4     0.265571
+5     0.165813
+6     0.391171
+7    -0.408229
+8    -0.793334
+9    -0.681416
+10   -0.375484
+11   -0.512455
+12    0.303624
+13    0.221786
+14    0.112522
+15   -0.104497
+16    0.083411
+17   -0.020046
+18    0.460347
+19    0.521805
+20   -0.908803
+21    0.124151
+22    0.041271
+23    0.150066
+24    0.084884
+25    0.953599
+26    0.242178
+27   -0.102761
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2     0.804860
-3     0.538083
-4     0.235854
-5     0.138977
-6     0.232082
-7     0.536214
-8     0.608758
-9     0.631885
-10    0.549543
-11    0.126044
-12   -0.138464
-13   -0.477728
-14   -0.298000
-15   -0.299124
-16    0.661304
-17    0.108940
-18    0.473045
-19   -0.071383
-20    0.586326
-21    0.689601
-22    0.369464
-23    0.170685
-24    0.072730
-25   -0.050677
-26   -0.469074
-27    0.181415
+2    -0.435870
+3    -0.409073
+4    -0.737533
+5    -0.379677
+6    -0.610717
+7    -0.791893
+8    -0.188450
+9     0.093601
+10    0.260216
+11    0.820223
+12    0.211994
+13    0.423543
+14    0.429227
+15   -0.658276
+16   -0.583052
+17   -0.698035
+18   -0.386199
+19    0.069440
+20    0.483784
+21    0.545983
+22    0.546813
+23    0.301473
+24    0.098247
+25    0.098069
+26   -0.178925
+27    0.551646
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.267937
-3    -0.149955
-4    -0.403502
-5     0.256940
-6     0.623524
-7     0.477920
-8     0.198435
-9    -0.152755
-10   -0.165303
-11   -0.058606
-12   -0.808860
-13    0.648549
-14    0.702101
-15    0.747846
-16    0.285372
-17   -0.238572
-18   -0.958460
-19   -0.755876
-20   -0.575173
-21   -0.524869
-22   -0.477970
-23   -0.308307
-24   -0.256994
-25   -0.248592
-26   -0.098980
-27    0.391989
+2    -0.438192
+3    -0.284917
+4     0.133566
+5     0.626468
+6    -0.010493
+7     0.028712
+8     0.271862
+9     0.190636
+10    0.135075
+11    0.178977
+12    0.587333
+13    0.028183
+14    0.039290
+15   -0.408137
+16    0.444417
+17,2870:0    0.617075
+18   -0.181610
+19   -0.225985
+20    0.135261
+21   -0.652619
+22   -0.659578
+23   -0.553545
+24   -0.880477
+25   -0.412312
+26   -0.067425
+27    0.308342
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.433323
-3    -0.391194
-4    -0.189877
-5     0.168042
-6    -0.005574
-7     0.116655
-8     0.329141
-9    -0.483623
-10   -0.720081
-11   -0.672425
-12   -0.506227
-13   -0.259081
-14    0.043560
-15   -0.787578
-16   -0.533181
-17   -0.486284
-18   -0.211741
-19   -0.038397
-20    0.398952
-21    0.336087
-22    0.220845
-23   -0.290321
-24   -0.274045
-25   -0.552062
-26   -0.192845
-27   -0.008007
+2    -0.645270
+3     0.392505
+4     0.374373
+5     0.603207
+6     0.691909
+7     0.748357
+8     0.602933
+9     0.483870
+10    0.411025
+11   -0.662050
+12   -0.891123
+13   -0.738249
+14   -0.514781
+15   -0.920094
+16   -0.818673
+17   -0.638789
+18   -0.270352
+19   -0.277361
+20   -0.132459
+21   -0.005544
+22   -0.930364
+23   -0.986141
+24   -0.151754
+25   -0.107711
+26   -0.071578
+27    0.807142
 28         NaN
 29         NaN
 dtype: float64
 0          NaN
 1          NaN
-2    -0.482018
-3    -0.737963
-4    -0.576956
-5     0.056241
-6     0.056313
-7     0.769405
-8     0.798561
-9     0.604040
-10    0.204478
-11    0.349501
-12    0.257515
-13   -0.068302
-14    0.145392
-15    0.408195
-16    0.242420
-17   -0.806086
-18   -0.921679
-19   -0.201030
-20   -0.199438
-21    0.278605
-22    0.116288
-23   -0.252130
-24   -0.209273
-25    0.156400
-26   -0.385894
-27   -0.422428
+2     0.073265
+3    -0.285878
+4    -0.359173
+5    -0.878331
+6    -0.120100
+7     0.388485
+8     0.890475
+9     0.750630
+10    0.544260
+11   -0.181709
+12   -0.743982
+13   -0.888218
+14   -0.988053
+15   -0.480617
+16    0.195154
+17    0.300118
+18    0.223494
+19    0.559492
+20    0.110996
+21   -0.166874
+22    0.289872
+23    0.299906
+24    0.474362
+25    0.282100
+26    0.518271
+27   -0.256342
 28         NaN
 29         NaN
 dtype: float64
@@ -5628,30 +4934,25 @@ columns
 spam
 ----------------------------------------
     0  1  2  3  4  5  6  7  8  9
-2   0  5  0  4  6  2  8  4  8  0
-8   0  7  6  8  2  5  6  3  8  1
-12  0  7  0  6  9  9  3  6  6  8
+10  0  0  2  1  1  2  1  8  6  5
+16  0  0  9  2  6  3  0  5  3  5
 ----------------------------------------
 ----------------------------------------
-2     5
-8     7
-12    7
+10    0
+16    0
 ----------------------------------------
-2     5
-8     7
-12    7
+10    0
+16    0
 ----------------------------------------
-2     5
-8     7
-12    7
+10    0
+16    0
 ----------------------------------------
-2     5
-8     7
-12    7
+10    0
+16    0
 None
 Warning: discarding nonzero nanoseconds
-XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":101"
+,151:0XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":102"
       after 15 requests (13 known processed) with 0 events remaining.
-,59:2program finished with exit code 1
-elapsedTime=5446.476626
+,59:2program finished with exit code 0
+elapsedTime=5575.619730
 ,
