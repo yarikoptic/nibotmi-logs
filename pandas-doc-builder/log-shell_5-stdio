@@ -42,7 +42,7 @@ reading sources... [  0%] comparison_with_r
 reading sources... [  1%] computation
 reading sources... [  1%] cookbook
 reading sources... [  1%] dsintro
-,374:1/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/core/frame.py:3081: FutureWarning: TimeSeries broadcasting along DataFrame index by default is deprecated. Please use DataFrame.<op> to explicitly broadcast arithmetic operations along the index
+,374:1/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/core/frame.py:3057: FutureWarning: TimeSeries broadcasting along DataFrame index by default is deprecated. Please use DataFrame.<op> to explicitly broadcast arithmetic operations along the index
   FutureWarning)
 ,10001:0reading sources... [  1%] enhancingperf
 reading sources... [  2%] faq
@@ -57,12 +57,12 @@ AttributeError                            Traceback (most recent call last)
 <ipython-input-18-c16b12c482e8> in <module>()
 ----> 1 data = ts.time_series(np.random.randn(50), start_date='Jan-2000', freq='M')
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/core/generic.pyc in __getattr__(self, name)
-   1298             return self[name]
-   1299         raise AttributeError("'%s' object has no attribute '%s'" %
--> 1300                              (type(self).__name__, name))
-   1301 
-   1302     def __setattr__(self, name, value):
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/core/generic.pyc in __getattr__(self, name)
+   1334             return self[name]
+   1335         raise AttributeError("'%s' object has no attribute '%s'" %
+-> 1336                              (type(self).__name__, name))
+   1337 
+   1338     def __setattr__(self, name, value):
 
 AttributeError: 'Series' object has no attribute 'time_series'
 ---------------------------------------------------------------------------
@@ -212,7 +212,7 @@ reading sources... [ 36%] generated/pandas.Panel.__init__
 reading sources... [ 36%] generated/pandas.Panel.__iter__
 reading sources... [ 37%] generated/pandas.Panel.abs
 reading sources... [ 37%] generated/pandas.Panel.add
-reading s,1061:0ources... [ 37%] generated/pandas.Panel.add_prefix
+reading s,1117:0ources... [ 37%] generated/pandas.Panel.add_prefix
 reading sources... [ 37%] generated/pandas.Panel.add_suffix
 reading sources... [ 38%] generated/pandas.Panel.apply
 reading sources... [ 38%] generated/pandas.Panel.asfreq
@@ -231,8 +231,8 @@ reading sources... [ 41%] generated/pandas.Panel.cumsum
 reading sources... [ 41%] generated/pandas.Panel.div
 reading sources... [ 41%] generated/pandas.Panel.drop
 reading sources... [ 42%] generated/pandas.Panel.dropna
-,10001:0reading sources... [ 42%] generated/pandas.Panel.fillna
-reading sources... [ 42%] generated/pandas.Panel.filter
+reading sources... [ 42%] generated/pandas.Panel.fillna
+,10001:0reading sources... [ 42%] generated/pandas.Panel.filter
 reading sources... [ 42%] generated/pandas.Panel.first
 reading sources... [ 43%] generated/pandas.Panel.from_dict
 reading sources... [ 43%] generated/pandas.Panel.get_value
@@ -388,11 +388,11 @@ reading sources... [ 80%] generated/pandas.core.common.isnull
 reading sources... [ 80%] generated/pandas.core.common.notnull
 reading sources... [ 81%] generated/pandas.core.reshape.get_dummies
 reading sources... [ 81%] generated/pandas.eval
+reading sources... [ 81%] generated/pandas.io.clipboard.read_clipboard
 reading sources... [ 81%] generated/pandas.io.excel.ExcelFile.parse
-reading sources... [ 81%] generated/pandas.io.excel.read_excel
+reading sources... [ 82%] generated/pandas.io.excel.read_excel
 reading sources... [ 82%] generated/pandas.io.html.read_html
 reading sources... [ 82%] generated/pandas.io.json.read_json
-reading sources... [ 82%] generated/pandas.io.parsers.read_clipboard
 reading sources... [ 82%] generated/pandas.io.parsers.read_csv
 reading sources... [ 83%] generated/pandas.io.parsers.read_fwf
 reading sources... [ 83%] generated/pandas.io.parsers.read_table
@@ -403,8 +403,8 @@ reading sources... [ 84%] generated/pandas.io.pytables.HDFStore.put
 reading sources... [ 84%] generated/pandas.io.pytables.HDFStore.select
 reading sources... [ 84%] generated/pandas.io.pytables.read_hdf
 reading sources... [ 85%] generated/pandas.io.sql.read_frame
-reading sources... [ 85%] generated/pandas,149:0.io.sql.read_sql
-reading sources... [ 85%] generated/pandas.io.sql.write_frame
+reading sources... [ 85%] generated/pandas.io.sql.read_sql
+reading sources... [ 85%] generated/p,95:0andas.io.sql.write_frame
 reading sources... [ 85%] generated/pandas.io.stata.StataReader.data
 ,2874:0reading sources... [ 86%] generated/pandas.io.stata.StataReader.data_label
 reading sources... [ 86%] generated/pandas.io.stata.StataReader.value_labels
@@ -458,68 +458,68 @@ StopIteration                             Traceback (most recent call last)
 <ipython-input-182-475cedd2a1b1> in <module>()
 ----> 1 pd.read_clipboard()
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/clipboard.pyc in read_clipboard(**kwargs)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/clipboard.pyc in read_clipboard(**kwargs)
      24         except:
      25             pass
 ---> 26     return read_table(StringIO(text), **kwargs)
      27 
      28 
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in parser_f(filepath_or_buffer, sep, dialect, compression, doublequote, escapechar, quotechar, quoting, skipinitialspace, lineterminator, header, index_col, names, prefix, skiprows, skipfooter, skip_footer, na_values, na_fvalues, true_values, false_values, delimiter, converters, dtype, usecols, engine, delim_whitespace, as_recarray, na_filter, compact_ints, use_unsigned, low_memory, buffer_lines, warn_bad_lines, error_bad_lines, keep_default_na, thousands, comment, decimal, parse_dates, keep_date_col, dayfirst, date_parser, memory_map, nrows, iterator, chunksize, verbose, encoding, squeeze, mangle_dupe_cols, tupleize_cols)
-    400             )
-    401 
---> 402         return _read(filepath_or_buffer, kwds)
-    403 
-    404     parser_f.__name__ = name
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in parser_f(filepath_or_buffer, sep, dialect, compression, doublequote, escapechar, quotechar, quoting, skipinitialspace, lineterminator, header, index_col, names, prefix, skiprows, skipfooter, skip_footer, na_values, na_fvalues, true_values, false_values, delimiter, converters, dtype, usecols, engine, delim_whitespace, as_recarray, na_filter, compact_ints, use_unsigned, low_memory, buffer_lines, warn_bad_lines, error_bad_lines, keep_default_na, thousands, comment, decimal, parse_dates, keep_date_col, dayfirst, date_parser, memory_map, nrows, iterator, chunksize, verbose, encoding, squeeze, mangle_dupe_cols, tupleize_cols)
+    399             )
+    400 
+--> 401         return _read(filepath_or_buffer, kwds)
+    402 
+    403     parser_f.__name__ = name
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _read(filepath_or_buffer, kwds)
-    198 
-    199     # Create the parser.
---> 200     parser = TextFileReader(filepath_or_buffer, **kwds)
-    201 
-    202     if nrows is not None:
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _read(filepath_or_buffer, kwds)
+    197 
+    198     # Create the parser.
+--> 199     parser = TextFileReader(filepath_or_buffer, **kwds)
+    200 
+    201     if nrows is not None:
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in __init__(self, f, engine, **kwds)
-    481             self.options['has_index_names'] = kwds['has_index_names']
-    482 
---> 483         self._make_engine(self.engine)
-    484 
-    485     def _get_options_with_defaults(self, engine):
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in __init__(self, f, engine, **kwds)
+    480             self.options['has_index_names'] = kwds['has_index_names']
+    481 
+--> 482         self._make_engine(self.engine)
+    483 
+    484     def _get_options_with_defaults(self, engine):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _make_engine(self, engine)
-    594             elif engine == 'python-fwf':
-    595                 klass = FixedWidthFieldParser
---> 596             self._engine = klass(self.f, **self.options)
-    597 
-    598     def _failover_to_python(self):
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _make_engine(self, engine)
+    593             elif engine == 'python-fwf':
+    594                 klass = FixedWidthFieldParser
+--> 595             self._engine = klass(self.f, **self.options)
+    596 
+    597     def _failover_to_python(self):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in __init__(self, f, **kwds)
-   1279             self.data = f
-   1280 
--> 1281         self.columns = self._infer_columns()
-   1282 
-   1283         # we are processing a multi index column
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in __init__(self, f, **kwds)
+   1290             self.data = f
+   1291 
+-> 1292         self.columns = self._infer_columns()
+   1293 
+   1294         # we are processing a multi index column
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _infer_columns(self)
-   1471                     line = self.buf[0]
-   1472                 else:
--> 1473                     line = self._next_line()
-   1474 
-   1475                 while self.pos <= hr:
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _infer_columns(self)
+   1482                     line = self.buf[0]
+   1483                 else:
+-> 1484                     line = self._next_line()
+   1485 
+   1486                 while self.pos <= hr:
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _next_line(self)
-   1538                 self.pos += 1
-   1539 
--> 1540             line = next(self.data)
-   1541 
-   1542         line = self._check_comments([line])[0]
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _next_line(self)
+   1549                 self.pos += 1
+   1550 
+-> 1551             line = next(self.data)
+   1552 
+   1553         line = self._check_comments([line])[0]
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _read()
-   1388         else:
-   1389             def _read():
--> 1390                 line = next(f)
-   1391                 pat = re.compile(sep)
-   1392                 yield pat.split(line.strip())
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/parsers.pyc in _read()
+   1399         else:
+   1400             def _read():
+-> 1401                 line = next(f)
+   1402                 pat = re.compile(sep)
+   1403                 yield pat.split(line.strip())
 
 StopIteration: 
 ---------------------------------------------------------------------------
@@ -527,21 +527,21 @@ TypeError                                 Traceback (most recent call last)
 <ipython-input-335-9110e3df5f3f> in <module>()
 ----> 1 pd.read_stata('stata.dta')
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in read_stata(filepath_or_buffer, convert_dates, convert_categoricals, encoding, index)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in read_stata(filepath_or_buffer, convert_dates, convert_categoricals, encoding, index)
      44         identifier of column that should be used as index of the DataFrame
      45     """
 ---> 46     reader = StataReader(filepath_or_buffer, encoding)
      47 
      48     return reader.data(convert_dates, convert_categoricals, index)
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in __init__(self, path_or_buf, encoding)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in __init__(self, path_or_buf, encoding)
     331             self.path_or_buf = path_or_buf
     332 
 --> 333         self._read_header()
     334 
     335     def _read_header(self):
 
-/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_595_g0fbd347-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in _read_header(self)
+/home/buildslave/nd-bb-slave-sparc-sid/pandas-doc-builder/build/venv/local/lib/python2.7/site-packages/pandas-0.12.0_617_g1f00335-py2.7-linux-sparc64.egg/pandas/io/stata.pyc in _read_header(self)
     437                 self.dtyplist = [self.DTYPE_MAP[typ] for typ in typlist]
     438             except:
 --> 439                 raise ValueError("cannot convert stata dtypes [{0}]".format(','.join(typlist)))
@@ -557,5 +557,5 @@ reading sources... [ 97%] r_interface
 Building HTML failed.
 make: *** [doc] Error 1
 ,59:2program finished with exit code 2
-elapsedTime=1098.120899
+elapsedTime=1094.489066
 ,
